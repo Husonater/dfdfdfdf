@@ -1,0 +1,46 @@
+---
+attacker-internet:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+client-internal:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+edge-router:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.9
+firewall-in:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+ids-dmz:
+    username: 
+    password: 
+    platform: linux
+    hostname: 
+internal-router:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2
+reverse-proxy-waf:
+    username: 
+    password: 
+    platform: linux
+    hostname: 
+siem-backend:
+    username: 
+    password: 
+    platform: linux
+    hostname: 
+webserver:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.8

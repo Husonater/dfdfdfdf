@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # 1. Web Application Firewall (WAF) / Reverse Proxy
+  waf:
+    build:
+      context: ./images/waf
+      dockerfile: Dockerfile
+    # IMAGE TAG MUSS mit dmz_topology.yaml übereinstimmen
+    image: waf:latest
+    container_name: build_waf
+
+  # 2. Intrusion Detection System (IDS)
+  ids:
+    build:
+      context: ./images/ids
+      dockerfile: Dockerfile
+    image: ids:latest
+    container_name: build_ids
+
+  # 3. SIEM System (Log Collector)
+  siem:
+    build:
+      context: ./images/siem
+      dockerfile: Dockerfile
+    image: siem:latest
+    container_name: build_siem
+
+  # 4. Client/Attacker Base Image
+  attacker:
+    build:
+      context: ./images/attacker
+      dockerfile: Dockerfile
+    image: attacker:latest
+    container_name: build_attacker_base
+
+  # 5. Webserver Base Image
+  webserver:
+    build:
+      context: ./images/webserver
+      dockerfile: Dockerfile
+    image: webserver:latest
+    container_name: build_webserver
+
+  # 6. NEU: Firewall Base Image (Muss gebaut werden, um Bash/IP-Tools zu haben)
+  firewall:
+    build:
+      context: ./images/firewall
+      dockerfile: Dockerfile
+    image: firewall:latest
+    container_name: build_firewall
