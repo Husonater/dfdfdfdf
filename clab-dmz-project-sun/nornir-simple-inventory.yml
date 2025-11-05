@@ -8,32 +8,32 @@ client-internal:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.2
 edge-router:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.9
+    hostname: 172.20.20.6
 firewall-in:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
+    hostname: 172.20.20.4
 ids-dmz:
     username: 
     password: 
     platform: linux
-    hostname: 
+    hostname: 172.20.20.5
 internal-router:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.7
 reverse-proxy-waf:
     username: 
     password: 
     platform: linux
-    hostname: 
+    hostname: 172.20.20.8
 siem-backend:
     username: 
     password: 
@@ -43,4 +43,4 @@ webserver:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.8
+    hostname: 172.20.20.9

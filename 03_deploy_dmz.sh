@@ -144,7 +144,9 @@ echo "Docker images successfully built."
 # --------------------------------------------------------
 echo "--- 2. CONTAINERLAB DEPLOYMENT ---"
 # Zuerst destroy, um sauberen Start zu gewaehrleisten.
-sudo containerlab destroy --topo dmz_topology.yaml > /dev/null 2>&1
+# GOOD: Shows errors
+echo "--- DESTROYING PREVIOUS LAB (if any) ---"
+sudo containerlab destroy --topo dmz_topology.yaml
 # Deploy
 sudo containerlab deploy --topo dmz_topology.yaml
 if [ $? -ne 0 ]; then
@@ -152,7 +154,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo "Containerlab topology deployed successfully."
-sleep 5 # Kurze Wartezeit, um sicherzustellen, dass alle Container hochgefahren sind
+sleep 15 # Kurze Wartezeit, um sicherzustellen, dass alle Container hochgefahren sind
 
 
 # --------------------------------------------------------
