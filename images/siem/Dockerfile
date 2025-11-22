@@ -1,9 +1,6 @@
 FROM debian:latest
-RUN apt-get update && apt-get install -y rsyslog iproute2 net-tools bash && rm -rf /var/lib/apt/lists/*
-# Kopiere rsyslog config
+RUN apt-get update && apt-get install -y rsyslog iproute2 net-tools bash procps && rm -rf /var/lib/apt/lists/*
 COPY rsyslog_receiver.conf /etc/rsyslog.d/
 RUN mkdir -p /var/log/siem_logs
-# Startet rsyslog und haelt den Container am Laufen
-
-# --- FIX: Use a simple, robust CMD ---
-CMD ["rsyslogd", "-n"]
+RUN touch /var/log/siem_logs/suricata_alerts.log && chmod 666 /var/log/siem_logs/suricata_alerts.log || true
+CMD ["sleep", "infinity"]
