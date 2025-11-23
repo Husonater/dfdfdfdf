@@ -1,38 +1,31 @@
 #!/bin/bash
-set -e # Stop script immediately if any command fails
+set -e
 
 # --------------------------------------------------------
-# DMZ Deployment Script (Fixed for Race Conditions)
+# DMZ Deployment Script (FINAL FIX: Routing Crash Resolved)
 # --------------------------------------------------------
 
 echo "--- 0. CLEANUP & PREPARATION ---"
-# Clean up any previous lab instances to avoid "file exists" errors
 sudo containerlab destroy --topo dmz_topology.yaml --cleanup || true
 
-echo "--- 1. CREATING DIRECTORY STRUCTURE AND CONFIGS ---"
-
+echo "--- 1. CREATING DIRECTORY STRUCTURE ---"
 mkdir -p images/waf images/ids images/siem images/attacker images/webserver images/firewall config/waf
 
-# --- DOCKERFILES (Using 'sleep infinity' to ensure stability during network linking) ---
-
-# 1. ATTACKER
+# --- DOCKERFILES ---
 cat > images/attacker/Dockerfile <<EOF
 FROM kalilinux/kali-rolling
 RUN apt-get update && apt-get install -y iproute2 iputils-ping nmap curl netcat-openbsd net-tools wget dnsutils tcpdump && rm -rf /var/lib/apt/lists/*
 CMD ["sleep", "infinity"]
 EOF
 
-# 2. IDS (Suricata)
 cat > images/ids/Dockerfile <<EOF
 FROM debian:latest
 RUN apt-get update && apt-get install -y suricata net-tools iproute2 bash rsyslog procps && rm -rf /var/lib/apt/lists/*
 COPY startup_ids.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup_ids.sh
-# Start sleeping to let Containerlab link interfaces first
 CMD ["sleep", "infinity"]
 EOF
 
-# 3. SIEM (Rsyslog)
 cat > images/siem/Dockerfile <<EOF
 FROM debian:latest
 RUN apt-get update && apt-get install -y rsyslog iproute2 net-tools bash procps && rm -rf /var/lib/apt/lists/*
@@ -42,7 +35,6 @@ RUN touch /var/log/siem_logs/suricata_alerts.log && chmod 666 /var/log/siem_logs
 CMD ["sleep", "infinity"]
 EOF
 
-# 4. WAF (Nginx/ModSec)
 cat > images/waf/Dockerfile <<EOF
 FROM owasp/modsecurity-crs:nginx-alpine
 USER root
@@ -55,7 +47,6 @@ RUN chown -R nginx:nginx /etc/nginx/modsecurity.d || true
 CMD ["sleep", "infinity"]
 EOF
 
-# 5. WEBSERVER
 cat > images/webserver/Dockerfile <<EOF
 FROM php:8.2-apache
 RUN apt-get update && apt-get install -y iproute2 net-tools && rm -rf /var/lib/apt/lists/*
@@ -63,15 +54,13 @@ RUN echo "<h1>Webserver is running!</h1><p>Client IP: \$_SERVER['REMOTE_ADDR']</
 CMD ["apache2-foreground"]
 EOF
 
-# 6. FIREWALL
 cat > images/firewall/Dockerfile <<EOF
 FROM alpine:latest
 RUN apk update && apk add bash iproute2 iptables
 CMD ["sleep", "infinity"]
 EOF
 
-# --- CONFIGURATION FILES ---
-
+# --- CONFIG FILES ---
 cat > images/waf/nginx.conf <<EOF
 user nginx;
 worker_processes auto;
@@ -112,12 +101,9 @@ EOF
 
 cat > images/ids/startup_ids.sh <<'EOF'
 #!/bin/bash
-# Script to manually start Suricata after network is ready
 mkdir -p /var/log/suricata
 touch /var/log/suricata/fast.log
 rm -f /var/run/suricata.pid || true
-
-# Start Suricata in background (Daemon mode)
 suricata -i eth1 --set output.syslog.enabled=yes --set output.syslog.address=192.168.30.10 --set output.syslog.port=514 -D
 EOF
 chmod +x images/ids/startup_ids.sh
@@ -129,7 +115,6 @@ input(type="imudp" port="514")
 EOF
 
 echo "--- 2. BUILDING IMAGES ---"
-# Use standard build to avoid WSL/BuildX context issues
 sudo docker compose -f docker-compose.build.yaml build
 
 echo "--- 3. DEPLOYING TOPOLOGY ---"
@@ -137,36 +122,44 @@ sudo containerlab deploy --topo dmz_topology.yaml
 
 echo "--- 4. CONFIGURING NETWORK (IPs & Routes) ---"
 
-# Helper function to execute commands inside containers
 clab_exec() {
     CONTAINER=clab-dmz-project-sun-$1
     echo "Configuring $1..."
-    # We use -d (detach) for background services, but here we wait for ip commands
     sudo docker exec "$CONTAINER" /bin/sh -c "$2"
 }
 
-# --- Edge Router ---
-clab_exec edge-router "ip addr add 192.168.10.1/24 dev eth2"
+# --- EDGE ROUTER ---
+# eth1 -> Firewall (192.168.10.x)
+clab_exec edge-router "ip addr add 192.168.10.1/24 dev eth1"
+# eth2 -> Internet/Attacker (NEW SUBNET: 172.16.1.x)
+clab_exec edge-router "ip addr add 172.16.1.1/24 dev eth2"
+# Routes
 clab_exec edge-router "ip route add 192.168.20.0/24 via 192.168.10.2"
 clab_exec edge-router "ip route add 192.168.30.0/24 via 192.168.10.2"
 clab_exec edge-router "ip route add 192.168.40.0/24 via 192.168.10.2"
 clab_exec edge-router "sysctl -w net.ipv4.ip_forward=1"
 
-# --- Firewall ---
+# --- FIREWALL ---
 clab_exec firewall-in "ip addr add 192.168.10.2/24 dev eth1"
 clab_exec firewall-in "ip addr add 192.168.20.1/24 dev eth2"
 clab_exec firewall-in "ip addr add 192.168.30.1/24 dev eth3"
 clab_exec firewall-in "sysctl -w net.ipv4.ip_forward=1"
+# FIX: Delete default route before adding new one to prevent crash
+clab_exec firewall-in "ip route del default || true"
+clab_exec firewall-in "ip route add default via 192.168.10.1"
 
 # --- DMZ Components ---
 clab_exec reverse-proxy-waf "ip addr add 192.168.20.10/24 dev eth1"
 clab_exec reverse-proxy-waf "ip addr add 192.168.20.11/24 dev eth2"
+clab_exec reverse-proxy-waf "ip route del default || true"
 clab_exec reverse-proxy-waf "ip route add default via 192.168.20.2"
 
 clab_exec webserver "ip addr add 192.168.20.20/24 dev eth1"
+clab_exec webserver "ip route del default || true"
 clab_exec webserver "ip route add default via 192.168.20.2"
 
 clab_exec ids-dmz "ip addr add 192.168.20.30/24 dev eth1"
+clab_exec ids-dmz "ip route del default || true"
 clab_exec ids-dmz "ip route add default via 192.168.20.2"
 
 # --- Internal Router ---
@@ -174,35 +167,36 @@ clab_exec internal-router "ip addr add 192.168.20.2/24 dev eth1"
 clab_exec internal-router "ip addr add 192.168.30.2/24 dev eth2"
 clab_exec internal-router "ip addr add 192.168.40.1/24 dev eth3"
 clab_exec internal-router "sysctl -w net.ipv4.ip_forward=1"
+clab_exec internal-router "ip route del default || true"
+clab_exec internal-router "ip route add default via 192.168.20.1"
 
-# --- Endpoints ---
+# --- ENDPOINTS ---
+# 1. Attacker (172.16.1.x)
+clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1"
+clab_exec attacker-internet "ip route del default || true"
+clab_exec attacker-internet "ip route add default via 172.16.1.1"
+
+# 2. Client Internal
+clab_exec client-internal "ip addr add 192.168.40.10/24 dev eth1"
+clab_exec client-internal "ip route del default || true"
 clab_exec client-internal "ip route add default via 192.168.40.1"
+
+# 3. SIEM
+clab_exec siem-backend "ip addr add 192.168.30.10/24 dev eth1"
+clab_exec siem-backend "ip route del default || true"
 clab_exec siem-backend "ip route add default via 192.168.30.2"
-clab_exec attacker-internet "ip route add default via 192.168.10.1"
 
-echo "--- 5. STARTING APPLICATION SERVICES ---"
-# Now that network interfaces exist, we start the services manually.
-
-echo "Starting SIEM Rsyslog..."
+echo "--- 5. STARTING SERVICES ---"
 sudo docker exec -d clab-dmz-project-sun-siem-backend rsyslogd -n
-
-echo "Starting WAF Nginx..."
 sudo docker exec -d clab-dmz-project-sun-reverse-proxy-waf nginx
-
-echo "Starting IDS Suricata..."
 sudo docker exec clab-dmz-project-sun-ids-dmz /usr/local/bin/startup_ids.sh
 
-echo "--- 6. APPLYING FIREWALL RULES ---"
-# Reset Rules
-clab_exec firewall-in "iptables -F && iptables -t nat -F"
+echo "--- 6. FIREWALL RULES ---"
 clab_exec firewall-in "iptables -P FORWARD DROP"
-
-# Allow Established
+clab_exec firewall-in "iptables -F && iptables -t nat -F"
 clab_exec firewall-in "iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT"
-
-# Allow HTTP/HTTPS from Internet to WAF
 clab_exec firewall-in "iptables -A FORWARD -p tcp -d 192.168.20.10 --dport 80 -j ACCEPT"
 clab_exec firewall-in "iptables -A FORWARD -p tcp -d 192.168.20.10 --dport 443 -j ACCEPT"
+clab_exec firewall-in "iptables -A FORWARD -s 192.168.40.0/24 -d 192.168.30.0/24 -j ACCEPT"
 
-echo "--- DEPLOYMENT SUCCESSFUL ---"
-echo "Lab is ready. You can now test connectivity."
+echo "--- READY ---"
