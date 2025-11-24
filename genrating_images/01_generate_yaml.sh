@@ -1,0 +1,51 @@
+#!/bin/bash
+set -e
+
+echo "--- 1. GENERATING TOPOLOGY FILE ---"
+cat > ../dmz_topology.yaml <<EOF
+name: dmz-project-sun
+topology:
+  nodes:
+    attacker-internet:
+      kind: linux
+      image: attacker:latest
+    edge-router:
+      kind: linux
+      image: frrouting/frr:latest
+    firewall-in:
+      kind: linux
+      image: firewall:latest
+    
+    reverse-proxy-waf:
+      kind: linux
+      image: waf:latest
+      memory: 512Mb
+
+    internal-router:
+      kind: linux
+      image: frrouting/frr:latest
+    webserver:
+      kind: linux
+      image: webserver:latest
+    ids-dmz:
+      kind: linux
+      image: ids:latest
+    siem-backend:
+      kind: linux
+      image: siem:latest
+    client-internal:
+      kind: linux
+      image: attacker:latest
+
+  links:
+    - endpoints: ["attacker-internet:eth1", "edge-router:eth2"]
+    - endpoints: ["edge-router:eth1", "firewall-in:eth1"]
+    - endpoints: ["firewall-in:eth2", "reverse-proxy-waf:eth1"]
+    - endpoints: ["firewall-in:eth3", "internal-router:eth1"]
+    - endpoints: ["internal-router:eth2", "siem-backend:eth1"]
+    - endpoints: ["internal-router:eth3", "client-internal:eth1"]
+    - endpoints: ["internal-router:eth5", "webserver:eth1"]
+    - endpoints: ["internal-router:eth7", "ids-dmz:eth1"]
+EOF
+
+echo "Success"

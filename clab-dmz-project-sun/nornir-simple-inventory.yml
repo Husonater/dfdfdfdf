@@ -3,7 +3,7 @@ attacker-internet:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.3
+    hostname: 172.20.20.8
 client-internal:
     username: 
     password: 
@@ -18,29 +18,29 @@ firewall-in:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.7
+    hostname: 172.20.20.2
 ids-dmz:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.7
 internal-router:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.4
+    hostname: 172.20.20.3
 reverse-proxy-waf:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.10
 siem-backend:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.8
+    hostname: 172.20.20.4
 webserver:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.10
+    hostname: 172.20.20.5
