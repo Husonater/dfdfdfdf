@@ -139,8 +139,9 @@ fi
 check_waf_status "attacker-internet" "http://192.168.20.10/?id=1%27%20OR%20%271%27=%271" "403" "Blocking SQL Injection (Union Based)"
 
 # 2. Path Traversal
-# Needs --path-as-is (handled in function now)
-check_waf_status "attacker-internet" "http://192.168.20.10/../../etc/passwd" "403" "Blocking Path Traversal"
+# Änderung: Wir greifen über einen Parameter an (?f=...), damit Nginx nicht sofort 400 wirft,
+# sondern die WAF den String "../.." im Argument erkennt und 403 blockt.
+check_waf_status "attacker-internet" "http://192.168.20.10/?f=../../etc/passwd" "403" "Blocking Path Traversal"
 
 # 3. XSS (Cross Site Scripting)
 # Raw: <script> -> Enc: %3Cscript%3E

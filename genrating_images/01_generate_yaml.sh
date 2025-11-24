@@ -2,7 +2,7 @@
 set -e
 
 echo "--- 1. GENERATING TOPOLOGY ---"
-cat > dmz_topology.yaml <<EOF
+cat > ../dmz_topology.yaml <<EOF
 name: dmz-project-sun
 topology:
   nodes:

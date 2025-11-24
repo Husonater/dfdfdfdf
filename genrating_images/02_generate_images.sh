@@ -31,25 +31,26 @@ RUN touch /var/log/siem_logs/suricata_alerts.log && chmod 666 /var/log/siem_logs
 CMD ["sleep", "infinity"]
 EOF
 
-# 4. WAF (HARDENED & ROOT FIX)
-cat > ../images/waf/Dockerfile <<EOF
-FROM owasp/modsecurity-crs:nginx-alpine
-USER root
-RUN apk update && apk add --no-cache iproute2 bash curl net-tools
+cat > ../images/waf/modsecurity.conf <<EOF
+SecRuleEngine On
+SecRequestBodyAccess On
+SecResponseBodyAccess Off
+SecAuditEngine Off
+SecDebugLogLevel 0
 
-# Logs & Permissions
-RUN mkdir -p /var/log/nginx && \
-    ln -sf /dev/stdout /var/log/nginx/access.log && \
-    ln -sf /dev/stderr /var/log/nginx/error.log && \
-    chmod -R 777 /var/log/nginx /etc/nginx /var/run
+# --- MANUAL SECURITY RULES ---
 
-# Copy Configs
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY modsecurity.conf /etc/nginx/modsecurity.d/modsecurity.conf
+# 1. SQL Injection
+SecRule ARGS "1' OR '1'='1" "id:1001,phase:2,log,deny,status:403,msg:'SQL Injection Blocked'"
 
-# Prevent Auto-Start (Manual Control)
-ENTRYPOINT []
-CMD ["sleep", "infinity"]
+# 2. Path Traversal (Schaut auch in Parameter ARGS, nicht nur URI)
+SecRule REQUEST_URI|ARGS "\.\./" "id:1002,phase:2,log,deny,status:403,msg:'Path Traversal Blocked'"
+
+# 3. XSS
+SecRule ARGS|ARGS_NAMES|REQUEST_COOKIES|REQUEST_COOKIES_NAMES "<script>" "id:1003,phase:2,log,deny,status:403,msg:'XSS Blocked'"
+
+# 4. Shell Injection (ERWEITERT: Blockiert jetzt auch 'cat /etc' und ';')
+SecRule ARGS "cmd=|/bin/sh|/bin/bash|cat /etc|;cat" "id:1004,phase:2,log,deny,status:403,msg:'Shell Injection Blocked'"
 EOF
 
 # 5. WEBSERVER

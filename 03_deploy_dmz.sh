@@ -43,6 +43,11 @@ clab_exec internal-router "ip addr add 192.168.25.1/24 dev eth5"
 clab_exec internal-router "ip addr add 192.168.22.1/24 dev eth7"
 clab_exec internal-router "ip route del default || true"
 clab_exec internal-router "ip route add default via 192.168.30.1" 
+# Verhindert, dass der Client (VLAN 40) direkt auf den Webserver (VLAN 25) zugreift.
+# Der Traffic muss über die Firewall (Gateway) laufen, aber da sie am gleichen Router hängen,
+# müssen wir den direkten "Kurzschluss" hier verbieten.
+clab_exec internal-router "iptables -A FORWARD -s 192.168.40.0/24 -d 192.168.25.0/24 -j DROP"
+# ------------------------------------------------
 
 clab_exec reverse-proxy-waf "ip addr add 192.168.20.10/24 dev eth1"
 clab_exec reverse-proxy-waf "ip route del default || true"
