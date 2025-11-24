@@ -2,14 +2,14 @@
 set -e
 
 # --------------------------------------------------------
-# DMZ Deployment Script (STABLE + MODULE FIX)
+# DMZ Deployment (DEBUG MODE - MAX STABILITY)
 # --------------------------------------------------------
 
 echo "--- 0. CLEANUP ---"
 sudo containerlab destroy --topo dmz_topology.yaml --cleanup || true
 sudo docker rm -f $(sudo docker ps -a -q --filter "label=containerlab=dmz-project-sun") 2>/dev/null || true
 sudo docker network prune -f >/dev/null 2>&1
-sudo rm -rf images config || true
+sudo rm -rf images config waf_logs || true
 
 echo "--- 1. GENERATING TOPOLOGY FILE ---"
 cat > dmz_topology.yaml <<EOF
@@ -25,9 +25,12 @@ topology:
     firewall-in:
       kind: linux
       image: firewall:latest
+    
     reverse-proxy-waf:
       kind: linux
       image: waf:latest
+      memory: 512Mb
+
     internal-router:
       kind: linux
       image: frrouting/frr:latest
@@ -86,13 +89,13 @@ RUN touch /var/log/siem_logs/suricata_alerts.log && chmod 666 /var/log/siem_logs
 CMD ["sleep", "infinity"]
 EOF
 
-# 4. WAF (SLEEP STRATEGY)
+# 4. WAF (MANUAL CONTROL)
 cat > images/waf/Dockerfile <<EOF
 FROM owasp/modsecurity-crs:nginx-alpine
 USER root
 RUN apk update && apk add --no-cache iproute2 bash curl net-tools
 
-# Logs
+# Logs auf stdout
 RUN mkdir -p /var/log/nginx && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log
@@ -101,10 +104,10 @@ RUN mkdir -p /var/log/nginx && \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY modsecurity.conf /etc/nginx/modsecurity.d/modsecurity.conf
 
-# Permissions fixen
+# Permissions
 RUN chmod -R 777 /var/log/nginx /etc/nginx /var/run
 
-# CRITICAL: Entrypoint leeren & Sleep
+# Entrypoint leeren & Sleep -> KEIN AUTOSTART
 ENTRYPOINT []
 CMD ["sleep", "infinity"]
 EOF
@@ -126,12 +129,13 @@ EOF
 
 # --- CONFIG FILES ---
 
-# FIX: Explicit Load Module + Correct Config Structure
+# Nginx Config: MINIMAL & SAFE
 cat > images/waf/nginx.conf <<EOF
-# 1. Modul explizit laden (Der Pfad ist Standard für nginx-alpine Images)
 load_module /usr/lib/nginx/modules/ngx_http_modsecurity_module.so;
 
-worker_processes auto;
+# Run as root to avoid permission issues
+user root;
+worker_processes 1;
 error_log /dev/stderr warn;
 pid /var/run/nginx.pid;
 events { worker_connections 1024; }
@@ -143,16 +147,15 @@ http {
     sendfile on;
     keepalive_timeout 65;
 
-    # 2. ModSecurity Global aktivieren
+    # ModSecurity aktivieren
     modsecurity on;
-    # Hinweis: Wir laden hier KEINE Rules, nur im Location Block, um Duplikate zu vermeiden
     
     server {
         listen 80;
         server_name localhost;
         
         location / {
-            # 3. Rules laden (vermeidet "Duplicate Rule ID" Fehler)
+            # Rules laden
             modsecurity_rules_file /etc/nginx/modsecurity.d/modsecurity.conf;
             
             proxy_pass http://192.168.25.20;
@@ -164,16 +167,17 @@ http {
 }
 EOF
 
+# ModSecurity: SAFE MODE (No Audit Log, Custom Rule Only)
 cat > images/waf/modsecurity.conf <<EOF
 SecRuleEngine On
 SecRequestBodyAccess On
 SecResponseBodyAccess Off
-SecAuditEngine RelevantOnly
-SecAuditLog /var/log/modsec_audit.log
-SecDebugLog /var/log/modsec_debug.log
+
+# Audit Engine AUS = Kein Crash
+SecAuditEngine Off
 SecDebugLogLevel 0
 
-# Test-Regel für SQL Injection Check
+# UNSERE TEST REGEL (Blockt SQLi mit 403)
 SecRule ARGS "1' OR '1'='1" "id:1001,phase:2,log,deny,status:403,msg:'SQL Injection Test Blocked'"
 EOF
 
@@ -225,6 +229,7 @@ clab_exec edge-router "ip route add 192.168.35.0/24 via 192.168.10.2"
 clab_exec edge-router "ip route add 192.168.40.0/24 via 192.168.10.2"
 
 # --- DMZ WAF ---
+# Jetzt ist er sicher da (weil sleep infinity)
 clab_exec reverse-proxy-waf "ip addr add 192.168.20.10/24 dev eth1"
 clab_exec reverse-proxy-waf "ip route del default || true"
 clab_exec reverse-proxy-waf "ip route add default via 192.168.20.1"
@@ -274,16 +279,16 @@ echo "--- 7. STARTING SERVICES (MANUAL) ---"
 sudo docker exec -d clab-dmz-project-sun-siem-backend rsyslogd -n
 sudo docker exec clab-dmz-project-sun-ids-dmz /usr/local/bin/startup_ids.sh
 
-echo "Starting WAF Nginx..."
-# Start Nginx in background
+echo "Starting WAF Nginx (Manual)..."
 sudo docker exec -d clab-dmz-project-sun-reverse-proxy-waf nginx -g "daemon off;" 
-sleep 2
+sleep 3
 
 # Check
+echo "Checking WAF Process:"
 if sudo docker exec clab-dmz-project-sun-reverse-proxy-waf ps aux | grep "nginx: master" > /dev/null; then
-    echo "WAF started successfully."
+    echo "✅ WAF started successfully."
 else
-    echo "ERROR: WAF failed to start. Logs:"
+    echo "❌ ERROR: WAF failed to start. LOGS:"
     sudo docker exec clab-dmz-project-sun-reverse-proxy-waf nginx -t || true
 fi
 

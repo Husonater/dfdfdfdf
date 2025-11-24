@@ -10,9 +10,12 @@ topology:
     firewall-in:
       kind: linux
       image: firewall:latest
+    
     reverse-proxy-waf:
       kind: linux
       image: waf:latest
+      memory: 512Mb
+
     internal-router:
       kind: linux
       image: frrouting/frr:latest
