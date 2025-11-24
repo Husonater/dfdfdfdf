@@ -1,8 +1,3 @@
-#!/bin/bash
-set -e
-
-echo "--- 1. GENERATING TOPOLOGY ---"
-cat > dmz_topology.yaml <<EOF
 name: dmz-project-sun
 topology:
   nodes:
@@ -15,10 +10,12 @@ topology:
     firewall-in:
       kind: linux
       image: firewall:latest
+    
     reverse-proxy-waf:
       kind: linux
       image: waf:latest
       memory: 512Mb
+
     internal-router:
       kind: linux
       image: frrouting/frr:latest
@@ -44,6 +41,3 @@ topology:
     - endpoints: ["internal-router:eth3", "client-internal:eth1"]
     - endpoints: ["internal-router:eth5", "webserver:eth1"]
     - endpoints: ["internal-router:eth7", "ids-dmz:eth1"]
-EOF
-
-echo "Success"

@@ -31,25 +31,23 @@ RUN touch /var/log/siem_logs/suricata_alerts.log && chmod 666 /var/log/siem_logs
 CMD ["sleep", "infinity"]
 EOF
 
-# 4. WAF (MANUAL CONTROL)
+# 4. WAF (HARDENED & ROOT FIX)
 cat > ../images/waf/Dockerfile <<EOF
 FROM owasp/modsecurity-crs:nginx-alpine
 USER root
 RUN apk update && apk add --no-cache iproute2 bash curl net-tools
 
-# Logs auf stdout
+# Logs & Permissions
 RUN mkdir -p /var/log/nginx && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
-    ln -sf /dev/stderr /var/log/nginx/error.log
+    ln -sf /dev/stderr /var/log/nginx/error.log && \
+    chmod -R 777 /var/log/nginx /etc/nginx /var/run
 
-# Configs direkt kopieren
+# Copy Configs
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY modsecurity.conf /etc/nginx/modsecurity.d/modsecurity.conf
 
-# Permissions
-RUN chmod -R 777 /var/log/nginx /etc/nginx /var/run
-
-# Entrypoint leeren & Sleep -> KEIN AUTOSTART
+# Prevent Auto-Start (Manual Control)
 ENTRYPOINT []
 CMD ["sleep", "infinity"]
 EOF
@@ -71,12 +69,10 @@ EOF
 
 # --- CONFIG FILES ---
 
-# Nginx Config: MINIMAL & SAFE
+# NGINX (Run as root = No Permission Crashes)
 cat > ../images/waf/nginx.conf <<EOF
 load_module /usr/lib/nginx/modules/ngx_http_modsecurity_module.so;
-
-# Run as root to avoid permission issues
-user root;
+user root; 
 worker_processes 1;
 error_log /dev/stderr warn;
 pid /var/run/nginx.pid;
@@ -88,18 +84,13 @@ http {
     access_log /dev/stdout;
     sendfile on;
     keepalive_timeout 65;
-
-    # ModSecurity aktivieren
     modsecurity on;
     
     server {
         listen 80;
         server_name localhost;
-        
         location / {
-            # Rules laden
             modsecurity_rules_file /etc/nginx/modsecurity.d/modsecurity.conf;
-            
             proxy_pass http://192.168.25.20;
             proxy_set_header Host \$host;
             proxy_set_header X-Real-IP \$remote_addr;
@@ -109,18 +100,28 @@ http {
 }
 EOF
 
-# ModSecurity: SAFE MODE (No Audit Log, Custom Rule Only)
+# MODSECURITY (NO AUDIT = NO CRASH / ALL RULES ADDED)
 cat > ../images/waf/modsecurity.conf <<EOF
 SecRuleEngine On
 SecRequestBodyAccess On
 SecResponseBodyAccess Off
-
-# Audit Engine AUS = Kein Crash
+# CRITICAL: Turn off Audit to prevent Disk I/O crashes
 SecAuditEngine Off
 SecDebugLogLevel 0
 
-# UNSERE TEST REGEL (Blockt SQLi mit 403)
-SecRule ARGS "1' OR '1'='1" "id:1001,phase:2,log,deny,status:403,msg:'SQL Injection Test Blocked'"
+# --- MANUAL SECURITY RULES ---
+
+# 1. SQL Injection (Block ' OR '1'='1)
+SecRule ARGS "1' OR '1'='1" "id:1001,phase:2,log,deny,status:403,msg:'SQL Injection Blocked'"
+
+# 2. Path Traversal (Block ../..)
+SecRule REQUEST_URI "\.\./" "id:1002,phase:1,log,deny,status:403,msg:'Path Traversal Blocked'"
+
+# 3. XSS (Block <script>)
+SecRule ARGS|ARGS_NAMES|REQUEST_COOKIES|REQUEST_COOKIES_NAMES "<script>" "id:1003,phase:2,log,deny,status:403,msg:'XSS Blocked'"
+
+# 4. Shell Injection (Block cmd= or /bin/sh)
+SecRule ARGS "cmd=|/bin/sh|/bin/bash" "id:1004,phase:2,log,deny,status:403,msg:'Shell Injection Blocked'"
 EOF
 
 cat > ../images/ids/startup_ids.sh <<'EOF'
