@@ -1,14 +1,27 @@
-FROM owasp/modsecurity-crs:nginx-alpine
-USER root
-RUN apk update && apk add --no-cache iproute2 bash curl net-tools
+FROM debian:bookworm-slim
 
-# Logs & Permissions
-RUN mkdir -p /var/log/nginx &&     ln -sf /dev/stdout /var/log/nginx/access.log &&     ln -sf /dev/stderr /var/log/nginx/error.log &&     chmod -R 777 /var/log/nginx /etc/nginx /var/run
+# 1. Nginx und ModSecurity Module installieren
+# WICHTIG: Wir installieren 'libnginx-mod-http-modsecurity', das bringt Nginx und das Modul mit.
+RUN apt-get update && apt-get install -y \
+    nginx \
+    libnginx-mod-http-modsecurity \
+    iproute2 \
+    iputils-ping \
+    curl \
+    procps \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy Configs
+# 2. Ordner für ModSecurity Regeln erstellen
+RUN mkdir -p /etc/nginx/modsecurity.d
+
+# 3. Konfigurationen kopieren
+# Die Dateien müssen lokal im Ordner ./images/waf/ liegen!
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY modsecurity.conf /etc/nginx/modsecurity.d/modsecurity.conf
 
-# Prevent Auto-Start (Manual Control)
-ENTRYPOINT []
-CMD ["sleep", "infinity"]
+# 4. Logs umleiten (für Docker Logs)
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+
+# 5. Startbefehl
+CMD ["nginx", "-g", "daemon off;"]

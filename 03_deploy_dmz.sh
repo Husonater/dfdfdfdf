@@ -6,10 +6,10 @@ set -e
 # --------------------------------------------------------
 
 echo "--- 3. BUILDING IMAGES ---"
-sudo docker compose -f docker-compose.build.yaml build
+sudo docker compose -f docker-compose.yml build
 
 echo "--- 4. DEPLOYING TOPOLOGY ---"
-sudo containerlab deploy --topo dmz_topology.yaml
+sudo containerlab deploy --topo dmz-project-sun.clab.yml
 
 echo "--- 5. WAITING FOR STABILIZATION (15s) ---"
 sleep 15
