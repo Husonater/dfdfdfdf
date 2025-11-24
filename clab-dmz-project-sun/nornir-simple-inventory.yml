@@ -3,12 +3,12 @@ attacker-internet:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.10
 client-internal:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.10
+    hostname: 172.20.20.2
 edge-router:
     username: 
     password: 
@@ -18,17 +18,17 @@ firewall-in:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.8
+    hostname: 172.20.20.5
 ids-dmz:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.7
 internal-router:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.7
+    hostname: 172.20.20.6
 reverse-proxy-waf:
     username: 
     password: 
@@ -43,4 +43,4 @@ webserver:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
+    hostname: 172.20.20.8

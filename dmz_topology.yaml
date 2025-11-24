@@ -1,64 +1,40 @@
 name: dmz-project-sun
-
 topology:
   nodes:
-    # --- NETZWERK-KOMPONENTEN ---
+    attacker-internet:
+      kind: linux
+      image: attacker:latest
     edge-router:
       kind: linux
       image: frrouting/frr:latest
     firewall-in:
       kind: linux
       image: firewall:latest
-    internal-router:
-      kind: linux
-      image: frrouting/frr:latest
-    # --- DMZ-KOMPONENTEN (Lokale Images korrigiert) ---
     reverse-proxy-waf:
       kind: linux
       image: waf:latest
-    ids-dmz:
+    internal-router:
       kind: linux
-      image: ids:latest
+      image: frrouting/frr:latest
     webserver:
       kind: linux
       image: webserver:latest
-    # --- INTERNE/EXTERNE KOMPONENTEN ---
-    attacker-internet:
+    ids-dmz:
       kind: linux
-      image: attacker:latest
-    client-internal:
-      kind: linux
-      image: attacker:latest
+      image: ids:latest
     siem-backend:
       kind: linux
       image: siem:latest
-      
+    client-internal:
+      kind: linux
+      image: attacker:latest
+
   links:
-    # ----------------------------------------------------
-    # 1. INTERNET NETZ (192.168.10.0/24)
-    # ----------------------------------------------------
     - endpoints: ["attacker-internet:eth1", "edge-router:eth2"]
     - endpoints: ["edge-router:eth1", "firewall-in:eth1"]
-
-    # ----------------------------------------------------
-    # 2. DMZ NETZ (192.168.20.0/24) - Eindeutige Ports!
-    # ----------------------------------------------------
-    - endpoints: ["firewall-in:eth2", "reverse-proxy-waf:eth1"] 
-    - endpoints: ["internal-router:eth4", "reverse-proxy-waf:eth2"]
-    - endpoints: ["internal-router:eth5", "webserver:eth1"] 
-    - endpoints: ["internal-router:eth7", "ids-dmz:eth1"]
-
-    # ----------------------------------------------------
-    # 3. FIREWALL ZUM INTERNEN ROUTER (192.168.30.0/24)
-    # ----------------------------------------------------
+    - endpoints: ["firewall-in:eth2", "reverse-proxy-waf:eth1"]
     - endpoints: ["firewall-in:eth3", "internal-router:eth1"]
-
-    # ----------------------------------------------------
-    # 4. BACKEND NETZ (192.168.30.0/24)
-    # ----------------------------------------------------
     - endpoints: ["internal-router:eth2", "siem-backend:eth1"]
-
-    # ----------------------------------------------------
-    # 5. CLIENT NETZ (192.168.40.0/24)
-    # ----------------------------------------------------
     - endpoints: ["internal-router:eth3", "client-internal:eth1"]
+    - endpoints: ["internal-router:eth5", "webserver:eth1"]
+    - endpoints: ["internal-router:eth7", "ids-dmz:eth1"]
