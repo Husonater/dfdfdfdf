@@ -37,5 +37,5 @@ topology:
     - endpoints: ["firewall-in:eth3", "internal-router:eth1"]
     - endpoints: ["internal-router:eth2", "siem-backend:eth1"]
     - endpoints: ["internal-router:eth3", "client-internal:eth1"]
-    - endpoints: ["internal-router:eth5", "webserver:eth1"]
-    - endpoints: ["internal-router:eth7", "ids-dmz:eth1"]
+    - endpoints: ["firewall-in:eth4", "webserver:eth1"]
+    - endpoints: ["firewall-in:eth5", "ids-dmz:eth1"]
