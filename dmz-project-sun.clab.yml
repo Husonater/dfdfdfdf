@@ -26,17 +26,52 @@ topology:
     siem-backend:
       kind: linux
       image: siem:latest
+      binds:
+        - ./logs/siem:/var/log/siem_logs:rw
+    db-backend:
+      kind: linux
+      image: db:latest
     client-internal:
       kind: linux
       image: attacker:latest
 
+    firewall-internal:
+      kind: linux
+      image: firewall:latest
+
+    siem-overlay:
+      kind: linux
+      image: siem-overlay:latest
+      binds:
+        - ./logs/siem:/var/log/siem_logs:rw
+        - ./dmz-project-sun.clab.yml:/app/topology.yml:ro
+      ports:
+        - 9090:5000
+
   links:
+    # Internet -> Edge
     - endpoints: ["attacker-internet:eth1", "edge-router:eth2"]
+    
+    # Edge -> DMZ Perimeter
     - endpoints: ["edge-router:eth1", "firewall-in:eth1"]
+    
+    # Edge -> IDS (Monitoring)
+    - endpoints: ["edge-router:eth3", "ids-dmz:eth1"]
+
+    # DMZ Segment (FW -> WAF -> Web)
     - endpoints: ["firewall-in:eth2", "reverse-proxy-waf:eth1"]
+    - endpoints: ["reverse-proxy-waf:eth2", "webserver:eth1"]
+    
+    # DMZ -> Internal Router
     - endpoints: ["firewall-in:eth3", "internal-router:eth1"]
+    
+    # Internal Router -> SIEM
     - endpoints: ["internal-router:eth2", "siem-backend:eth1"]
-    - endpoints: ["internal-router:eth3", "client-internal:eth1"]
-    - endpoints: ["firewall-in:eth4", "webserver:eth1"]
-    - endpoints: ["firewall-in:eth5", "ids-dmz:eth1"]
+    
+    # Internal Router -> Internal FW
+    - endpoints: ["internal-router:eth3", "firewall-internal:eth1"]
+    
+    # Internal FW -> Segments
+    - endpoints: ["firewall-internal:eth2", "client-internal:eth1"]
+    - endpoints: ["firewall-internal:eth3", "db-backend:eth1"]
    

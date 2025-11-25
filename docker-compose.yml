@@ -49,3 +49,19 @@ services:
       dockerfile: Dockerfile
     image: firewall:latest
     container_name: build_firewall
+
+  # 7. Database Image
+  db:
+    build:
+      context: ./images/db
+      dockerfile: Dockerfile
+    image: db:latest
+    container_name: build_db
+
+  # 8. SIEM Overlay
+  siem-overlay:
+    build:
+      context: ./images/siem_overlay
+      dockerfile: Dockerfile
+    image: siem-overlay:latest
+    container_name: build_siem_overlay

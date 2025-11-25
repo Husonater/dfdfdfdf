@@ -7,12 +7,35 @@ mkdir -p /var/log/suricata
 touch /var/log/suricata/fast.log
 rm -f /var/run/suricata.pid || true
 
+# 1.5 Silent Mode (Prevent Kernel Responses)
+# Drop all incoming packets on eth1 so the kernel doesn't respond (RST/ICMP).
+# Suricata sees them via AF_PACKET before iptables DROP.
+# 1.5 Silent Mode (Prevent Kernel Responses)
+# Drop all incoming IP packets on eth1 so the kernel doesn't respond (RST/ICMP/Routing).
+# Suricata sees them via AF_PACKET before iptables raw table DROP (or concurrently).
+# Note: ARP is not affected by iptables IP chains.
+iptables -t raw -I PREROUTING -i eth1 -j DROP
+
+# 1.6 Add Custom Rule for Audit
+# Ensure we detect the specific test case even if default rules change.
+echo 'alert http any any -> any any (msg:"ET WEB_SERVER CMD.EXE Access"; content:"cmd.exe"; http_uri; sid:1000001; rev:1;)' >> /var/lib/suricata/rules/suricata.rules
+
+# 1.7 Configure and Start Rsyslog (Forward to SIEM)
+echo "Configuring Rsyslog..."
+mkdir -p /var/lib/rsyslog
+echo 'global(workDirectory="/var/lib/rsyslog")' > /etc/rsyslog.conf
+echo 'module(load="imfile")' >> /etc/rsyslog.conf
+echo 'input(type="imfile" File="/var/log/suricata/fast.log" Tag="suricata")' >> /etc/rsyslog.conf
+echo '*.* @192.168.35.10:514' >> /etc/rsyslog.conf
+rsyslogd
+
 # 2. Suricata starten
 echo "Starting Suricata Engine..."
 
 # -k none: WICHTIG für Mirroring (ignoriert Checksummen-Fehler)
 # -D: Daemon Mode (Hintergrund)
 # eth1: Das Interface im neuen 61er Netz
-suricata -i eth1 -k none --set output.syslog.enabled=yes --set output.syslog.address=192.168.35.10 --set output.syslog.port=514 -D
+# output.syslog.enabled=yes removed, using fast.log + imfile
+suricata -i eth1 -k none -D
 
 echo "✅ IDS started successfully."

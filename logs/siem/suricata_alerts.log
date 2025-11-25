@@ -1,0 +1,881 @@
+2025-11-25T19:46:31.724751+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth3445dbb) entered disabled state
+2025-11-25T19:46:31.724950+00:00 siem-backend kernel: veth3445dbb (unregistering): left allmulticast mode
+2025-11-25T19:46:31.724951+00:00 siem-backend kernel: veth3445dbb (unregistering): left promiscuous mode
+2025-11-25T19:46:31.724951+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth3445dbb) entered disabled state
+2025-11-25T19:46:32.371679+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:46:44.811272+00:00 siem-backend kernel: br-5bd8de29f1d8: port 6(veth7bfcff3) entered blocking state
+2025-11-25T19:46:44.811471+00:00 siem-backend kernel: br-5bd8de29f1d8: port 6(veth7bfcff3) entered disabled state
+2025-11-25T19:46:44.811475+00:00 siem-backend kernel: veth7bfcff3: entered allmulticast mode
+2025-11-25T19:46:44.811475+00:00 siem-backend kernel: veth7bfcff3: entered promiscuous mode
+2025-11-25T19:46:44.811480+00:00 siem-backend kernel: eth0: renamed from veth8e7ecc3
+2025-11-25T19:46:45.032813+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth5398422) entered disabled state
+2025-11-25T19:46:45.032835+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(vethf953608) entered disabled state
+2025-11-25T19:46:45.032844+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth3a5f698) entered disabled state
+2025-11-25T19:46:45.032845+00:00 siem-backend kernel: br-5bd8de29f1d8: port 6(veth7bfcff3) entered blocking state
+2025-11-25T19:46:45.032846+00:00 siem-backend kernel: br-5bd8de29f1d8: port 6(veth7bfcff3) entered forwarding state
+2025-11-25T19:46:45.100654+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth5398422) entered forwarding state
+2025-11-25T19:46:45.112641+00:00 siem-backend kernel: eth0: renamed from vethe43aa03
+2025-11-25T19:46:45.132863+00:00 siem-backend kernel: eth0: renamed from vethcfefd33
+2025-11-25T19:46:45.160709+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(vethf953608) entered blocking state
+2025-11-25T19:46:45.172802+00:00 siem-backend kernel: eth0: renamed from vethb20b7b5
+2025-11-25T19:46:45.201548+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth17798ee) entered forwarding state
+2025-11-25T19:46:45.398968+00:00 siem-backend kernel: eth1: renamed from clab-9a735e23
+2025-11-25T19:46:45.476870+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3547d3c) entered blocking state
+2025-11-25T19:46:45.476910+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3547d3c) entered forwarding state
+2025-11-25T19:46:45.520706+00:00 siem-backend kernel: eth2: renamed from clab-2a708938
+2025-11-25T19:46:45.544674+00:00 siem-backend kernel: eth1: renamed from clab-cb89fa6f
+2025-11-25T19:46:45.684646+00:00 siem-backend kernel: eth2: renamed from clab-a7aa4f2d
+2025-11-25T19:46:45.811834+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:46:46.652655+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3547d3c) entered disabled state
+2025-11-25T19:46:46.652674+00:00 siem-backend kernel: veth3547d3c (unregistering): left allmulticast mode
+2025-11-25T19:46:46.652675+00:00 siem-backend kernel: veth3547d3c (unregistering): left promiscuous mode
+2025-11-25T19:46:46.652675+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3547d3c) entered disabled state
+2025-11-25T19:47:01.796844+00:00 siem-backend kernel: eth2: renamed from clab-119020ba
+2025-11-25T19:47:01.817266+00:00 siem-backend kernel: br-5bd8de29f1d8: port 2(veth1d0a195) entered disabled state
+2025-11-25T19:47:01.817297+00:00 siem-backend kernel: veth1d0a195 (unregistering): left allmulticast mode
+2025-11-25T19:47:01.817298+00:00 siem-backend kernel: veth1d0a195 (unregistering): left promiscuous mode
+2025-11-25T19:47:01.817298+00:00 siem-backend kernel: br-5bd8de29f1d8: port 2(veth1d0a195) entered disabled state
+2025-11-25T19:47:01.924830+00:00 siem-backend kernel: eth1: renamed from clab-b43e92d7
+2025-11-25T19:47:01.944797+00:00 siem-backend kernel: eth6: renamed from clab-5d6fbed9
+2025-11-25T19:47:02.742089+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:47:14.564006+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered blocking state
+2025-11-25T19:47:14.564268+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered disabled state
+2025-11-25T19:47:14.564285+00:00 siem-backend kernel: veth65dbc69: entered allmulticast mode
+2025-11-25T19:47:14.564286+00:00 siem-backend kernel: veth65dbc69: entered promiscuous mode
+2025-11-25T19:47:14.564287+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered blocking state
+2025-11-25T19:47:14.564287+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered forwarding state
+2025-11-25T19:47:14.564287+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered disabled state
+2025-11-25T19:47:14.564291+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(vethd748d53) entered blocking state
+2025-11-25T19:47:14.564293+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(vethd748d53) entered forwarding state
+2025-11-25T19:47:14.692792+00:00 siem-backend kernel: eth0: renamed from veth8154ab4
+2025-11-25T19:47:14.708739+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth748f23c) entered blocking state
+2025-11-25T19:47:14.708774+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth748f23c) entered forwarding state
+2025-11-25T19:47:14.708775+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered blocking state
+2025-11-25T19:47:14.708775+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth65dbc69) entered forwarding state
+2025-11-25T19:47:14.740741+00:00 siem-backend kernel: eth1: renamed from clab-04d22e5b
+2025-11-25T19:47:14.788644+00:00 siem-backend kernel: eth2: renamed from clab-7394712e
+2025-11-25T19:47:14.920645+00:00 siem-backend kernel: eth1: renamed from clab-02938de6
+2025-11-25T19:47:14.992724+00:00 siem-backend kernel: eth3: renamed from clab-49d0a839
+2025-11-25T19:47:15.028744+00:00 siem-backend kernel: eth2: renamed from clab-7fa91424
+2025-11-25T19:47:15.112807+00:00 siem-backend kernel: eth3: renamed from clab-7affbce1
+2025-11-25T19:47:15.564749+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:49:35.328815+00:00 siem-backend kernel: eth0: renamed from veth95bf2ea
+2025-11-25T19:49:35.364792+00:00 siem-backend kernel: docker0: port 1(veth837e126) entered blocking state
+2025-11-25T19:49:38.568636+00:00 siem-backend kernel: docker0: port 1(veth837e126) entered disabled state
+2025-11-25T19:49:38.568654+00:00 siem-backend kernel: veth837e126 (unregistering): left allmulticast mode
+2025-11-25T19:49:38.568655+00:00 siem-backend kernel: veth837e126 (unregistering): left promiscuous mode
+2025-11-25T19:49:38.568655+00:00 siem-backend kernel: docker0: port 1(veth837e126) entered disabled state
+2025-11-25T19:49:50.921595+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered blocking state
+2025-11-25T19:49:50.921850+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered disabled state
+2025-11-25T19:49:50.921852+00:00 siem-backend kernel: veth6387c78: entered allmulticast mode
+2025-11-25T19:49:50.921853+00:00 siem-backend kernel: veth6387c78: entered promiscuous mode
+2025-11-25T19:49:50.921853+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered blocking state
+2025-11-25T19:49:50.921853+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered forwarding state
+2025-11-25T19:49:50.952732+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth952261c) entered disabled state
+2025-11-25T19:49:50.952773+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered disabled state
+2025-11-25T19:49:50.988809+00:00 siem-backend kernel: eth1: renamed from clab-1d676f62
+2025-11-25T19:49:51.036783+00:00 siem-backend kernel: eth1: renamed from clab-977ad851
+2025-11-25T19:49:51.080680+00:00 siem-backend kernel: eth0: renamed from veth1403c1c
+2025-11-25T19:49:51.204844+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth6387c78) entered blocking state
+2025-11-25T19:49:51.236783+00:00 siem-backend kernel: eth2: renamed from clab-086a6791
+2025-11-25T19:49:51.268687+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered blocking state
+2025-11-25T19:49:51.268705+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered disabled state
+2025-11-25T19:49:51.268706+00:00 siem-backend kernel: veth1a86528: entered allmulticast mode
+2025-11-25T19:49:51.268706+00:00 siem-backend kernel: veth1a86528: entered promiscuous mode
+2025-11-25T19:49:51.268707+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered blocking state
+2025-11-25T19:49:51.268707+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered forwarding state
+2025-11-25T19:49:51.412869+00:00 siem-backend kernel: eth2: renamed from clab-28a15094
+2025-11-25T19:49:51.472801+00:00 siem-backend kernel: eth3: renamed from clab-ec285494
+2025-11-25T19:49:51.612635+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered blocking state
+2025-11-25T19:49:51.612646+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth1a86528) entered forwarding state
+2025-11-25T19:49:51.644661+00:00 siem-backend kernel: eth1: renamed from clab-0c0b2d2f
+2025-11-25T19:49:51.760639+00:00 siem-backend kernel: eth0: renamed from veth408e03c
+2025-11-25T19:49:51.788645+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc444df6) entered blocking state
+2025-11-25T19:49:51.788663+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc444df6) entered forwarding state
+2025-11-25T19:49:51.820677+00:00 siem-backend kernel: eth1: renamed from clab-177138bd
+2025-11-25T19:49:51.921776+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:49:52.068760+00:00 siem-backend kernel: eth6: renamed from clab-2c1efd78
+2025-11-25T19:52:57.988860+00:00 siem-backend kernel: audit: type=1326 audit(1764100377.980:17): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=751916 comm="docker-buildx" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-buildx" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40ddce code=0x50000
+2025-11-25T19:53:06.204810+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethfc25997) entered blocking state
+2025-11-25T19:53:06.205085+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethfc25997) entered forwarding state
+2025-11-25T19:53:06.205090+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3b44db5) entered blocking state
+2025-11-25T19:53:06.205090+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth3b44db5) entered forwarding state
+2025-11-25T19:53:06.205090+00:00 siem-backend kernel: eth1: renamed from clab-8eeeb6f7
+2025-11-25T19:53:06.406129+00:00 siem-backend kernel: eth5: renamed from clab-4c5d410a
+2025-11-25T19:53:06.441013+00:00 siem-backend kernel: eth2: renamed from clab-53f5ba89
+2025-11-25T19:53:07.121710+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:55:42.920766+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T19:56:37.172664+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered blocking state
+2025-11-25T19:56:37.172690+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered disabled state
+2025-11-25T19:56:37.172691+00:00 siem-backend kernel: vethe591cd8: entered allmulticast mode
+2025-11-25T19:56:37.172691+00:00 siem-backend kernel: vethe591cd8: entered promiscuous mode
+2025-11-25T19:56:37.516760+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered blocking state
+2025-11-25T19:56:41.644709+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered disabled state
+2025-11-25T19:56:41.644773+00:00 siem-backend kernel: veth384f8ef: renamed from eth0
+2025-11-25T19:56:41.740872+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered disabled state
+2025-11-25T19:56:41.740903+00:00 siem-backend kernel: vethe591cd8 (unregistering): left allmulticast mode
+2025-11-25T19:56:41.740903+00:00 siem-backend kernel: vethe591cd8 (unregistering): left promiscuous mode
+2025-11-25T19:56:41.740904+00:00 siem-backend kernel: docker0: port 1(vethe591cd8) entered disabled state
+2025-11-25T19:56:57.989409+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(vethf213d66) entered blocking state
+2025-11-25T19:56:57.989989+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(vethf213d66) entered forwarding state
+2025-11-25T19:56:58.088749+00:00 siem-backend kernel: br-5bd8de29f1d8: port 6(veth14daec8) entered blocking state
+2025-11-25T19:56:58.144807+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth197af07) entered disabled state
+2025-11-25T19:56:58.184778+00:00 siem-backend kernel: eth1: renamed from clab-834a7ac7
+2025-11-25T19:56:58.304846+00:00 siem-backend kernel: eth1: renamed from clab-a61db307
+2025-11-25T19:56:58.340779+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth76ba1dc) entered disabled state
+2025-11-25T19:56:58.376945+00:00 siem-backend kernel: eth1: renamed from clab-17341258
+2025-11-25T19:56:58.412864+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc65b835) entered blocking state
+2025-11-25T19:56:58.412896+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc65b835) entered disabled state
+2025-11-25T19:56:58.412896+00:00 siem-backend kernel: vethc65b835: entered allmulticast mode
+2025-11-25T19:56:58.412897+00:00 siem-backend kernel: vethc65b835: entered promiscuous mode
+2025-11-25T19:56:58.412897+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc65b835) entered blocking state
+2025-11-25T19:56:58.412897+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc65b835) entered forwarding state
+2025-11-25T19:56:58.796821+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethc65b835) entered blocking state
+2025-11-25T19:56:58.840822+00:00 siem-backend kernel: eth1: renamed from clab-fe1be3e9
+2025-11-25T19:56:58.892823+00:00 siem-backend kernel: eth4: renamed from clab-1008cdc0
+2025-11-25T19:56:58.952862+00:00 siem-backend kernel: eth1: renamed from clab-11d7b205
+2025-11-25T19:56:58.990328+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:56:59.020776+00:00 siem-backend kernel: eth1: renamed from clab-3424ab61
+2025-11-25T19:56:59.088783+00:00 siem-backend kernel: eth5: renamed from clab-64f5182c
+2025-11-25T19:56:59.164781+00:00 siem-backend kernel: eth6: renamed from clab-b3d22f82
+2025-11-25T19:57:42.852912+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T19:58:54.204681+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth8bd5a8a) entered blocking state
+2025-11-25T19:58:54.204949+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth8bd5a8a) entered forwarding state
+2025-11-25T19:58:54.256833+00:00 siem-backend kernel: eth1: renamed from clab-0bba134c
+2025-11-25T19:58:55.203235+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T19:59:42.845326+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:03:05.604656+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth320da39) entered blocking state
+2025-11-25T20:03:05.605068+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth320da39) entered forwarding state
+2025-11-25T20:03:05.605110+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered blocking state
+2025-11-25T20:03:05.605112+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered disabled state
+2025-11-25T20:03:05.605112+00:00 siem-backend kernel: vethcce6f12: entered allmulticast mode
+2025-11-25T20:03:05.605113+00:00 siem-backend kernel: vethcce6f12: entered promiscuous mode
+2025-11-25T20:03:05.605113+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered blocking state
+2025-11-25T20:03:05.605117+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered forwarding state
+2025-11-25T20:03:05.605117+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered disabled state
+2025-11-25T20:03:05.605118+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth5583411) entered blocking state
+2025-11-25T20:03:05.605118+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth5583411) entered forwarding state
+2025-11-25T20:03:05.716853+00:00 siem-backend kernel: eth1: renamed from clab-ac348bc4
+2025-11-25T20:03:05.780720+00:00 siem-backend kernel: eth2: renamed from clab-cf5c9947
+2025-11-25T20:03:05.860791+00:00 siem-backend kernel: eth1: renamed from clab-75c0082f
+2025-11-25T20:03:05.936653+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethcce6f12) entered blocking state
+2025-11-25T20:03:05.960668+00:00 siem-backend kernel: eth1: renamed from clab-2ce11682
+2025-11-25T20:03:06.052829+00:00 siem-backend kernel: eth1: renamed from clab-f2c6386a
+2025-11-25T20:03:06.121012+00:00 siem-backend kernel: eth2: renamed from clab-7a9b3efe
+2025-11-25T20:03:06.200804+00:00 siem-backend kernel: eth3: renamed from clab-42e322be
+2025-11-25T20:03:06.603060+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:00:00+00:00 attacker-internet kernel: Critical Attack detected
+2025-11-25T20:03:42.857119+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:06:44.432665+00:00 siem-backend kernel: audit: type=1326 audit(1764101204.427:24): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=764144 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:06:58.844784+00:00 siem-backend kernel: eth1: renamed from clab-b112d28e
+2025-11-25T20:06:58.872768+00:00 siem-backend kernel: eth1: renamed from clab-da4c05ca
+2025-11-25T20:06:58.932621+00:00 siem-backend kernel: eth2: renamed from clab-eba75c19
+2025-11-25T20:06:59.766412+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:07:42.848998+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:09:12.376829+00:00 siem-backend kernel: audit: type=1326 audit(1764101352.371:27): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=766781 comm="docker-buildx" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-buildx" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40ddce code=0x50000
+2025-11-25T20:09:29.914571+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:15:07.392889+00:00 siem-backend kernel: audit: type=1326 audit(1764101707.384:28): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=770745 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:15:24.652727+00:00 siem-backend kernel: eth1: renamed from clab-a1ecbb55
+2025-11-25T20:15:24.708775+00:00 siem-backend kernel: eth4: renamed from clab-4bc17550
+2025-11-25T20:15:25.518242+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:16:12.860661+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:24:04.408679+00:00 siem-backend kernel: audit: type=1326 audit(1764102244.402:30): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=776607 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:24:05.608728+00:00 siem-backend kernel: audit: type=1326 audit(1764102245.602:31): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=776726 comm="docker-buildx" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-buildx" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40ddce code=0x50000
+2025-11-25T20:24:17.572077+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth08f6654) entered disabled state
+2025-11-25T20:24:17.572853+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth8907353) entered blocking state
+2025-11-25T20:24:17.572857+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth8907353) entered forwarding state
+2025-11-25T20:24:17.572857+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethfcbd885) entered blocking state
+2025-11-25T20:24:17.572857+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethfcbd885) entered disabled state
+2025-11-25T20:24:17.572858+00:00 siem-backend kernel: vethfcbd885: entered allmulticast mode
+2025-11-25T20:24:17.572858+00:00 siem-backend kernel: vethfcbd885: entered promiscuous mode
+2025-11-25T20:24:17.692734+00:00 siem-backend kernel: eth0: renamed from vetha145583
+2025-11-25T20:24:17.720881+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth08f6654) entered blocking state
+2025-11-25T20:24:17.720932+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth08f6654) entered forwarding state
+2025-11-25T20:24:17.720934+00:00 siem-backend kernel: eth1: renamed from clab-9bd2a194
+2025-11-25T20:24:17.836786+00:00 siem-backend kernel: eth1: renamed from clab-04f66745
+2025-11-25T20:24:17.945016+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered blocking state
+2025-11-25T20:24:17.945034+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered disabled state
+2025-11-25T20:24:17.945035+00:00 siem-backend kernel: vethbeee22e: entered allmulticast mode
+2025-11-25T20:24:17.945035+00:00 siem-backend kernel: vethbeee22e: entered promiscuous mode
+2025-11-25T20:24:17.945036+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered blocking state
+2025-11-25T20:24:17.945036+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered forwarding state
+2025-11-25T20:24:18.088957+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered disabled state
+2025-11-25T20:24:18.112715+00:00 siem-backend kernel: eth0: renamed from vethd6ef39a
+2025-11-25T20:24:18.264650+00:00 siem-backend kernel: eth3: renamed from clab-8309b17e
+2025-11-25T20:24:18.288677+00:00 siem-backend kernel: eth0: renamed from veth51c8823
+2025-11-25T20:24:18.404668+00:00 siem-backend kernel: eth4: renamed from clab-e514f66b
+2025-11-25T20:24:18.428865+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethfcbd885) entered blocking state
+2025-11-25T20:24:18.428882+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered blocking state
+2025-11-25T20:24:18.428883+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbeee22e) entered forwarding state
+2025-11-25T20:24:18.428883+00:00 siem-backend kernel: eth3: renamed from clab-5f75aab8
+2025-11-25T20:24:18.572985+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:24:18.576711+00:00 siem-backend kernel: eth1: renamed from clab-19d64649
+2025-11-25T20:24:18.620708+00:00 siem-backend kernel: eth6: renamed from clab-6bf08711
+2025-11-25T21:30:00+00:00 firewall-in kernel: [BLOCK] SRC=192.168.1.100 DST=10.0.0.5 PROTO=TCP SPT=443 DPT=80
+2025-11-25T20:25:12.864721+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T21:35:00+00:00 firewall-in kernel: [ALLOW] SRC=10.0.0.5 DST=172.20.20.10 PROTO=TCP SPT=54321 DPT=80
+2025-11-25T21:35:05+00:00 firewall-in kernel: [REJECT] SRC=192.168.1.200 DST=10.0.0.5 PROTO=UDP SPT=123 DPT=53
+2025-11-25T20:31:40.212676+00:00 siem-backend kernel: audit: type=1326 audit(1764102700.204:32): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=781916 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:31:53.222391+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(vethf15dd8d) entered disabled state
+2025-11-25T20:31:53.222633+00:00 siem-backend kernel: br-5bd8de29f1d8: port 5(vethf61df27) entered blocking state
+2025-11-25T20:31:53.222634+00:00 siem-backend kernel: br-5bd8de29f1d8: port 5(vethf61df27) entered forwarding state
+2025-11-25T20:31:53.344645+00:00 siem-backend kernel: eth1: renamed from clab-c5c000bf
+2025-11-25T20:31:53.360805+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(vethf4130a7) entered blocking state
+2025-11-25T20:31:53.360832+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(vethf4130a7) entered forwarding state
+2025-11-25T20:31:53.360834+00:00 siem-backend kernel: eth1: renamed from clab-7fc69a7d
+2025-11-25T20:31:53.452815+00:00 siem-backend kernel: eth2: renamed from clab-299ac39f
+2025-11-25T20:31:53.484855+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(vethf15dd8d) entered forwarding state
+2025-11-25T20:31:53.520857+00:00 siem-backend kernel: eth1: renamed from clab-5ff92758
+2025-11-25T20:31:53.584687+00:00 siem-backend kernel: eth3: renamed from clab-14c12d21
+2025-11-25T20:31:53.780860+00:00 siem-backend kernel: eth0: renamed from vethd5d8b22
+2025-11-25T20:31:53.804707+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth31235d9) entered blocking state
+2025-11-25T20:31:53.804748+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth31235d9) entered disabled state
+2025-11-25T20:31:53.804749+00:00 siem-backend kernel: veth31235d9: entered allmulticast mode
+2025-11-25T20:31:53.804750+00:00 siem-backend kernel: veth31235d9: entered promiscuous mode
+2025-11-25T20:31:53.804750+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth31235d9) entered blocking state
+2025-11-25T20:31:53.804751+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth31235d9) entered forwarding state
+2025-11-25T20:31:53.804751+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth8e208f8) entered disabled state
+2025-11-25T20:31:53.804760+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(veth31235d9) entered disabled state
+2025-11-25T20:31:53.804762+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(vethf02e75c) entered blocking state
+2025-11-25T20:31:53.804762+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(vethf02e75c) entered forwarding state
+2025-11-25T20:31:53.940819+00:00 siem-backend kernel: eth2: renamed from clab-37f0e441
+2025-11-25T20:31:54.064650+00:00 siem-backend kernel: eth6: renamed from clab-d59c9ed4
+2025-11-25T20:31:54.084687+00:00 siem-backend kernel: eth1: renamed from clab-de4789f8
+2025-11-25T20:31:54.104753+00:00 siem-backend kernel: eth0: renamed from vethd4b187e
+2025-11-25T20:31:54.136762+00:00 siem-backend kernel: eth0: renamed from vethb06f939
+2025-11-25T20:31:54.223002+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:35:23.528923+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth69122a3) entered blocking state
+2025-11-25T20:35:23.530060+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth69122a3) entered forwarding state
+2025-11-25T20:35:23.632707+00:00 siem-backend kernel: eth1: renamed from clab-6138e39e
+2025-11-25T20:35:23.656701+00:00 siem-backend kernel: eth1: renamed from clab-47775d20
+2025-11-25T20:35:23.684645+00:00 siem-backend kernel: eth3: renamed from clab-2e12377e
+2025-11-25T20:35:23.736734+00:00 siem-backend kernel: eth3: renamed from clab-868cbfa5
+2025-11-25T20:35:23.836783+00:00 siem-backend kernel: eth2: renamed from clab-94348b3c
+2025-11-25T20:35:23.908772+00:00 siem-backend kernel: eth3: renamed from clab-9d784b01
+2025-11-25T20:35:24.530562+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:36:12.856854+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:41:34.624859+00:00 siem-backend kernel: audit: type=1326 audit(1764103294.618:34): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=789908 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:41:47.873882+00:00 siem-backend kernel: eth1: renamed from clab-b75a86e1
+2025-11-25T20:41:48.000843+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered blocking state
+2025-11-25T20:41:48.000877+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered disabled state
+2025-11-25T20:41:48.000879+00:00 siem-backend kernel: veth690bde5: entered allmulticast mode
+2025-11-25T20:41:48.000880+00:00 siem-backend kernel: veth690bde5: entered promiscuous mode
+2025-11-25T20:41:48.000880+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered blocking state
+2025-11-25T20:41:48.000880+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered forwarding state
+2025-11-25T20:41:48.000885+00:00 siem-backend kernel: eth1: renamed from clab-5d40dcd3
+2025-11-25T20:41:48.028815+00:00 siem-backend kernel: eth0: renamed from veth15e4ac7
+2025-11-25T20:41:48.061752+00:00 siem-backend kernel: vethaf3abb9: entered promiscuous mode
+2025-11-25T20:41:48.061771+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethaf3abb9) entered forwarding state
+2025-11-25T20:41:48.108785+00:00 siem-backend kernel: eth1: renamed from clab-399a1358
+2025-11-25T20:41:48.192767+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethaf3abb9) entered disabled state
+2025-11-25T20:41:48.272730+00:00 siem-backend kernel: eth1: renamed from clab-0d38b010
+2025-11-25T20:41:48.292655+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth2c0f90f) entered blocking state
+2025-11-25T20:41:48.292672+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth2c0f90f) entered disabled state
+2025-11-25T20:41:48.292673+00:00 siem-backend kernel: veth2c0f90f: entered allmulticast mode
+2025-11-25T20:41:48.292673+00:00 siem-backend kernel: veth2c0f90f: entered promiscuous mode
+2025-11-25T20:41:48.292674+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth2c0f90f) entered blocking state
+2025-11-25T20:41:48.292674+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth2c0f90f) entered forwarding state
+2025-11-25T20:41:48.292674+00:00 siem-backend kernel: eth1: renamed from clab-4329ace3
+2025-11-25T20:41:48.384722+00:00 siem-backend kernel: eth2: renamed from clab-2324d902
+2025-11-25T20:41:48.412663+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered blocking state
+2025-11-25T20:41:48.412700+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth690bde5) entered forwarding state
+2025-11-25T20:41:48.556881+00:00 siem-backend kernel: eth3: renamed from clab-527a75a9
+2025-11-25T20:41:48.660712+00:00 siem-backend kernel: eth1: renamed from clab-cf20c401
+2025-11-25T20:41:48.724822+00:00 siem-backend kernel: eth2: renamed from clab-4b36449b
+2025-11-25T20:41:48.832765+00:00 siem-backend kernel: eth1: renamed from clab-3c221eb3
+2025-11-25T20:41:48.874472+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:41:48.952845+00:00 siem-backend kernel: eth3: renamed from clab-3192dcaa
+2025-11-25T20:45:01.532819+00:00 siem-backend kernel: audit: type=1326 audit(1764103501.526:37): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=793465 comm="docker-buildx" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-buildx" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40ddce code=0x50000
+2025-11-25T20:45:16.348648+00:00 siem-backend kernel: eth0: renamed from veth910aa97
+2025-11-25T20:45:16.392817+00:00 siem-backend kernel: eth3: renamed from clab-5a43766c
+2025-11-25T20:45:16.412621+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethacd2dda) entered blocking state
+2025-11-25T20:45:16.412636+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethacd2dda) entered forwarding state
+2025-11-25T20:45:16.412636+00:00 siem-backend kernel: eth0: renamed from veth636dd0e
+2025-11-25T20:45:16.441734+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vethe8015cd) entered blocking state
+2025-11-25T20:45:16.441761+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vethe8015cd) entered forwarding state
+2025-11-25T20:45:16.472819+00:00 siem-backend kernel: eth1: renamed from clab-68efba93
+2025-11-25T20:45:17.193857+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:46:04.680717+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vetha06398d) entered blocking state
+2025-11-25T20:46:04.680738+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vetha06398d) entered disabled state
+2025-11-25T20:46:04.680739+00:00 siem-backend kernel: vetha06398d: entered allmulticast mode
+2025-11-25T20:46:04.680739+00:00 siem-backend kernel: vetha06398d: entered promiscuous mode
+2025-11-25T20:50:49.824935+00:00 siem-backend kernel: eth1: renamed from clab-40377dc2
+2025-11-25T20:50:50.754489+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:51:20.268822+00:00 siem-backend kernel: eth1: renamed from clab-e3a87247
+2025-11-25T20:51:20.344754+00:00 siem-backend kernel: eth0: renamed from veth71a6302
+2025-11-25T20:51:20.392875+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth9493f2d) entered disabled state
+2025-11-25T20:51:20.392911+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth81e80bd) entered blocking state
+2025-11-25T20:51:20.392913+00:00 siem-backend kernel: br-5bd8de29f1d8: port 7(veth81e80bd) entered forwarding state
+2025-11-25T20:51:20.392914+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethbfc3f74) entered blocking state
+2025-11-25T20:51:20.392914+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethbfc3f74) entered disabled state
+2025-11-25T20:51:20.392923+00:00 siem-backend kernel: vethbfc3f74: entered allmulticast mode
+2025-11-25T20:51:20.392925+00:00 siem-backend kernel: vethbfc3f74: entered promiscuous mode
+2025-11-25T20:51:20.392926+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethbfc3f74) entered blocking state
+2025-11-25T20:51:20.392926+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethbfc3f74) entered forwarding state
+2025-11-25T20:51:20.392926+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(vethbfc3f74) entered disabled state
+2025-11-25T20:51:20.392927+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth3c7ec34) entered blocking state
+2025-11-25T20:51:20.392927+00:00 siem-backend kernel: br-5bd8de29f1d8: port 8(veth3c7ec34) entered forwarding state
+2025-11-25T20:51:20.444857+00:00 siem-backend kernel: eth2: renamed from clab-63f90378
+2025-11-25T20:51:20.460797+00:00 siem-backend kernel: eth0: renamed from vethfc7342d
+2025-11-25T20:51:20.496929+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbe5126c) entered blocking state
+2025-11-25T20:51:20.496948+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbe5126c) entered disabled state
+2025-11-25T20:51:20.496949+00:00 siem-backend kernel: vethbe5126c: entered allmulticast mode
+2025-11-25T20:51:20.496949+00:00 siem-backend kernel: vethbe5126c: entered promiscuous mode
+2025-11-25T20:51:20.516636+00:00 siem-backend kernel: eth1: renamed from clab-4f3619c5
+2025-11-25T20:51:20.540647+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbe5126c) entered blocking state
+2025-11-25T20:51:20.540665+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbe5126c) entered forwarding state
+2025-11-25T20:51:20.540666+00:00 siem-backend kernel: br-5bd8de29f1d8: port 11(vethbe5126c) entered disabled state
+2025-11-25T20:51:20.540666+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth9493f2d) entered blocking state
+2025-11-25T20:51:20.540666+00:00 siem-backend kernel: br-5bd8de29f1d8: port 9(veth9493f2d) entered forwarding state
+2025-11-25T20:51:20.576676+00:00 siem-backend kernel: eth2: renamed from clab-5f5aa328
+2025-11-25T20:51:20.600828+00:00 siem-backend kernel: eth0: renamed from veth10cb1d4
+2025-11-25T20:51:20.668662+00:00 siem-backend kernel: eth1: renamed from clab-1be5c5f8
+2025-11-25T20:51:20.764807+00:00 siem-backend kernel: eth3: renamed from clab-638f1e1a
+2025-11-25T20:51:20.852836+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vethb541363) entered blocking state
+2025-11-25T20:51:20.852880+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(vethb541363) entered forwarding state
+2025-11-25T20:51:20.876855+00:00 siem-backend kernel: eth1: renamed from clab-58e39e3a
+2025-11-25T20:51:20.969256+00:00 siem-backend kernel: eth2: renamed from clab-d38102e7
+2025-11-25T20:51:21.160817+00:00 siem-backend kernel: eth1: renamed from clab-9bb3e99a
+2025-11-25T20:51:21.235476+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:51:21.244675+00:00 siem-backend kernel: eth3: renamed from clab-dadcdc21
+2025-11-25T20:51:21.348807+00:00 siem-backend kernel: eth3: renamed from clab-bac491dd
+2025-11-25T20:51:26.883234+00:00 firewall-perimeter kernel: [BLOCK] SRC=79.75.23.88 DST=172.20.20.3 PROTO=TCP SPT=47320 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883300+00:00 firewall-perimeter kernel: [BLOCK] SRC=248.183.157.79 DST=172.20.20.3 PROTO=TCP SPT=61147 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883312+00:00 firewall-perimeter kernel: [BLOCK] SRC=87.126.114.140 DST=172.20.20.3 PROTO=TCP SPT=55799 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883315+00:00 firewall-perimeter kernel: [BLOCK] SRC=178.214.19.99 DST=172.20.20.3 PROTO=TCP SPT=57085 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883317+00:00 firewall-perimeter kernel: [BLOCK] SRC=237.4.187.59 DST=172.20.20.3 PROTO=TCP SPT=28829 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883320+00:00 firewall-perimeter kernel: [BLOCK] SRC=115.69.199.255 DST=172.20.20.3 PROTO=TCP SPT=54266 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883322+00:00 firewall-perimeter kernel: [BLOCK] SRC=209.54.75.54 DST=172.20.20.3 PROTO=TCP SPT=9129 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883327+00:00 firewall-perimeter kernel: [BLOCK] SRC=106.200.75.173 DST=172.20.20.3 PROTO=TCP SPT=50377 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883335+00:00 firewall-perimeter kernel: [BLOCK] SRC=58.93.213.244 DST=172.20.20.3 PROTO=TCP SPT=64256 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883338+00:00 firewall-perimeter kernel: [BLOCK] SRC=93.118.20.229 DST=172.20.20.3 PROTO=TCP SPT=28342 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883340+00:00 firewall-perimeter kernel: [BLOCK] SRC=115.208.17.11 DST=172.20.20.3 PROTO=TCP SPT=48738 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883342+00:00 firewall-perimeter kernel: [BLOCK] SRC=139.170.29.133 DST=172.20.20.3 PROTO=TCP SPT=51102 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883344+00:00 firewall-perimeter kernel: [BLOCK] SRC=38.98.219.148 DST=172.20.20.3 PROTO=TCP SPT=5190 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883346+00:00 firewall-perimeter kernel: [BLOCK] SRC=20.137.127.113 DST=172.20.20.3 PROTO=TCP SPT=15399 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883348+00:00 firewall-perimeter kernel: [BLOCK] SRC=228.200.129.205 DST=172.20.20.3 PROTO=TCP SPT=21458 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883350+00:00 firewall-perimeter kernel: [BLOCK] SRC=36.234.189.142 DST=172.20.20.3 PROTO=TCP SPT=25268 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883352+00:00 firewall-perimeter kernel: [BLOCK] SRC=214.105.163.34 DST=172.20.20.3 PROTO=TCP SPT=20212 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883354+00:00 firewall-perimeter kernel: [BLOCK] SRC=145.78.90.101 DST=172.20.20.3 PROTO=TCP SPT=13354 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883356+00:00 firewall-perimeter kernel: [BLOCK] SRC=36.130.237.155 DST=172.20.20.3 PROTO=TCP SPT=44366 DPT=80 SYN_FLOOD
+2025-11-25T20:51:26.883358+00:00 firewall-perimeter kernel: [BLOCK] SRC=178.59.152.211 DST=172.20.20.3 PROTO=TCP SPT=19162 DPT=80 SYN_FLOOD
+2025-11-25T20:52:12.880760+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:54:52.320795+00:00 siem-backend kernel: audit: type=1326 audit(1764104092.316:40): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=803633 comm="docker-compose" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-compose" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40eb4e code=0x50000
+2025-11-25T20:55:07.004695+00:00 siem-backend kernel: eth1: renamed from clab-c75e3d4d
+2025-11-25T20:55:07.032810+00:00 siem-backend kernel: eth1: renamed from clab-e4ca2aea
+2025-11-25T20:55:07.092713+00:00 siem-backend kernel: eth2: renamed from clab-43916d0c
+2025-11-25T20:55:07.140738+00:00 siem-backend kernel: eth3: renamed from clab-30386f07
+2025-11-25T20:55:07.931548+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:55:42.876781+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T20:55:45.023157+00:00 firewall-perimeter kernel: [BLOCK] SRC=95.118.182.116 DST=172.20.20.3 PROTO=TCP SPT=64946 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023190+00:00 firewall-perimeter kernel: [BLOCK] SRC=190.118.201.166 DST=172.20.20.3 PROTO=TCP SPT=29809 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023201+00:00 firewall-perimeter kernel: [BLOCK] SRC=79.3.115.51 DST=172.20.20.3 PROTO=TCP SPT=36773 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023204+00:00 firewall-perimeter kernel: [BLOCK] SRC=191.26.52.30 DST=172.20.20.3 PROTO=TCP SPT=55472 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023206+00:00 firewall-perimeter kernel: [BLOCK] SRC=210.125.122.8 DST=172.20.20.3 PROTO=TCP SPT=63328 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023209+00:00 firewall-perimeter kernel: [BLOCK] SRC=95.6.206.118 DST=172.20.20.3 PROTO=TCP SPT=8969 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023211+00:00 firewall-perimeter kernel: [BLOCK] SRC=249.246.199.141 DST=172.20.20.3 PROTO=TCP SPT=47061 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023215+00:00 firewall-perimeter kernel: [BLOCK] SRC=220.114.72.80 DST=172.20.20.3 PROTO=TCP SPT=25614 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023219+00:00 firewall-perimeter kernel: [BLOCK] SRC=68.213.124.123 DST=172.20.20.3 PROTO=TCP SPT=17164 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023222+00:00 firewall-perimeter kernel: [BLOCK] SRC=243.186.64.234 DST=172.20.20.3 PROTO=TCP SPT=41396 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023224+00:00 firewall-perimeter kernel: [BLOCK] SRC=33.198.108.122 DST=172.20.20.3 PROTO=TCP SPT=57996 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023226+00:00 firewall-perimeter kernel: [BLOCK] SRC=125.15.234.179 DST=172.20.20.3 PROTO=TCP SPT=54406 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023228+00:00 firewall-perimeter kernel: [BLOCK] SRC=89.221.30.193 DST=172.20.20.3 PROTO=TCP SPT=55891 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023230+00:00 firewall-perimeter kernel: [BLOCK] SRC=38.167.75.94 DST=172.20.20.3 PROTO=TCP SPT=43096 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023233+00:00 firewall-perimeter kernel: [BLOCK] SRC=154.165.109.90 DST=172.20.20.3 PROTO=TCP SPT=49242 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023234+00:00 firewall-perimeter kernel: [BLOCK] SRC=206.74.23.79 DST=172.20.20.3 PROTO=TCP SPT=30279 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023236+00:00 firewall-perimeter kernel: [BLOCK] SRC=143.98.106.175 DST=172.20.20.3 PROTO=TCP SPT=5727 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023238+00:00 firewall-perimeter kernel: [BLOCK] SRC=171.251.21.51 DST=172.20.20.3 PROTO=TCP SPT=33896 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023240+00:00 firewall-perimeter kernel: [BLOCK] SRC=166.71.84.43 DST=172.20.20.3 PROTO=TCP SPT=32711 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.023243+00:00 firewall-perimeter kernel: [BLOCK] SRC=173.17.85.95 DST=172.20.20.3 PROTO=TCP SPT=9260 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323340+00:00 firewall-perimeter kernel: [BLOCK] SRC=130.30.5.142 DST=172.20.20.3 PROTO=TCP SPT=23514 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323358+00:00 firewall-perimeter kernel: [BLOCK] SRC=101.88.240.65 DST=172.20.20.3 PROTO=TCP SPT=8251 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323360+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.42.170.189 DST=172.20.20.3 PROTO=TCP SPT=33465 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323363+00:00 firewall-perimeter kernel: [BLOCK] SRC=218.161.78.245 DST=172.20.20.3 PROTO=TCP SPT=41843 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323365+00:00 firewall-perimeter kernel: [BLOCK] SRC=14.177.202.169 DST=172.20.20.3 PROTO=TCP SPT=18581 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323367+00:00 firewall-perimeter kernel: [BLOCK] SRC=111.60.106.83 DST=172.20.20.3 PROTO=TCP SPT=6159 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323369+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.38.104.236 DST=172.20.20.3 PROTO=TCP SPT=2607 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323371+00:00 firewall-perimeter kernel: [BLOCK] SRC=130.226.83.18 DST=172.20.20.3 PROTO=TCP SPT=15930 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323373+00:00 firewall-perimeter kernel: [BLOCK] SRC=189.91.190.251 DST=172.20.20.3 PROTO=TCP SPT=1402 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323375+00:00 firewall-perimeter kernel: [BLOCK] SRC=198.193.94.15 DST=172.20.20.3 PROTO=TCP SPT=39701 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323377+00:00 firewall-perimeter kernel: [BLOCK] SRC=68.97.92.113 DST=172.20.20.3 PROTO=TCP SPT=53150 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323379+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.185.151.102 DST=172.20.20.3 PROTO=TCP SPT=28999 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323381+00:00 firewall-perimeter kernel: [BLOCK] SRC=157.130.117.245 DST=172.20.20.3 PROTO=TCP SPT=42161 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323383+00:00 firewall-perimeter kernel: [BLOCK] SRC=255.6.166.124 DST=172.20.20.3 PROTO=TCP SPT=26385 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323385+00:00 firewall-perimeter kernel: [BLOCK] SRC=38.124.232.95 DST=172.20.20.3 PROTO=TCP SPT=35635 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323387+00:00 firewall-perimeter kernel: [BLOCK] SRC=235.23.250.8 DST=172.20.20.3 PROTO=TCP SPT=60167 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323389+00:00 firewall-perimeter kernel: [BLOCK] SRC=197.73.9.172 DST=172.20.20.3 PROTO=TCP SPT=8544 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323391+00:00 firewall-perimeter kernel: [BLOCK] SRC=54.200.55.207 DST=172.20.20.3 PROTO=TCP SPT=44590 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323393+00:00 firewall-perimeter kernel: [BLOCK] SRC=221.157.94.236 DST=172.20.20.3 PROTO=TCP SPT=37476 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.323395+00:00 firewall-perimeter kernel: [BLOCK] SRC=72.58.234.148 DST=172.20.20.3 PROTO=TCP SPT=40861 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487565+00:00 firewall-perimeter kernel: [BLOCK] SRC=238.50.179.114 DST=172.20.20.3 PROTO=TCP SPT=6103 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487577+00:00 firewall-perimeter kernel: [BLOCK] SRC=31.131.9.92 DST=172.20.20.3 PROTO=TCP SPT=62673 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487580+00:00 firewall-perimeter kernel: [BLOCK] SRC=62.71.159.112 DST=172.20.20.3 PROTO=TCP SPT=37180 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487583+00:00 firewall-perimeter kernel: [BLOCK] SRC=18.41.215.109 DST=172.20.20.3 PROTO=TCP SPT=23901 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487585+00:00 firewall-perimeter kernel: [BLOCK] SRC=68.252.181.152 DST=172.20.20.3 PROTO=TCP SPT=25667 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487587+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.104.195.85 DST=172.20.20.3 PROTO=TCP SPT=59364 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487590+00:00 firewall-perimeter kernel: [BLOCK] SRC=197.235.94.197 DST=172.20.20.3 PROTO=TCP SPT=22806 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487592+00:00 firewall-perimeter kernel: [BLOCK] SRC=163.24.161.149 DST=172.20.20.3 PROTO=TCP SPT=42240 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487594+00:00 firewall-perimeter kernel: [BLOCK] SRC=144.163.96.150 DST=172.20.20.3 PROTO=TCP SPT=57466 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487596+00:00 firewall-perimeter kernel: [BLOCK] SRC=143.214.213.116 DST=172.20.20.3 PROTO=TCP SPT=34889 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487598+00:00 firewall-perimeter kernel: [BLOCK] SRC=180.165.106.66 DST=172.20.20.3 PROTO=TCP SPT=65028 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487600+00:00 firewall-perimeter kernel: [BLOCK] SRC=112.60.218.124 DST=172.20.20.3 PROTO=TCP SPT=3328 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487602+00:00 firewall-perimeter kernel: [BLOCK] SRC=188.56.233.16 DST=172.20.20.3 PROTO=TCP SPT=7371 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487604+00:00 firewall-perimeter kernel: [BLOCK] SRC=18.143.250.189 DST=172.20.20.3 PROTO=TCP SPT=37910 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487606+00:00 firewall-perimeter kernel: [BLOCK] SRC=51.180.45.46 DST=172.20.20.3 PROTO=TCP SPT=2012 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487608+00:00 firewall-perimeter kernel: [BLOCK] SRC=90.114.53.65 DST=172.20.20.3 PROTO=TCP SPT=24020 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487610+00:00 firewall-perimeter kernel: [BLOCK] SRC=2.198.207.193 DST=172.20.20.3 PROTO=TCP SPT=63970 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487612+00:00 firewall-perimeter kernel: [BLOCK] SRC=55.50.173.97 DST=172.20.20.3 PROTO=TCP SPT=7206 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487615+00:00 firewall-perimeter kernel: [BLOCK] SRC=28.153.64.143 DST=172.20.20.3 PROTO=TCP SPT=48473 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.487617+00:00 firewall-perimeter kernel: [BLOCK] SRC=246.91.171.2 DST=172.20.20.3 PROTO=TCP SPT=39019 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659031+00:00 firewall-perimeter kernel: [BLOCK] SRC=63.241.213.62 DST=172.20.20.3 PROTO=TCP SPT=16314 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659044+00:00 firewall-perimeter kernel: [BLOCK] SRC=188.50.50.13 DST=172.20.20.3 PROTO=TCP SPT=55279 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659047+00:00 firewall-perimeter kernel: [BLOCK] SRC=251.206.182.100 DST=172.20.20.3 PROTO=TCP SPT=29088 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659050+00:00 firewall-perimeter kernel: [BLOCK] SRC=135.233.1.167 DST=172.20.20.3 PROTO=TCP SPT=54499 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659052+00:00 firewall-perimeter kernel: [BLOCK] SRC=223.130.7.29 DST=172.20.20.3 PROTO=TCP SPT=52382 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659058+00:00 firewall-perimeter kernel: [BLOCK] SRC=123.14.36.211 DST=172.20.20.3 PROTO=TCP SPT=22475 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659060+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.99.165.235 DST=172.20.20.3 PROTO=TCP SPT=19007 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659062+00:00 firewall-perimeter kernel: [BLOCK] SRC=109.17.56.37 DST=172.20.20.3 PROTO=TCP SPT=63531 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659064+00:00 firewall-perimeter kernel: [BLOCK] SRC=67.194.112.154 DST=172.20.20.3 PROTO=TCP SPT=35172 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659066+00:00 firewall-perimeter kernel: [BLOCK] SRC=218.74.84.92 DST=172.20.20.3 PROTO=TCP SPT=50600 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659068+00:00 firewall-perimeter kernel: [BLOCK] SRC=88.86.41.95 DST=172.20.20.3 PROTO=TCP SPT=3651 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659070+00:00 firewall-perimeter kernel: [BLOCK] SRC=109.6.61.43 DST=172.20.20.3 PROTO=TCP SPT=15727 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659072+00:00 firewall-perimeter kernel: [BLOCK] SRC=103.171.182.216 DST=172.20.20.3 PROTO=TCP SPT=46789 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659074+00:00 firewall-perimeter kernel: [BLOCK] SRC=78.60.181.228 DST=172.20.20.3 PROTO=TCP SPT=25599 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659076+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.2.147.179 DST=172.20.20.3 PROTO=TCP SPT=20320 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659081+00:00 firewall-perimeter kernel: [BLOCK] SRC=92.62.73.211 DST=172.20.20.3 PROTO=TCP SPT=41220 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659083+00:00 firewall-perimeter kernel: [BLOCK] SRC=105.153.118.199 DST=172.20.20.3 PROTO=TCP SPT=39058 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659085+00:00 firewall-perimeter kernel: [BLOCK] SRC=196.8.95.176 DST=172.20.20.3 PROTO=TCP SPT=59282 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659088+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.231.128.209 DST=172.20.20.3 PROTO=TCP SPT=54282 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.659090+00:00 firewall-perimeter kernel: [BLOCK] SRC=152.57.191.145 DST=172.20.20.3 PROTO=TCP SPT=62303 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804425+00:00 firewall-perimeter kernel: [BLOCK] SRC=21.106.97.204 DST=172.20.20.3 PROTO=TCP SPT=64137 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804438+00:00 firewall-perimeter kernel: [BLOCK] SRC=207.51.248.38 DST=172.20.20.3 PROTO=TCP SPT=59018 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804441+00:00 firewall-perimeter kernel: [BLOCK] SRC=253.126.200.227 DST=172.20.20.3 PROTO=TCP SPT=54132 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804443+00:00 firewall-perimeter kernel: [BLOCK] SRC=230.169.43.239 DST=172.20.20.3 PROTO=TCP SPT=41015 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804445+00:00 firewall-perimeter kernel: [BLOCK] SRC=214.46.183.137 DST=172.20.20.3 PROTO=TCP SPT=31480 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804447+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.93.237.136 DST=172.20.20.3 PROTO=TCP SPT=60969 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804454+00:00 firewall-perimeter kernel: [BLOCK] SRC=197.154.127.45 DST=172.20.20.3 PROTO=TCP SPT=24885 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804456+00:00 firewall-perimeter kernel: [BLOCK] SRC=200.184.41.116 DST=172.20.20.3 PROTO=TCP SPT=56460 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804458+00:00 firewall-perimeter kernel: [BLOCK] SRC=71.183.112.250 DST=172.20.20.3 PROTO=TCP SPT=39306 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804460+00:00 firewall-perimeter kernel: [BLOCK] SRC=55.166.142.20 DST=172.20.20.3 PROTO=TCP SPT=4789 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804462+00:00 firewall-perimeter kernel: [BLOCK] SRC=230.26.205.216 DST=172.20.20.3 PROTO=TCP SPT=17114 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804464+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.3.83.53 DST=172.20.20.3 PROTO=TCP SPT=29138 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804466+00:00 firewall-perimeter kernel: [BLOCK] SRC=162.89.21.59 DST=172.20.20.3 PROTO=TCP SPT=41597 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804468+00:00 firewall-perimeter kernel: [BLOCK] SRC=219.52.35.132 DST=172.20.20.3 PROTO=TCP SPT=14085 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804470+00:00 firewall-perimeter kernel: [BLOCK] SRC=170.220.22.165 DST=172.20.20.3 PROTO=TCP SPT=4886 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804472+00:00 firewall-perimeter kernel: [BLOCK] SRC=214.255.62.105 DST=172.20.20.3 PROTO=TCP SPT=6239 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804474+00:00 firewall-perimeter kernel: [BLOCK] SRC=16.112.78.25 DST=172.20.20.3 PROTO=TCP SPT=54586 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804476+00:00 firewall-perimeter kernel: [BLOCK] SRC=180.196.15.21 DST=172.20.20.3 PROTO=TCP SPT=58854 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804478+00:00 firewall-perimeter kernel: [BLOCK] SRC=7.217.185.196 DST=172.20.20.3 PROTO=TCP SPT=62003 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.804480+00:00 firewall-perimeter kernel: [BLOCK] SRC=214.45.205.97 DST=172.20.20.3 PROTO=TCP SPT=14054 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957340+00:00 firewall-perimeter kernel: [BLOCK] SRC=100.136.71.171 DST=172.20.20.3 PROTO=TCP SPT=29338 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957353+00:00 firewall-perimeter kernel: [BLOCK] SRC=232.166.191.238 DST=172.20.20.3 PROTO=TCP SPT=52471 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957356+00:00 firewall-perimeter kernel: [BLOCK] SRC=209.120.90.203 DST=172.20.20.3 PROTO=TCP SPT=28997 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957359+00:00 firewall-perimeter kernel: [BLOCK] SRC=187.223.148.150 DST=172.20.20.3 PROTO=TCP SPT=45732 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957361+00:00 firewall-perimeter kernel: [BLOCK] SRC=241.25.70.37 DST=172.20.20.3 PROTO=TCP SPT=3238 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957363+00:00 firewall-perimeter kernel: [BLOCK] SRC=225.98.186.12 DST=172.20.20.3 PROTO=TCP SPT=25603 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957366+00:00 firewall-perimeter kernel: [BLOCK] SRC=84.72.123.231 DST=172.20.20.3 PROTO=TCP SPT=22840 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957368+00:00 firewall-perimeter kernel: [BLOCK] SRC=86.250.44.21 DST=172.20.20.3 PROTO=TCP SPT=33001 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957370+00:00 firewall-perimeter kernel: [BLOCK] SRC=57.168.135.149 DST=172.20.20.3 PROTO=TCP SPT=37861 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957372+00:00 firewall-perimeter kernel: [BLOCK] SRC=45.156.205.72 DST=172.20.20.3 PROTO=TCP SPT=16222 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957374+00:00 firewall-perimeter kernel: [BLOCK] SRC=133.133.142.36 DST=172.20.20.3 PROTO=TCP SPT=57234 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957376+00:00 firewall-perimeter kernel: [BLOCK] SRC=99.239.181.69 DST=172.20.20.3 PROTO=TCP SPT=23152 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957378+00:00 firewall-perimeter kernel: [BLOCK] SRC=73.173.212.178 DST=172.20.20.3 PROTO=TCP SPT=49124 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957380+00:00 firewall-perimeter kernel: [BLOCK] SRC=209.83.31.240 DST=172.20.20.3 PROTO=TCP SPT=38768 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957382+00:00 firewall-perimeter kernel: [BLOCK] SRC=79.50.68.76 DST=172.20.20.3 PROTO=TCP SPT=61283 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957384+00:00 firewall-perimeter kernel: [BLOCK] SRC=226.44.39.233 DST=172.20.20.3 PROTO=TCP SPT=57309 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957386+00:00 firewall-perimeter kernel: [BLOCK] SRC=63.34.239.143 DST=172.20.20.3 PROTO=TCP SPT=44686 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957388+00:00 firewall-perimeter kernel: [BLOCK] SRC=53.255.190.158 DST=172.20.20.3 PROTO=TCP SPT=26541 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957390+00:00 firewall-perimeter kernel: [BLOCK] SRC=21.230.141.171 DST=172.20.20.3 PROTO=TCP SPT=1753 DPT=80 SYN_FLOOD
+2025-11-25T20:55:45.957391+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.135.224.54 DST=172.20.20.3 PROTO=TCP SPT=19555 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272802+00:00 firewall-perimeter kernel: [BLOCK] SRC=87.228.115.90 DST=172.20.20.3 PROTO=TCP SPT=46905 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272815+00:00 firewall-perimeter kernel: [BLOCK] SRC=194.57.126.253 DST=172.20.20.3 PROTO=TCP SPT=32798 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272818+00:00 firewall-perimeter kernel: [BLOCK] SRC=224.237.112.115 DST=172.20.20.3 PROTO=TCP SPT=3370 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272820+00:00 firewall-perimeter kernel: [BLOCK] SRC=162.170.149.11 DST=172.20.20.3 PROTO=TCP SPT=16717 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272823+00:00 firewall-perimeter kernel: [BLOCK] SRC=202.63.131.174 DST=172.20.20.3 PROTO=TCP SPT=40421 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272825+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.195.243.246 DST=172.20.20.3 PROTO=TCP SPT=41602 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272828+00:00 firewall-perimeter kernel: [BLOCK] SRC=143.18.234.17 DST=172.20.20.3 PROTO=TCP SPT=1662 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272830+00:00 firewall-perimeter kernel: [BLOCK] SRC=26.75.99.92 DST=172.20.20.3 PROTO=TCP SPT=48107 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272832+00:00 firewall-perimeter kernel: [BLOCK] SRC=181.84.50.240 DST=172.20.20.3 PROTO=TCP SPT=55439 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272834+00:00 firewall-perimeter kernel: [BLOCK] SRC=238.27.81.81 DST=172.20.20.3 PROTO=TCP SPT=1024 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272836+00:00 firewall-perimeter kernel: [BLOCK] SRC=45.172.135.132 DST=172.20.20.3 PROTO=TCP SPT=15033 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272841+00:00 firewall-perimeter kernel: [BLOCK] SRC=239.112.30.144 DST=172.20.20.3 PROTO=TCP SPT=24378 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272843+00:00 firewall-perimeter kernel: [BLOCK] SRC=183.8.28.241 DST=172.20.20.3 PROTO=TCP SPT=57827 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272845+00:00 firewall-perimeter kernel: [BLOCK] SRC=194.192.35.148 DST=172.20.20.3 PROTO=TCP SPT=15080 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272847+00:00 firewall-perimeter kernel: [BLOCK] SRC=204.170.181.154 DST=172.20.20.3 PROTO=TCP SPT=13155 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272849+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.17.71.12 DST=172.20.20.3 PROTO=TCP SPT=59478 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272851+00:00 firewall-perimeter kernel: [BLOCK] SRC=175.140.24.224 DST=172.20.20.3 PROTO=TCP SPT=65246 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272853+00:00 firewall-perimeter kernel: [BLOCK] SRC=7.187.230.202 DST=172.20.20.3 PROTO=TCP SPT=7529 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272855+00:00 firewall-perimeter kernel: [BLOCK] SRC=158.189.40.196 DST=172.20.20.3 PROTO=TCP SPT=42140 DPT=80 SYN_FLOOD
+2025-11-25T20:55:46.272857+00:00 firewall-perimeter kernel: [BLOCK] SRC=135.81.117.33 DST=172.20.20.3 PROTO=TCP SPT=6342 DPT=80 SYN_FLOOD
+2025-11-25T20:56:02.447835+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:02.623345+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:02.762389+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:03.044920+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:03.207794+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:03.517620+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:03.676652+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:56:29.522766+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 31763 ssh2
+2025-11-25T20:56:29.522779+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 35159 ssh2
+2025-11-25T20:56:29.522782+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 36275 ssh2
+2025-11-25T20:56:29.522784+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 34120 ssh2
+2025-11-25T20:56:29.522785+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 37617 ssh2
+2025-11-25T20:56:29.699908+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 33225 ssh2
+2025-11-25T20:56:29.699919+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 31765 ssh2
+2025-11-25T20:56:29.699921+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 33542 ssh2
+2025-11-25T20:56:29.699923+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 31270 ssh2
+2025-11-25T20:56:29.699953+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 35721 ssh2
+2025-11-25T20:56:29.851455+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 39940 ssh2
+2025-11-25T20:56:29.851468+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 30104 ssh2
+2025-11-25T20:56:29.851471+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 31957 ssh2
+2025-11-25T20:56:29.851473+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 36748 ssh2
+2025-11-25T20:56:29.851474+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 36953 ssh2
+2025-11-25T20:56:29.982241+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 34444 ssh2
+2025-11-25T20:56:29.982253+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 36378 ssh2
+2025-11-25T20:56:29.982255+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 37818 ssh2
+2025-11-25T20:56:29.982257+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 30266 ssh2
+2025-11-25T20:56:29.982258+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 38309 ssh2
+2025-11-25T20:56:30.115499+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 35033 ssh2
+2025-11-25T20:56:30.115511+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 36248 ssh2
+2025-11-25T20:56:30.115513+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 38715 ssh2
+2025-11-25T20:56:30.115515+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 39706 ssh2
+2025-11-25T20:56:30.115517+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 30030 ssh2
+2025-11-25T20:56:30.406173+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 34079 ssh2
+2025-11-25T20:56:30.406185+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 33735 ssh2
+2025-11-25T20:56:30.406187+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 34360 ssh2
+2025-11-25T20:56:30.406189+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 36728 ssh2
+2025-11-25T20:56:30.406194+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 30906 ssh2
+2025-11-25T20:56:30.561388+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 33112 ssh2
+2025-11-25T20:56:30.561400+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 32028 ssh2
+2025-11-25T20:56:30.561402+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 32760 ssh2
+2025-11-25T20:56:30.561404+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 33066 ssh2
+2025-11-25T20:56:30.561406+00:00 webserver sshd: [Failed Password] for user from SRC=10.0.0.5 port 39146 ssh2
+2025-11-25T20:56:30.738799+00:00 webserver sshd: [Failed Password] for service from SRC=10.0.0.5 port 33308 ssh2
+2025-11-25T20:56:30.738811+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 33667 ssh2
+2025-11-25T20:56:30.738813+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 33406 ssh2
+2025-11-25T20:56:30.738815+00:00 webserver sshd: [Failed Password] for root from SRC=10.0.0.5 port 38269 ssh2
+2025-11-25T20:56:30.738816+00:00 webserver sshd: [Failed Password] for admin from SRC=10.0.0.5 port 30332 ssh2
+2025-11-25T20:57:17.066975+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:17.219115+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:17.358242+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:17.511711+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:17.815437+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:17.980355+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:18.297859+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:18.437022+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:19.976990+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:20.116345+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:20.264113+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:20.440436+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:25.549659+00:00 firewall-perimeter kernel: [BLOCK] SRC=19.46.73.218 DST=172.20.20.3 PROTO=TCP SPT=3946 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549671+00:00 firewall-perimeter kernel: [BLOCK] SRC=149.201.121.201 DST=172.20.20.3 PROTO=TCP SPT=53541 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549687+00:00 firewall-perimeter kernel: [BLOCK] SRC=238.6.56.149 DST=172.20.20.3 PROTO=TCP SPT=58663 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549690+00:00 firewall-perimeter kernel: [BLOCK] SRC=59.113.29.3 DST=172.20.20.3 PROTO=TCP SPT=7217 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549692+00:00 firewall-perimeter kernel: [BLOCK] SRC=187.224.145.217 DST=172.20.20.3 PROTO=TCP SPT=56773 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549694+00:00 firewall-perimeter kernel: [BLOCK] SRC=176.105.241.141 DST=172.20.20.3 PROTO=TCP SPT=5429 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549697+00:00 firewall-perimeter kernel: [BLOCK] SRC=153.19.22.19 DST=172.20.20.3 PROTO=TCP SPT=1962 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549699+00:00 firewall-perimeter kernel: [BLOCK] SRC=238.183.19.253 DST=172.20.20.3 PROTO=TCP SPT=16141 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549701+00:00 firewall-perimeter kernel: [BLOCK] SRC=117.27.45.153 DST=172.20.20.3 PROTO=TCP SPT=63888 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549704+00:00 firewall-perimeter kernel: [BLOCK] SRC=79.70.185.218 DST=172.20.20.3 PROTO=TCP SPT=50100 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549706+00:00 firewall-perimeter kernel: [BLOCK] SRC=189.129.100.247 DST=172.20.20.3 PROTO=TCP SPT=2230 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549708+00:00 firewall-perimeter kernel: [BLOCK] SRC=80.3.40.158 DST=172.20.20.3 PROTO=TCP SPT=13734 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549710+00:00 firewall-perimeter kernel: [BLOCK] SRC=122.97.235.52 DST=172.20.20.3 PROTO=TCP SPT=42627 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549712+00:00 firewall-perimeter kernel: [BLOCK] SRC=28.190.124.29 DST=172.20.20.3 PROTO=TCP SPT=43652 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549714+00:00 firewall-perimeter kernel: [BLOCK] SRC=196.191.171.112 DST=172.20.20.3 PROTO=TCP SPT=22574 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549716+00:00 firewall-perimeter kernel: [BLOCK] SRC=129.34.131.219 DST=172.20.20.3 PROTO=TCP SPT=52757 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549718+00:00 firewall-perimeter kernel: [BLOCK] SRC=72.143.17.140 DST=172.20.20.3 PROTO=TCP SPT=51771 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549720+00:00 firewall-perimeter kernel: [BLOCK] SRC=93.138.229.15 DST=172.20.20.3 PROTO=TCP SPT=39101 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549722+00:00 firewall-perimeter kernel: [BLOCK] SRC=142.26.14.78 DST=172.20.20.3 PROTO=TCP SPT=19635 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.549725+00:00 firewall-perimeter kernel: [BLOCK] SRC=245.66.77.4 DST=172.20.20.3 PROTO=TCP SPT=32218 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702910+00:00 firewall-perimeter kernel: [BLOCK] SRC=76.108.89.99 DST=172.20.20.3 PROTO=TCP SPT=24300 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702924+00:00 firewall-perimeter kernel: [BLOCK] SRC=220.239.133.198 DST=172.20.20.3 PROTO=TCP SPT=49233 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702927+00:00 firewall-perimeter kernel: [BLOCK] SRC=187.146.60.78 DST=172.20.20.3 PROTO=TCP SPT=53281 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702929+00:00 firewall-perimeter kernel: [BLOCK] SRC=142.164.190.131 DST=172.20.20.3 PROTO=TCP SPT=11471 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702932+00:00 firewall-perimeter kernel: [BLOCK] SRC=131.70.74.235 DST=172.20.20.3 PROTO=TCP SPT=2067 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702934+00:00 firewall-perimeter kernel: [BLOCK] SRC=251.46.221.14 DST=172.20.20.3 PROTO=TCP SPT=57249 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702937+00:00 firewall-perimeter kernel: [BLOCK] SRC=135.233.191.150 DST=172.20.20.3 PROTO=TCP SPT=28138 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702939+00:00 firewall-perimeter kernel: [BLOCK] SRC=79.202.91.245 DST=172.20.20.3 PROTO=TCP SPT=2979 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702941+00:00 firewall-perimeter kernel: [BLOCK] SRC=17.218.2.189 DST=172.20.20.3 PROTO=TCP SPT=48920 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702944+00:00 firewall-perimeter kernel: [BLOCK] SRC=39.107.28.1 DST=172.20.20.3 PROTO=TCP SPT=38231 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702946+00:00 firewall-perimeter kernel: [BLOCK] SRC=93.130.243.8 DST=172.20.20.3 PROTO=TCP SPT=29686 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702948+00:00 firewall-perimeter kernel: [BLOCK] SRC=173.194.216.139 DST=172.20.20.3 PROTO=TCP SPT=53910 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702950+00:00 firewall-perimeter kernel: [BLOCK] SRC=137.105.1.195 DST=172.20.20.3 PROTO=TCP SPT=5328 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702952+00:00 firewall-perimeter kernel: [BLOCK] SRC=244.178.155.226 DST=172.20.20.3 PROTO=TCP SPT=14516 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702954+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.70.119.108 DST=172.20.20.3 PROTO=TCP SPT=43163 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702957+00:00 firewall-perimeter kernel: [BLOCK] SRC=163.184.150.137 DST=172.20.20.3 PROTO=TCP SPT=25005 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702959+00:00 firewall-perimeter kernel: [BLOCK] SRC=94.129.85.219 DST=172.20.20.3 PROTO=TCP SPT=36273 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702961+00:00 firewall-perimeter kernel: [BLOCK] SRC=221.25.104.238 DST=172.20.20.3 PROTO=TCP SPT=48656 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702963+00:00 firewall-perimeter kernel: [BLOCK] SRC=51.222.204.63 DST=172.20.20.3 PROTO=TCP SPT=37990 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.702965+00:00 firewall-perimeter kernel: [BLOCK] SRC=181.125.29.114 DST=172.20.20.3 PROTO=TCP SPT=35677 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854469+00:00 firewall-perimeter kernel: [BLOCK] SRC=151.220.80.56 DST=172.20.20.3 PROTO=TCP SPT=24128 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854482+00:00 firewall-perimeter kernel: [BLOCK] SRC=89.243.41.15 DST=172.20.20.3 PROTO=TCP SPT=59975 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854485+00:00 firewall-perimeter kernel: [BLOCK] SRC=139.198.72.28 DST=172.20.20.3 PROTO=TCP SPT=50642 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854487+00:00 firewall-perimeter kernel: [BLOCK] SRC=46.6.117.220 DST=172.20.20.3 PROTO=TCP SPT=28209 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854489+00:00 firewall-perimeter kernel: [BLOCK] SRC=90.136.167.224 DST=172.20.20.3 PROTO=TCP SPT=11021 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854492+00:00 firewall-perimeter kernel: [BLOCK] SRC=85.107.13.172 DST=172.20.20.3 PROTO=TCP SPT=46254 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854494+00:00 firewall-perimeter kernel: [BLOCK] SRC=254.47.117.58 DST=172.20.20.3 PROTO=TCP SPT=54197 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854496+00:00 firewall-perimeter kernel: [BLOCK] SRC=5.110.167.222 DST=172.20.20.3 PROTO=TCP SPT=53597 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854499+00:00 firewall-perimeter kernel: [BLOCK] SRC=191.22.181.183 DST=172.20.20.3 PROTO=TCP SPT=50626 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854501+00:00 firewall-perimeter kernel: [BLOCK] SRC=248.58.110.64 DST=172.20.20.3 PROTO=TCP SPT=57754 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854503+00:00 firewall-perimeter kernel: [BLOCK] SRC=255.15.98.76 DST=172.20.20.3 PROTO=TCP SPT=59955 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854505+00:00 firewall-perimeter kernel: [BLOCK] SRC=22.236.223.43 DST=172.20.20.3 PROTO=TCP SPT=4985 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854507+00:00 firewall-perimeter kernel: [BLOCK] SRC=93.157.111.77 DST=172.20.20.3 PROTO=TCP SPT=19822 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854512+00:00 firewall-perimeter kernel: [BLOCK] SRC=152.240.10.73 DST=172.20.20.3 PROTO=TCP SPT=43678 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854514+00:00 firewall-perimeter kernel: [BLOCK] SRC=21.113.170.211 DST=172.20.20.3 PROTO=TCP SPT=17496 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854516+00:00 firewall-perimeter kernel: [BLOCK] SRC=182.125.26.229 DST=172.20.20.3 PROTO=TCP SPT=22587 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854518+00:00 firewall-perimeter kernel: [BLOCK] SRC=148.156.99.9 DST=172.20.20.3 PROTO=TCP SPT=46059 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854521+00:00 firewall-perimeter kernel: [BLOCK] SRC=148.49.157.178 DST=172.20.20.3 PROTO=TCP SPT=23079 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854523+00:00 firewall-perimeter kernel: [BLOCK] SRC=196.42.61.72 DST=172.20.20.3 PROTO=TCP SPT=57156 DPT=80 SYN_FLOOD
+2025-11-25T20:57:25.854524+00:00 firewall-perimeter kernel: [BLOCK] SRC=109.7.225.32 DST=172.20.20.3 PROTO=TCP SPT=20807 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000646+00:00 firewall-perimeter kernel: [BLOCK] SRC=37.92.20.35 DST=172.20.20.3 PROTO=TCP SPT=58655 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000659+00:00 firewall-perimeter kernel: [BLOCK] SRC=225.47.23.78 DST=172.20.20.3 PROTO=TCP SPT=50873 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000662+00:00 firewall-perimeter kernel: [BLOCK] SRC=236.233.115.90 DST=172.20.20.3 PROTO=TCP SPT=48689 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000665+00:00 firewall-perimeter kernel: [BLOCK] SRC=68.240.32.198 DST=172.20.20.3 PROTO=TCP SPT=55561 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000667+00:00 firewall-perimeter kernel: [BLOCK] SRC=103.232.30.29 DST=172.20.20.3 PROTO=TCP SPT=2860 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000669+00:00 firewall-perimeter kernel: [BLOCK] SRC=26.223.244.171 DST=172.20.20.3 PROTO=TCP SPT=2437 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000672+00:00 firewall-perimeter kernel: [BLOCK] SRC=227.160.27.61 DST=172.20.20.3 PROTO=TCP SPT=5727 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000674+00:00 firewall-perimeter kernel: [BLOCK] SRC=166.70.106.34 DST=172.20.20.3 PROTO=TCP SPT=26734 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000676+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.128.228.113 DST=172.20.20.3 PROTO=TCP SPT=63511 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000678+00:00 firewall-perimeter kernel: [BLOCK] SRC=47.209.119.234 DST=172.20.20.3 PROTO=TCP SPT=50361 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000681+00:00 firewall-perimeter kernel: [BLOCK] SRC=220.199.123.83 DST=172.20.20.3 PROTO=TCP SPT=3764 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000683+00:00 firewall-perimeter kernel: [BLOCK] SRC=99.12.103.106 DST=172.20.20.3 PROTO=TCP SPT=15150 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000689+00:00 firewall-perimeter kernel: [BLOCK] SRC=253.107.58.214 DST=172.20.20.3 PROTO=TCP SPT=12437 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000691+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.49.93.211 DST=172.20.20.3 PROTO=TCP SPT=25716 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000693+00:00 firewall-perimeter kernel: [BLOCK] SRC=64.100.54.249 DST=172.20.20.3 PROTO=TCP SPT=28136 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000695+00:00 firewall-perimeter kernel: [BLOCK] SRC=139.71.55.179 DST=172.20.20.3 PROTO=TCP SPT=14760 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000698+00:00 firewall-perimeter kernel: [BLOCK] SRC=65.187.212.122 DST=172.20.20.3 PROTO=TCP SPT=22274 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000699+00:00 firewall-perimeter kernel: [BLOCK] SRC=139.250.185.104 DST=172.20.20.3 PROTO=TCP SPT=33254 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000702+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.84.210.61 DST=172.20.20.3 PROTO=TCP SPT=27520 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.000704+00:00 firewall-perimeter kernel: [BLOCK] SRC=183.146.24.239 DST=172.20.20.3 PROTO=TCP SPT=1854 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147671+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.78.248.60 DST=172.20.20.3 PROTO=TCP SPT=53189 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147683+00:00 firewall-perimeter kernel: [BLOCK] SRC=138.14.8.134 DST=172.20.20.3 PROTO=TCP SPT=44383 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147686+00:00 firewall-perimeter kernel: [BLOCK] SRC=112.118.102.154 DST=172.20.20.3 PROTO=TCP SPT=21758 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147688+00:00 firewall-perimeter kernel: [BLOCK] SRC=207.197.223.31 DST=172.20.20.3 PROTO=TCP SPT=22121 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147691+00:00 firewall-perimeter kernel: [BLOCK] SRC=40.167.78.140 DST=172.20.20.3 PROTO=TCP SPT=64375 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147693+00:00 firewall-perimeter kernel: [BLOCK] SRC=161.21.7.89 DST=172.20.20.3 PROTO=TCP SPT=31601 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147695+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.227.89.240 DST=172.20.20.3 PROTO=TCP SPT=46375 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147696+00:00 firewall-perimeter kernel: [BLOCK] SRC=64.230.241.176 DST=172.20.20.3 PROTO=TCP SPT=12831 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147699+00:00 firewall-perimeter kernel: [BLOCK] SRC=234.31.166.89 DST=172.20.20.3 PROTO=TCP SPT=19536 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147701+00:00 firewall-perimeter kernel: [BLOCK] SRC=89.244.239.182 DST=172.20.20.3 PROTO=TCP SPT=55636 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147702+00:00 firewall-perimeter kernel: [BLOCK] SRC=80.175.144.22 DST=172.20.20.3 PROTO=TCP SPT=44020 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147704+00:00 firewall-perimeter kernel: [BLOCK] SRC=185.162.92.107 DST=172.20.20.3 PROTO=TCP SPT=53493 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147706+00:00 firewall-perimeter kernel: [BLOCK] SRC=206.143.162.25 DST=172.20.20.3 PROTO=TCP SPT=49874 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147708+00:00 firewall-perimeter kernel: [BLOCK] SRC=198.73.2.142 DST=172.20.20.3 PROTO=TCP SPT=65261 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147710+00:00 firewall-perimeter kernel: [BLOCK] SRC=254.28.129.85 DST=172.20.20.3 PROTO=TCP SPT=38844 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147712+00:00 firewall-perimeter kernel: [BLOCK] SRC=29.146.143.157 DST=172.20.20.3 PROTO=TCP SPT=56283 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147714+00:00 firewall-perimeter kernel: [BLOCK] SRC=9.143.204.90 DST=172.20.20.3 PROTO=TCP SPT=43239 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147716+00:00 firewall-perimeter kernel: [BLOCK] SRC=161.64.78.34 DST=172.20.20.3 PROTO=TCP SPT=26235 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147719+00:00 firewall-perimeter kernel: [BLOCK] SRC=78.198.43.223 DST=172.20.20.3 PROTO=TCP SPT=23581 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.147721+00:00 firewall-perimeter kernel: [BLOCK] SRC=15.169.41.228 DST=172.20.20.3 PROTO=TCP SPT=46911 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294704+00:00 firewall-perimeter kernel: [BLOCK] SRC=5.20.133.153 DST=172.20.20.3 PROTO=TCP SPT=27657 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294717+00:00 firewall-perimeter kernel: [BLOCK] SRC=93.26.124.126 DST=172.20.20.3 PROTO=TCP SPT=49740 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294721+00:00 firewall-perimeter kernel: [BLOCK] SRC=66.109.105.8 DST=172.20.20.3 PROTO=TCP SPT=5104 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294723+00:00 firewall-perimeter kernel: [BLOCK] SRC=86.192.208.149 DST=172.20.20.3 PROTO=TCP SPT=31458 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294726+00:00 firewall-perimeter kernel: [BLOCK] SRC=44.91.3.31 DST=172.20.20.3 PROTO=TCP SPT=17371 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294728+00:00 firewall-perimeter kernel: [BLOCK] SRC=244.46.166.77 DST=172.20.20.3 PROTO=TCP SPT=26120 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294730+00:00 firewall-perimeter kernel: [BLOCK] SRC=18.159.164.86 DST=172.20.20.3 PROTO=TCP SPT=36522 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294733+00:00 firewall-perimeter kernel: [BLOCK] SRC=128.25.86.31 DST=172.20.20.3 PROTO=TCP SPT=27219 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294735+00:00 firewall-perimeter kernel: [BLOCK] SRC=110.184.128.74 DST=172.20.20.3 PROTO=TCP SPT=4637 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294737+00:00 firewall-perimeter kernel: [BLOCK] SRC=64.53.14.234 DST=172.20.20.3 PROTO=TCP SPT=19485 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294739+00:00 firewall-perimeter kernel: [BLOCK] SRC=32.188.132.133 DST=172.20.20.3 PROTO=TCP SPT=24907 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294741+00:00 firewall-perimeter kernel: [BLOCK] SRC=149.210.28.96 DST=172.20.20.3 PROTO=TCP SPT=17919 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294743+00:00 firewall-perimeter kernel: [BLOCK] SRC=197.234.183.95 DST=172.20.20.3 PROTO=TCP SPT=51887 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294745+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.202.196.46 DST=172.20.20.3 PROTO=TCP SPT=12154 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294747+00:00 firewall-perimeter kernel: [BLOCK] SRC=179.100.67.182 DST=172.20.20.3 PROTO=TCP SPT=43898 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294749+00:00 firewall-perimeter kernel: [BLOCK] SRC=103.131.167.47 DST=172.20.20.3 PROTO=TCP SPT=24594 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294751+00:00 firewall-perimeter kernel: [BLOCK] SRC=209.77.35.120 DST=172.20.20.3 PROTO=TCP SPT=4000 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294753+00:00 firewall-perimeter kernel: [BLOCK] SRC=91.27.192.210 DST=172.20.20.3 PROTO=TCP SPT=39982 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294755+00:00 firewall-perimeter kernel: [BLOCK] SRC=132.253.147.16 DST=172.20.20.3 PROTO=TCP SPT=59985 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.294757+00:00 firewall-perimeter kernel: [BLOCK] SRC=254.93.155.235 DST=172.20.20.3 PROTO=TCP SPT=44454 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439893+00:00 firewall-perimeter kernel: [BLOCK] SRC=130.254.254.181 DST=172.20.20.3 PROTO=TCP SPT=36782 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439906+00:00 firewall-perimeter kernel: [BLOCK] SRC=50.2.39.180 DST=172.20.20.3 PROTO=TCP SPT=24115 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439909+00:00 firewall-perimeter kernel: [BLOCK] SRC=129.115.171.105 DST=172.20.20.3 PROTO=TCP SPT=30140 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439915+00:00 firewall-perimeter kernel: [BLOCK] SRC=126.91.173.65 DST=172.20.20.3 PROTO=TCP SPT=8364 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439918+00:00 firewall-perimeter kernel: [BLOCK] SRC=181.220.180.77 DST=172.20.20.3 PROTO=TCP SPT=37904 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439920+00:00 firewall-perimeter kernel: [BLOCK] SRC=21.193.61.123 DST=172.20.20.3 PROTO=TCP SPT=38138 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439923+00:00 firewall-perimeter kernel: [BLOCK] SRC=33.87.222.244 DST=172.20.20.3 PROTO=TCP SPT=39518 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439925+00:00 firewall-perimeter kernel: [BLOCK] SRC=234.61.143.76 DST=172.20.20.3 PROTO=TCP SPT=6372 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439927+00:00 firewall-perimeter kernel: [BLOCK] SRC=194.219.101.218 DST=172.20.20.3 PROTO=TCP SPT=21325 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439929+00:00 firewall-perimeter kernel: [BLOCK] SRC=195.159.58.180 DST=172.20.20.3 PROTO=TCP SPT=14460 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439931+00:00 firewall-perimeter kernel: [BLOCK] SRC=91.62.118.235 DST=172.20.20.3 PROTO=TCP SPT=45588 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439933+00:00 firewall-perimeter kernel: [BLOCK] SRC=116.18.63.137 DST=172.20.20.3 PROTO=TCP SPT=60309 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439935+00:00 firewall-perimeter kernel: [BLOCK] SRC=153.143.245.232 DST=172.20.20.3 PROTO=TCP SPT=48583 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439938+00:00 firewall-perimeter kernel: [BLOCK] SRC=159.145.146.238 DST=172.20.20.3 PROTO=TCP SPT=54818 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439940+00:00 firewall-perimeter kernel: [BLOCK] SRC=202.1.203.221 DST=172.20.20.3 PROTO=TCP SPT=31417 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439942+00:00 firewall-perimeter kernel: [BLOCK] SRC=65.120.244.109 DST=172.20.20.3 PROTO=TCP SPT=54758 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439944+00:00 firewall-perimeter kernel: [BLOCK] SRC=156.5.196.87 DST=172.20.20.3 PROTO=TCP SPT=56410 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439946+00:00 firewall-perimeter kernel: [BLOCK] SRC=153.32.46.206 DST=172.20.20.3 PROTO=TCP SPT=14648 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439948+00:00 firewall-perimeter kernel: [BLOCK] SRC=5.141.220.77 DST=172.20.20.3 PROTO=TCP SPT=27596 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.439950+00:00 firewall-perimeter kernel: [BLOCK] SRC=9.84.4.163 DST=172.20.20.3 PROTO=TCP SPT=46579 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581721+00:00 firewall-perimeter kernel: [BLOCK] SRC=65.195.118.185 DST=172.20.20.3 PROTO=TCP SPT=32913 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581734+00:00 firewall-perimeter kernel: [BLOCK] SRC=213.7.172.252 DST=172.20.20.3 PROTO=TCP SPT=53016 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581738+00:00 firewall-perimeter kernel: [BLOCK] SRC=83.190.155.137 DST=172.20.20.3 PROTO=TCP SPT=32128 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581741+00:00 firewall-perimeter kernel: [BLOCK] SRC=249.114.185.53 DST=172.20.20.3 PROTO=TCP SPT=50123 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581743+00:00 firewall-perimeter kernel: [BLOCK] SRC=3.122.24.217 DST=172.20.20.3 PROTO=TCP SPT=9280 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581746+00:00 firewall-perimeter kernel: [BLOCK] SRC=197.184.35.250 DST=172.20.20.3 PROTO=TCP SPT=26367 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581748+00:00 firewall-perimeter kernel: [BLOCK] SRC=57.54.210.99 DST=172.20.20.3 PROTO=TCP SPT=11459 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581750+00:00 firewall-perimeter kernel: [BLOCK] SRC=112.185.210.194 DST=172.20.20.3 PROTO=TCP SPT=5983 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581753+00:00 firewall-perimeter kernel: [BLOCK] SRC=228.32.63.195 DST=172.20.20.3 PROTO=TCP SPT=12809 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581755+00:00 firewall-perimeter kernel: [BLOCK] SRC=115.104.16.40 DST=172.20.20.3 PROTO=TCP SPT=2465 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581757+00:00 firewall-perimeter kernel: [BLOCK] SRC=158.40.193.170 DST=172.20.20.3 PROTO=TCP SPT=6866 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581759+00:00 firewall-perimeter kernel: [BLOCK] SRC=149.224.248.19 DST=172.20.20.3 PROTO=TCP SPT=31583 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581761+00:00 firewall-perimeter kernel: [BLOCK] SRC=22.215.12.37 DST=172.20.20.3 PROTO=TCP SPT=19634 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581763+00:00 firewall-perimeter kernel: [BLOCK] SRC=13.205.96.1 DST=172.20.20.3 PROTO=TCP SPT=34188 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581765+00:00 firewall-perimeter kernel: [BLOCK] SRC=135.47.87.177 DST=172.20.20.3 PROTO=TCP SPT=51039 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581767+00:00 firewall-perimeter kernel: [BLOCK] SRC=112.28.129.52 DST=172.20.20.3 PROTO=TCP SPT=4051 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581769+00:00 firewall-perimeter kernel: [BLOCK] SRC=252.101.253.134 DST=172.20.20.3 PROTO=TCP SPT=5824 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581771+00:00 firewall-perimeter kernel: [BLOCK] SRC=81.92.8.130 DST=172.20.20.3 PROTO=TCP SPT=63350 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581773+00:00 firewall-perimeter kernel: [BLOCK] SRC=166.40.15.61 DST=172.20.20.3 PROTO=TCP SPT=15700 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.581775+00:00 firewall-perimeter kernel: [BLOCK] SRC=106.30.190.60 DST=172.20.20.3 PROTO=TCP SPT=14812 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730877+00:00 firewall-perimeter kernel: [BLOCK] SRC=131.38.96.215 DST=172.20.20.3 PROTO=TCP SPT=15953 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730890+00:00 firewall-perimeter kernel: [BLOCK] SRC=175.122.56.242 DST=172.20.20.3 PROTO=TCP SPT=60687 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730894+00:00 firewall-perimeter kernel: [BLOCK] SRC=216.171.250.75 DST=172.20.20.3 PROTO=TCP SPT=34832 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730896+00:00 firewall-perimeter kernel: [BLOCK] SRC=104.38.223.14 DST=172.20.20.3 PROTO=TCP SPT=11269 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730898+00:00 firewall-perimeter kernel: [BLOCK] SRC=95.51.167.249 DST=172.20.20.3 PROTO=TCP SPT=24198 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730901+00:00 firewall-perimeter kernel: [BLOCK] SRC=21.51.197.50 DST=172.20.20.3 PROTO=TCP SPT=15097 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730904+00:00 firewall-perimeter kernel: [BLOCK] SRC=153.43.168.2 DST=172.20.20.3 PROTO=TCP SPT=19404 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730906+00:00 firewall-perimeter kernel: [BLOCK] SRC=31.89.253.162 DST=172.20.20.3 PROTO=TCP SPT=19871 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730908+00:00 firewall-perimeter kernel: [BLOCK] SRC=37.89.47.181 DST=172.20.20.3 PROTO=TCP SPT=28552 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730910+00:00 firewall-perimeter kernel: [BLOCK] SRC=6.235.158.12 DST=172.20.20.3 PROTO=TCP SPT=43213 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730912+00:00 firewall-perimeter kernel: [BLOCK] SRC=52.6.11.4 DST=172.20.20.3 PROTO=TCP SPT=38010 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730914+00:00 firewall-perimeter kernel: [BLOCK] SRC=202.44.73.134 DST=172.20.20.3 PROTO=TCP SPT=20792 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730916+00:00 firewall-perimeter kernel: [BLOCK] SRC=219.139.82.128 DST=172.20.20.3 PROTO=TCP SPT=26492 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730919+00:00 firewall-perimeter kernel: [BLOCK] SRC=106.202.54.43 DST=172.20.20.3 PROTO=TCP SPT=16068 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730921+00:00 firewall-perimeter kernel: [BLOCK] SRC=126.183.66.196 DST=172.20.20.3 PROTO=TCP SPT=25955 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730923+00:00 firewall-perimeter kernel: [BLOCK] SRC=6.192.184.128 DST=172.20.20.3 PROTO=TCP SPT=20182 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730927+00:00 firewall-perimeter kernel: [BLOCK] SRC=101.91.253.193 DST=172.20.20.3 PROTO=TCP SPT=6368 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730930+00:00 firewall-perimeter kernel: [BLOCK] SRC=155.127.174.8 DST=172.20.20.3 PROTO=TCP SPT=23318 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730932+00:00 firewall-perimeter kernel: [BLOCK] SRC=16.101.35.46 DST=172.20.20.3 PROTO=TCP SPT=22518 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.730934+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.25.223.169 DST=172.20.20.3 PROTO=TCP SPT=40582 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881390+00:00 firewall-perimeter kernel: [BLOCK] SRC=14.255.78.47 DST=172.20.20.3 PROTO=TCP SPT=3254 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881403+00:00 firewall-perimeter kernel: [BLOCK] SRC=173.21.76.37 DST=172.20.20.3 PROTO=TCP SPT=3564 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881406+00:00 firewall-perimeter kernel: [BLOCK] SRC=38.99.135.218 DST=172.20.20.3 PROTO=TCP SPT=35458 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881409+00:00 firewall-perimeter kernel: [BLOCK] SRC=216.38.151.163 DST=172.20.20.3 PROTO=TCP SPT=62632 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881411+00:00 firewall-perimeter kernel: [BLOCK] SRC=114.201.88.220 DST=172.20.20.3 PROTO=TCP SPT=3773 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881414+00:00 firewall-perimeter kernel: [BLOCK] SRC=122.244.167.160 DST=172.20.20.3 PROTO=TCP SPT=28383 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881417+00:00 firewall-perimeter kernel: [BLOCK] SRC=240.157.239.147 DST=172.20.20.3 PROTO=TCP SPT=19237 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881419+00:00 firewall-perimeter kernel: [BLOCK] SRC=4.108.157.61 DST=172.20.20.3 PROTO=TCP SPT=49878 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881421+00:00 firewall-perimeter kernel: [BLOCK] SRC=169.154.35.43 DST=172.20.20.3 PROTO=TCP SPT=60466 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881423+00:00 firewall-perimeter kernel: [BLOCK] SRC=1.10.83.50 DST=172.20.20.3 PROTO=TCP SPT=41957 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881426+00:00 firewall-perimeter kernel: [BLOCK] SRC=159.129.242.119 DST=172.20.20.3 PROTO=TCP SPT=7400 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881428+00:00 firewall-perimeter kernel: [BLOCK] SRC=35.109.124.82 DST=172.20.20.3 PROTO=TCP SPT=43509 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881431+00:00 firewall-perimeter kernel: [BLOCK] SRC=211.4.86.108 DST=172.20.20.3 PROTO=TCP SPT=32924 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881433+00:00 firewall-perimeter kernel: [BLOCK] SRC=228.23.60.50 DST=172.20.20.3 PROTO=TCP SPT=43224 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881435+00:00 firewall-perimeter kernel: [BLOCK] SRC=149.103.55.1 DST=172.20.20.3 PROTO=TCP SPT=12545 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881437+00:00 firewall-perimeter kernel: [BLOCK] SRC=70.107.207.185 DST=172.20.20.3 PROTO=TCP SPT=39924 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881439+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.188.83.8 DST=172.20.20.3 PROTO=TCP SPT=16152 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881441+00:00 firewall-perimeter kernel: [BLOCK] SRC=130.255.113.231 DST=172.20.20.3 PROTO=TCP SPT=29030 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881444+00:00 firewall-perimeter kernel: [BLOCK] SRC=249.201.18.139 DST=172.20.20.3 PROTO=TCP SPT=31563 DPT=80 SYN_FLOOD
+2025-11-25T20:57:26.881446+00:00 firewall-perimeter kernel: [BLOCK] SRC=181.19.223.8 DST=172.20.20.3 PROTO=TCP SPT=5363 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026869+00:00 firewall-perimeter kernel: [BLOCK] SRC=143.62.208.68 DST=172.20.20.3 PROTO=TCP SPT=24656 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026883+00:00 firewall-perimeter kernel: [BLOCK] SRC=147.163.204.253 DST=172.20.20.3 PROTO=TCP SPT=62218 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026887+00:00 firewall-perimeter kernel: [BLOCK] SRC=140.136.172.243 DST=172.20.20.3 PROTO=TCP SPT=21462 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026889+00:00 firewall-perimeter kernel: [BLOCK] SRC=8.77.114.66 DST=172.20.20.3 PROTO=TCP SPT=54956 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026892+00:00 firewall-perimeter kernel: [BLOCK] SRC=119.149.85.176 DST=172.20.20.3 PROTO=TCP SPT=45784 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026899+00:00 firewall-perimeter kernel: [BLOCK] SRC=155.11.249.111 DST=172.20.20.3 PROTO=TCP SPT=9136 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026901+00:00 firewall-perimeter kernel: [BLOCK] SRC=62.244.153.34 DST=172.20.20.3 PROTO=TCP SPT=59088 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026903+00:00 firewall-perimeter kernel: [BLOCK] SRC=8.142.116.152 DST=172.20.20.3 PROTO=TCP SPT=12168 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026905+00:00 firewall-perimeter kernel: [BLOCK] SRC=167.141.6.64 DST=172.20.20.3 PROTO=TCP SPT=12570 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026907+00:00 firewall-perimeter kernel: [BLOCK] SRC=210.174.136.127 DST=172.20.20.3 PROTO=TCP SPT=42071 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026909+00:00 firewall-perimeter kernel: [BLOCK] SRC=70.41.123.231 DST=172.20.20.3 PROTO=TCP SPT=21445 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026911+00:00 firewall-perimeter kernel: [BLOCK] SRC=223.143.16.50 DST=172.20.20.3 PROTO=TCP SPT=37304 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026913+00:00 firewall-perimeter kernel: [BLOCK] SRC=141.251.149.14 DST=172.20.20.3 PROTO=TCP SPT=7232 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026915+00:00 firewall-perimeter kernel: [BLOCK] SRC=73.129.79.48 DST=172.20.20.3 PROTO=TCP SPT=33744 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026945+00:00 firewall-perimeter kernel: [BLOCK] SRC=203.218.62.194 DST=172.20.20.3 PROTO=TCP SPT=17619 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026949+00:00 firewall-perimeter kernel: [BLOCK] SRC=209.223.103.173 DST=172.20.20.3 PROTO=TCP SPT=30405 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026951+00:00 firewall-perimeter kernel: [BLOCK] SRC=149.219.124.235 DST=172.20.20.3 PROTO=TCP SPT=17324 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026965+00:00 firewall-perimeter kernel: [BLOCK] SRC=153.186.156.129 DST=172.20.20.3 PROTO=TCP SPT=46420 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026968+00:00 firewall-perimeter kernel: [BLOCK] SRC=3.120.177.220 DST=172.20.20.3 PROTO=TCP SPT=1873 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.026970+00:00 firewall-perimeter kernel: [BLOCK] SRC=164.27.175.100 DST=172.20.20.3 PROTO=TCP SPT=62921 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168649+00:00 firewall-perimeter kernel: [BLOCK] SRC=8.120.74.239 DST=172.20.20.3 PROTO=TCP SPT=30038 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168689+00:00 firewall-perimeter kernel: [BLOCK] SRC=70.51.187.66 DST=172.20.20.3 PROTO=TCP SPT=53770 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168692+00:00 firewall-perimeter kernel: [BLOCK] SRC=47.3.177.28 DST=172.20.20.3 PROTO=TCP SPT=19529 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168694+00:00 firewall-perimeter kernel: [BLOCK] SRC=246.222.204.77 DST=172.20.20.3 PROTO=TCP SPT=9325 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168697+00:00 firewall-perimeter kernel: [BLOCK] SRC=164.111.201.146 DST=172.20.20.3 PROTO=TCP SPT=46881 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168700+00:00 firewall-perimeter kernel: [BLOCK] SRC=158.1.45.25 DST=172.20.20.3 PROTO=TCP SPT=34288 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168702+00:00 firewall-perimeter kernel: [BLOCK] SRC=228.210.48.221 DST=172.20.20.3 PROTO=TCP SPT=56936 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168704+00:00 firewall-perimeter kernel: [BLOCK] SRC=115.142.99.137 DST=172.20.20.3 PROTO=TCP SPT=16464 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168712+00:00 firewall-perimeter kernel: [BLOCK] SRC=73.206.185.132 DST=172.20.20.3 PROTO=TCP SPT=52734 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168714+00:00 firewall-perimeter kernel: [BLOCK] SRC=43.4.117.95 DST=172.20.20.3 PROTO=TCP SPT=14807 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168716+00:00 firewall-perimeter kernel: [BLOCK] SRC=97.56.206.34 DST=172.20.20.3 PROTO=TCP SPT=52126 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168718+00:00 firewall-perimeter kernel: [BLOCK] SRC=74.62.149.187 DST=172.20.20.3 PROTO=TCP SPT=46624 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168721+00:00 firewall-perimeter kernel: [BLOCK] SRC=7.36.253.77 DST=172.20.20.3 PROTO=TCP SPT=20743 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168723+00:00 firewall-perimeter kernel: [BLOCK] SRC=223.196.117.164 DST=172.20.20.3 PROTO=TCP SPT=19605 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168725+00:00 firewall-perimeter kernel: [BLOCK] SRC=176.204.193.60 DST=172.20.20.3 PROTO=TCP SPT=39666 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168727+00:00 firewall-perimeter kernel: [BLOCK] SRC=254.104.9.252 DST=172.20.20.3 PROTO=TCP SPT=33375 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168729+00:00 firewall-perimeter kernel: [BLOCK] SRC=3.182.157.192 DST=172.20.20.3 PROTO=TCP SPT=4468 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168731+00:00 firewall-perimeter kernel: [BLOCK] SRC=232.67.88.130 DST=172.20.20.3 PROTO=TCP SPT=3779 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168733+00:00 firewall-perimeter kernel: [BLOCK] SRC=38.87.212.228 DST=172.20.20.3 PROTO=TCP SPT=2054 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.168735+00:00 firewall-perimeter kernel: [BLOCK] SRC=83.142.84.18 DST=172.20.20.3 PROTO=TCP SPT=10909 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313361+00:00 firewall-perimeter kernel: [BLOCK] SRC=103.250.177.28 DST=172.20.20.3 PROTO=TCP SPT=17539 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313374+00:00 firewall-perimeter kernel: [BLOCK] SRC=206.19.34.43 DST=172.20.20.3 PROTO=TCP SPT=49617 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313376+00:00 firewall-perimeter kernel: [BLOCK] SRC=30.189.98.53 DST=172.20.20.3 PROTO=TCP SPT=29054 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313379+00:00 firewall-perimeter kernel: [BLOCK] SRC=205.122.37.213 DST=172.20.20.3 PROTO=TCP SPT=40853 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313381+00:00 firewall-perimeter kernel: [BLOCK] SRC=179.158.40.5 DST=172.20.20.3 PROTO=TCP SPT=52371 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313384+00:00 firewall-perimeter kernel: [BLOCK] SRC=188.93.127.131 DST=172.20.20.3 PROTO=TCP SPT=36541 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313386+00:00 firewall-perimeter kernel: [BLOCK] SRC=167.6.218.81 DST=172.20.20.3 PROTO=TCP SPT=33949 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313388+00:00 firewall-perimeter kernel: [BLOCK] SRC=88.16.212.34 DST=172.20.20.3 PROTO=TCP SPT=8358 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313391+00:00 firewall-perimeter kernel: [BLOCK] SRC=232.169.68.88 DST=172.20.20.3 PROTO=TCP SPT=64716 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313393+00:00 firewall-perimeter kernel: [BLOCK] SRC=75.46.211.226 DST=172.20.20.3 PROTO=TCP SPT=23057 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313395+00:00 firewall-perimeter kernel: [BLOCK] SRC=9.245.199.84 DST=172.20.20.3 PROTO=TCP SPT=1615 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313397+00:00 firewall-perimeter kernel: [BLOCK] SRC=252.202.128.37 DST=172.20.20.3 PROTO=TCP SPT=7673 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313399+00:00 firewall-perimeter kernel: [BLOCK] SRC=158.139.98.229 DST=172.20.20.3 PROTO=TCP SPT=18298 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313401+00:00 firewall-perimeter kernel: [BLOCK] SRC=183.254.77.235 DST=172.20.20.3 PROTO=TCP SPT=14571 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313404+00:00 firewall-perimeter kernel: [BLOCK] SRC=111.57.74.54 DST=172.20.20.3 PROTO=TCP SPT=28717 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313405+00:00 firewall-perimeter kernel: [BLOCK] SRC=244.177.239.211 DST=172.20.20.3 PROTO=TCP SPT=31700 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313407+00:00 firewall-perimeter kernel: [BLOCK] SRC=108.238.214.186 DST=172.20.20.3 PROTO=TCP SPT=51578 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313409+00:00 firewall-perimeter kernel: [BLOCK] SRC=98.77.44.123 DST=172.20.20.3 PROTO=TCP SPT=20148 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313411+00:00 firewall-perimeter kernel: [BLOCK] SRC=3.51.153.248 DST=172.20.20.3 PROTO=TCP SPT=24421 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.313413+00:00 firewall-perimeter kernel: [BLOCK] SRC=231.150.115.99 DST=172.20.20.3 PROTO=TCP SPT=59464 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445952+00:00 firewall-perimeter kernel: [BLOCK] SRC=144.89.250.247 DST=172.20.20.3 PROTO=TCP SPT=54233 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445967+00:00 firewall-perimeter kernel: [BLOCK] SRC=78.148.2.154 DST=172.20.20.3 PROTO=TCP SPT=5539 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445970+00:00 firewall-perimeter kernel: [BLOCK] SRC=244.130.171.242 DST=172.20.20.3 PROTO=TCP SPT=11176 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445973+00:00 firewall-perimeter kernel: [BLOCK] SRC=16.35.45.160 DST=172.20.20.3 PROTO=TCP SPT=47195 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445975+00:00 firewall-perimeter kernel: [BLOCK] SRC=202.192.55.183 DST=172.20.20.3 PROTO=TCP SPT=54872 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445978+00:00 firewall-perimeter kernel: [BLOCK] SRC=20.134.63.203 DST=172.20.20.3 PROTO=TCP SPT=23075 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445980+00:00 firewall-perimeter kernel: [BLOCK] SRC=233.127.202.51 DST=172.20.20.3 PROTO=TCP SPT=48928 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445982+00:00 firewall-perimeter kernel: [BLOCK] SRC=202.52.62.94 DST=172.20.20.3 PROTO=TCP SPT=44094 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445984+00:00 firewall-perimeter kernel: [BLOCK] SRC=29.166.250.22 DST=172.20.20.3 PROTO=TCP SPT=33919 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445987+00:00 firewall-perimeter kernel: [BLOCK] SRC=152.127.119.203 DST=172.20.20.3 PROTO=TCP SPT=60567 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445989+00:00 firewall-perimeter kernel: [BLOCK] SRC=174.70.190.78 DST=172.20.20.3 PROTO=TCP SPT=25962 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445991+00:00 firewall-perimeter kernel: [BLOCK] SRC=216.132.186.124 DST=172.20.20.3 PROTO=TCP SPT=62927 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445993+00:00 firewall-perimeter kernel: [BLOCK] SRC=177.60.194.83 DST=172.20.20.3 PROTO=TCP SPT=51927 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445995+00:00 firewall-perimeter kernel: [BLOCK] SRC=3.76.94.167 DST=172.20.20.3 PROTO=TCP SPT=40958 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.445997+00:00 firewall-perimeter kernel: [BLOCK] SRC=207.84.98.86 DST=172.20.20.3 PROTO=TCP SPT=41889 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.446000+00:00 firewall-perimeter kernel: [BLOCK] SRC=14.193.4.154 DST=172.20.20.3 PROTO=TCP SPT=32674 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.446002+00:00 firewall-perimeter kernel: [BLOCK] SRC=2.134.237.84 DST=172.20.20.3 PROTO=TCP SPT=35491 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.446004+00:00 firewall-perimeter kernel: [BLOCK] SRC=212.72.217.69 DST=172.20.20.3 PROTO=TCP SPT=8571 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.446006+00:00 firewall-perimeter kernel: [BLOCK] SRC=26.178.94.225 DST=172.20.20.3 PROTO=TCP SPT=1449 DPT=80 SYN_FLOOD
+2025-11-25T20:57:27.446008+00:00 firewall-perimeter kernel: [BLOCK] SRC=203.88.209.206 DST=172.20.20.3 PROTO=TCP SPT=65355 DPT=80 SYN_FLOOD
+2025-11-25T20:57:32.954185+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.113667+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.266620+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.411723+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.558824+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.700023+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.846427+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:33.976866+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:57:34.130712+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: ' OR 1=1 from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T20:59:01.492761+00:00 siem-backend kernel: eth3: renamed from clab-a16d5375
+2025-11-25T20:59:01.520793+00:00 siem-backend kernel: eth1: renamed from clab-a70c1a19
+2025-11-25T20:59:02.419387+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-25T20:59:10.876096+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T21:00:08.448918+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T21:00:08.609494+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: DROP TABLE users from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T21:00:08.753753+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T21:00:08.887255+00:00 reverse-proxy-waf modsecurity: [CRITICAL] SQL Injection Detected: UNION SELECT from SRC=192.168.1.66 DST=172.20.20.4
+2025-11-25T21:13:58.764753+00:00 siem-backend kernel: audit: type=1326 audit(1764105238.760:45): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=kernel pid=817266 comm="docker-buildx" exe="/snap/docker/3377/usr/libexec/docker/cli-plugins/docker-buildx" sig=0 arch=c000003e syscall=434 compat=0 ip=0x40ddce code=0x50000
+2025-11-25T21:14:42.884846+00:00 siem-backend kernel: mini_init (356): drop_caches: 1
+2025-11-25T21:16:00.580924+00:00 siem-backend kernel: eth1: renamed from clab-4a6d49a4
+2025-11-25T21:16:00.612775+00:00 siem-backend kernel: eth0: renamed from veth03126e8
+2025-11-25T21:16:00.636728+00:00 siem-backend kernel: eth0: renamed from veth674b58d
+2025-11-25T21:16:00.668668+00:00 siem-backend kernel: br-5bd8de29f1d8: port 10(veth9698bdd) entered blocking state
+2025-11-25T21:16:00.668689+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth8ac1340) entered blocking state
+2025-11-25T21:16:00.668689+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth8ac1340) entered disabled state
+2025-11-25T21:16:00.668690+00:00 siem-backend kernel: veth8ac1340: entered promiscuous mode
+2025-11-25T21:16:00.668695+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth8ac1340) entered blocking state
+2025-11-25T21:16:00.668696+00:00 siem-backend kernel: br-5bd8de29f1d8: port 12(veth8ac1340) entered forwarding state
+2025-11-25T21:16:00.792640+00:00 siem-backend kernel: eth1: renamed from clab-061ec95e
+2025-11-25T21:16:00.988805+00:00 siem-backend kernel: eth3: renamed from clab-36ab8cf7
+2025-11-25T21:16:01.164710+00:00 siem-backend kernel: eth3: renamed from clab-dd08efaf
+2025-11-25T21:16:01.256635+00:00 siem-backend kernel: eth1: renamed from clab-3a20d16d
+2025-11-25T21:16:01.534259+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start

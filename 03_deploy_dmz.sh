@@ -44,6 +44,7 @@ clab_exec edge-router "ip route add 192.168.35.0/24 via 192.168.10.2"
 clab_exec edge-router "ip route add 192.168.40.0/24 via 192.168.10.2"
 clab_exec edge-router "ip route add 192.168.60.0/24 via 192.168.10.2" # Webserver Netz
 clab_exec edge-router "ip route add 192.168.61.0/24 via 192.168.10.2" # IDS Netz
+clab_exec edge-router "ip route add 192.168.70.0/24 via 192.168.10.2" # DB Netz
 
 # 2. Internal Router (Vereinfacht: Nur noch Client & SIEM)
 clab_exec internal-router "ip addr add 192.168.30.2/24 dev eth1" # Transit zur FW
@@ -63,6 +64,7 @@ clab_exec firewall-in "ip addr add 192.168.20.1/24 dev eth2" # WAF
 clab_exec firewall-in "ip addr add 192.168.30.1/24 dev eth3" # Transit Intern
 clab_exec firewall-in "ip addr add 192.168.60.1/24 dev eth4" # Webserver Netz
 clab_exec firewall-in "ip addr add 192.168.61.1/24 dev eth5" # IDS Netz (WICHTIG für Routing!)
+clab_exec firewall-in "ip addr add 192.168.70.1/24 dev eth6" # DB Netz
 
 clab_exec firewall-in "ip route del default || true"
 clab_exec firewall-in "ip route add default via 192.168.10.1"
@@ -96,6 +98,11 @@ clab_exec siem-backend "ip addr add 192.168.35.10/24 dev eth1"
 clab_exec siem-backend "ip route del default || true"
 clab_exec siem-backend "ip route add default via 192.168.35.1"
 
+# 10. Database
+clab_exec db-backend "ip addr add 192.168.70.10/24 dev eth1"
+clab_exec db-backend "ip route del default || true"
+clab_exec db-backend "ip route add default via 192.168.70.1"
+
 # --- LOG-DATEI VORBEREITUNG ---
 echo "Creating Firewall log file..."
 sudo docker exec clab-dmz-project-sun-firewall-in touch /fw.log
@@ -104,7 +111,7 @@ sudo docker exec clab-dmz-project-sun-firewall-in chmod 644 /fw.log
 echo "--- 7. STARTING SERVICES ---"
 
 # SIEM Syslog Daemon
-sudo docker exec -d clab-dmz-project-sun-siem-backend rsyslogd -n
+# SIEM Syslog Daemon handled by startup script
 
 # IDS Start (Lädt Regeln + Engine)
 sudo docker exec clab-dmz-project-sun-ids-dmz /usr/local/bin/startup_ids.sh

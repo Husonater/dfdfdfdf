@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     tcpdump \
     python3 \
+    iptables \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Regeln AUTOMATISCH beim Bauen herunterladen

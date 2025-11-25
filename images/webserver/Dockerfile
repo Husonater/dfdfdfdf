@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     iproute2 \
     net-tools \
     tcpdump \
+    netcat-openbsd \
     && rm -rf /var/lib/apt/lists/*
 
 # Test-Seite erstellen (mit PHP für IP-Anzeige)

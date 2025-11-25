@@ -4,7 +4,8 @@ echo "--- 🔥 FIREWALL INITIALIZATION ---"
 
 # 1. LOGGING KONFIGURATION (Bleibt gleich)
 echo "Configuring Rsyslog..."
-echo '*.* @192.168.35.10:514' > /etc/rsyslog.conf
+echo 'module(load="imuxsock")' > /etc/rsyslog.conf
+echo '*.* @192.168.35.10:514' >> /etc/rsyslog.conf
 pkill rsyslogd || true
 rsyslogd
 
@@ -50,6 +51,13 @@ iptables -A FORWARD -s 192.168.20.10 -d 192.168.60.20 -p tcp --dport 80 -j ACCEP
 iptables -A FORWARD -s 192.168.40.0/24 -d 192.168.35.0/24 -j ACCEPT
 # WAF -> SIEM
 iptables -A FORWARD -s 192.168.20.10 -d 192.168.35.10 -p udp --dport 514 -j ACCEPT
+# IDS -> SIEM (Syslog)
+iptables -A FORWARD -s 192.168.61.30 -d 192.168.35.10 -p udp --dport 514 -j ACCEPT
+
+# Webserver -> Database (MySQL)
+iptables -A FORWARD -s 192.168.60.20 -d 192.168.70.10 -p tcp --dport 3306 -j ACCEPT
+# Database -> SIEM (Syslog)
+iptables -A FORWARD -s 192.168.70.10 -d 192.168.35.10 -p udp --dport 514 -j ACCEPT
 
 # --- D. LOGGING & DROP (Bleibt gleich) ---
 iptables -A FORWARD -j NFLOG --nflog-group 1 --nflog-prefix "FW-DROP: "
