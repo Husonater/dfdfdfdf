@@ -12,6 +12,24 @@ echo "--- 3. BUILDING IMAGES ---"
 sudo docker compose -f "$COMPOSE_FILE" build
 
 echo "--- 4. DEPLOYING TOPOLOGY ---"
+
+# Dynamic Port Selection for SIEM Overlay
+# Check if port 9090 (or current in file) is in use and find next available
+CURRENT_PORT=$(grep -oP '(?<=- )\d+(?=:5000)' "$TOPO_FILE" || echo "9090")
+NEW_PORT=$CURRENT_PORT
+
+while sudo lsof -i -P -n | grep ":$NEW_PORT (LISTEN)" >/dev/null; do
+    echo "Port $NEW_PORT is in use, trying next..."
+    ((NEW_PORT++))
+done
+
+if [ "$NEW_PORT" != "$CURRENT_PORT" ]; then
+    echo "Updating SIEM Overlay port from $CURRENT_PORT to $NEW_PORT in $TOPO_FILE"
+    sed -i "s/- $CURRENT_PORT:5000/- $NEW_PORT:5000/" "$TOPO_FILE"
+else
+    echo "Port $NEW_PORT is available."
+fi
+
 # Startet das Lab neu mit der optimierten Verkabelung
 sudo containerlab deploy --topo "$TOPO_FILE" --reconfigure
 
@@ -34,79 +52,69 @@ clab_exec() {
 
 # --- A. ROUTERS & ENDPOINTS (IPs & Routes) ---
 
-# 1. Edge Router
-clab_exec edge-router "ip addr add 192.168.10.1/24 dev eth1"
-clab_exec edge-router "ip addr add 172.16.1.1/24 dev eth2"
-# Routen zu allen internen Netzen via Firewall (10.2)
-clab_exec edge-router "ip route add 192.168.20.0/24 via 192.168.10.2"
-clab_exec edge-router "ip route add 192.168.30.0/24 via 192.168.10.2"
-clab_exec edge-router "ip route add 192.168.35.0/24 via 192.168.10.2"
-clab_exec edge-router "ip route add 192.168.40.0/24 via 192.168.10.2"
-clab_exec edge-router "ip route add 192.168.60.0/24 via 192.168.10.2" # Webserver Netz
-clab_exec edge-router "ip route add 192.168.61.0/24 via 192.168.10.2" # IDS Netz
-clab_exec edge-router "ip route add 192.168.70.0/24 via 192.168.10.2" # DB Netz
+# 1. Edge Firewall
+# eth1: Internet (172.16.1.1)
+# eth2: Link to Internal Firewall (192.168.10.1)
+# eth3: Mirror Port to IDS
+clab_exec edge-firewall "ip addr add 172.16.1.1/24 dev eth1 || true"
+clab_exec edge-firewall "ip addr add 192.168.10.1/24 dev eth2 || true"
+clab_exec edge-firewall "ip link set dev eth3 up || true" # Mirror port interface
+# Route to internal networks via Internal Firewall
+clab_exec edge-firewall "ip route replace 192.168.0.0/16 via 192.168.10.2 || true"
 
-# 2. Internal Router (Vereinfacht: Nur noch Client & SIEM)
-clab_exec internal-router "ip addr add 192.168.30.2/24 dev eth1" # Transit zur FW
-clab_exec internal-router "ip addr add 192.168.35.1/24 dev eth2" # SIEM
-clab_exec internal-router "ip addr add 192.168.40.1/24 dev eth3" # Client
-clab_exec internal-router "ip route del default || true"
-clab_exec internal-router "ip route add default via 192.168.30.1" 
+# 2. Internal Firewall
+# eth1: Link to Edge Firewall (192.168.10.2)
+# eth2: SIEM (192.168.35.1)
+# eth3: Client (192.168.40.1)
+# eth4: WAF (192.168.50.1)
+clab_exec internal-firewall "ip addr add 192.168.10.2/24 dev eth1 || true"
+clab_exec internal-firewall "ip addr add 192.168.35.1/24 dev eth2 || true"
+clab_exec internal-firewall "ip addr add 192.168.50.1/24 dev eth4 || true"
+clab_exec internal-firewall "ip link set dev eth5 up || true" # Mirror port to IDS
+# Default route out via Edge Firewall
+clab_exec internal-firewall "ip route del default || true"
+clab_exec internal-firewall "ip route add default via 192.168.10.1"
 
-# 3. WAF (Bleibt im DMZ Front Netz)
-clab_exec reverse-proxy-waf "ip addr add 192.168.20.10/24 dev eth1"
-clab_exec reverse-proxy-waf "ip route del default || true"
-clab_exec reverse-proxy-waf "ip route add default via 192.168.20.1"
-
-# 4. Firewall (Der zentrale Knoten)
-clab_exec firewall-in "ip addr add 192.168.10.2/24 dev eth1" # Outside
-clab_exec firewall-in "ip addr add 192.168.20.1/24 dev eth2" # WAF
-clab_exec firewall-in "ip addr add 192.168.30.1/24 dev eth3" # Transit Intern
-clab_exec firewall-in "ip addr add 192.168.60.1/24 dev eth4" # Webserver Netz
-clab_exec firewall-in "ip addr add 192.168.61.1/24 dev eth5" # IDS Netz (WICHTIG für Routing!)
-clab_exec firewall-in "ip addr add 192.168.70.1/24 dev eth6" # DB Netz
-
-clab_exec firewall-in "ip route del default || true"
-clab_exec firewall-in "ip route add default via 192.168.10.1"
-# Routen zu den internen Netzen hinter dem Internal Router
-clab_exec firewall-in "ip route add 192.168.35.0/24 via 192.168.30.2" 
-clab_exec firewall-in "ip route add 192.168.40.0/24 via 192.168.30.2" 
-
-# 5. Webserver (Neues Netz 60.0)
-clab_exec webserver "ip addr add 192.168.60.20/24 dev eth1"
-clab_exec webserver "ip route del default || true"
-clab_exec webserver "ip route add default via 192.168.60.1" 
-
-# 6. IDS (Neues Netz 61.0 - Separat für sauberes Mirroring)
-clab_exec ids-dmz "ip addr add 192.168.61.30/24 dev eth1"
-clab_exec ids-dmz "ip route del default || true"
-clab_exec ids-dmz "ip route add default via 192.168.61.1"
-# Promiscuous Mode aktivieren (Wichtig für Mirroring Empfang!)
-clab_exec ids-dmz "ip link set dev eth1 promisc on"
-
-# 7. Attacker
-clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1"
-clab_exec attacker-internet "ip route replace default via 172.16.1.1 dev eth1"
-
-# 8. Client
-clab_exec client-internal "ip addr add 192.168.40.10/24 dev eth1"
-clab_exec client-internal "ip route del default || true"
-clab_exec client-internal "ip route add default via 192.168.40.1"
-
-# 9. SIEM
-clab_exec siem-backend "ip addr add 192.168.35.10/24 dev eth1"
+# 3. SIEM
+clab_exec siem-backend "ip addr add 192.168.35.10/24 dev eth1 || true"
 clab_exec siem-backend "ip route del default || true"
 clab_exec siem-backend "ip route add default via 192.168.35.1"
 
-# 10. Database
-clab_exec db-backend "ip addr add 192.168.70.10/24 dev eth1"
-clab_exec db-backend "ip route del default || true"
-clab_exec db-backend "ip route add default via 192.168.70.1"
+# 4. Client
+clab_exec client-internal "ip addr add 192.168.40.10/24 dev eth1 || true"
+clab_exec client-internal "ip route del default || true"
+clab_exec client-internal "ip route add default via 192.168.40.1"
+
+# 5. WAF & Webserver
+# WAF
+clab_exec reverse-proxy-waf "ip addr add 192.168.50.10/24 dev eth1 || true"
+clab_exec reverse-proxy-waf "ip route del default || true"
+clab_exec reverse-proxy-waf "ip route add default via 192.168.50.1"
+# Webserver (Behind WAF, private link)
+# Using 10.0.0.0/24 for WAF<->Webserver link to isolate it
+clab_exec reverse-proxy-waf "ip addr add 10.0.0.1/24 dev eth2 || true"
+clab_exec webserver "ip addr add 10.0.0.2/24 dev eth1 || true"
+clab_exec webserver "ip route del default || true"
+clab_exec webserver "ip route add default via 10.0.0.1"
+
+# 6. IDS
+# Connected to Edge Firewall mirror port (eth1) and Internal Firewall mirror port (eth2)
+clab_exec ids-dmz "ip link set dev eth1 promisc on || true"
+clab_exec ids-dmz "ip link set dev eth1 up || true"
+clab_exec ids-dmz "ip link set dev eth2 promisc on || true"
+clab_exec ids-dmz "ip link set dev eth2 up || true"
+# Optional: Assign management IP if needed, but primarily for sniffing
+clab_exec ids-dmz "ip addr add 192.168.55.10/24 dev eth1 || true" 
+
+# 7. Attacker
+clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1 || true"
+clab_exec attacker-internet "ip route replace default via 172.16.1.1 dev eth1 || true"
+
 
 # --- LOG-DATEI VORBEREITUNG ---
 echo "Creating Firewall log file..."
-sudo docker exec clab-dmz-project-sun-firewall-in touch /fw.log
-sudo docker exec clab-dmz-project-sun-firewall-in chmod 644 /fw.log
+sudo docker exec clab-dmz-project-sun-edge-firewall touch /fw.log
+sudo docker exec clab-dmz-project-sun-edge-firewall chmod 644 /fw.log
 
 echo "--- 7. STARTING SERVICES ---"
 
@@ -128,6 +136,6 @@ fi
 
 # FIREWALL (Regeln + Logging Pipeline)
 echo "--- 8. INITIALIZING FIREWALL ---"
-clab_exec firewall-in "/usr/local/bin/init_firewall.sh"
+clab_exec edge-firewall "/usr/local/bin/init_firewall.sh"
 
 echo "--- READY ---"

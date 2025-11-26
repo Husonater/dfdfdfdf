@@ -879,3 +879,1124 @@
 2025-11-25T21:16:01.164710+00:00 siem-backend kernel: eth3: renamed from clab-dd08efaf
 2025-11-25T21:16:01.256635+00:00 siem-backend kernel: eth1: renamed from clab-3a20d16d
 2025-11-25T21:16:01.534259+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T14:59:15.262950+00:00 siem-backend kernel: br-2e911e050f94: port 11(vethb43cb0a) entered disabled state
+2025-11-26T14:59:15.263292+00:00 siem-backend kernel: vethfdfe15a: renamed from eth0
+2025-11-26T14:59:15.263299+00:00 siem-backend kernel: br-2e911e050f94: port 11(vethb43cb0a) entered disabled state
+2025-11-26T14:59:15.263300+00:00 siem-backend kernel: vethb43cb0a (unregistering): left allmulticast mode
+2025-11-26T14:59:15.263302+00:00 siem-backend kernel: vethb43cb0a (unregistering): left promiscuous mode
+2025-11-26T14:59:15.263396+00:00 siem-backend kernel: br-2e911e050f94: port 11(vethb43cb0a) entered disabled state
+2025-11-26T14:59:15.263400+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered blocking state
+2025-11-26T14:59:15.263411+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered disabled state
+2025-11-26T14:59:15.263412+00:00 siem-backend kernel: veth768d32c: entered allmulticast mode
+2025-11-26T14:59:15.263414+00:00 siem-backend kernel: veth768d32c: entered promiscuous mode
+2025-11-26T14:59:15.263416+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered blocking state
+2025-11-26T14:59:15.263417+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered disabled state
+2025-11-26T14:59:15.263419+00:00 siem-backend kernel: vethcafea28: entered allmulticast mode
+2025-11-26T14:59:15.263420+00:00 siem-backend kernel: vethcafea28: entered promiscuous mode
+2025-11-26T14:59:15.263426+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered blocking state
+2025-11-26T14:59:15.263428+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered disabled state
+2025-11-26T14:59:15.263429+00:00 siem-backend kernel: vethd844ce3: entered allmulticast mode
+2025-11-26T14:59:15.263431+00:00 siem-backend kernel: vethd844ce3: entered promiscuous mode
+2025-11-26T14:59:15.263432+00:00 siem-backend kernel: eth0: renamed from vethc2d85ae
+2025-11-26T14:59:15.263434+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered blocking state
+2025-11-26T14:59:15.263440+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered forwarding state
+2025-11-26T14:59:15.263441+00:00 siem-backend kernel: eth0: renamed from veth11e2978
+2025-11-26T14:59:15.263443+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered blocking state
+2025-11-26T14:59:15.263444+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered forwarding state
+2025-11-26T14:59:15.263445+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered blocking state
+2025-11-26T14:59:15.263447+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered disabled state
+2025-11-26T14:59:15.263452+00:00 siem-backend kernel: vethd780134: entered allmulticast mode
+2025-11-26T14:59:15.263453+00:00 siem-backend kernel: vethd780134: entered promiscuous mode
+2025-11-26T14:59:15.263455+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered blocking state
+2025-11-26T14:59:15.263456+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered disabled state
+2025-11-26T14:59:15.263458+00:00 siem-backend kernel: veth82aa5ef: entered allmulticast mode
+2025-11-26T14:59:15.263459+00:00 siem-backend kernel: veth82aa5ef: entered promiscuous mode
+2025-11-26T14:59:15.263461+00:00 siem-backend kernel: eth0: renamed from vethdab45c1
+2025-11-26T14:59:15.263466+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered blocking state
+2025-11-26T14:59:15.263468+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered forwarding state
+2025-11-26T14:59:15.263469+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered blocking state
+2025-11-26T14:59:15.263471+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered disabled state
+2025-11-26T14:59:15.263472+00:00 siem-backend kernel: veth326ed82: entered allmulticast mode
+2025-11-26T14:59:15.263473+00:00 siem-backend kernel: veth326ed82: entered promiscuous mode
+2025-11-26T14:59:15.263479+00:00 siem-backend kernel: eth1: renamed from clab-b60c994c
+2025-11-26T14:59:15.263481+00:00 siem-backend kernel: eth0: renamed from veth30c5a67
+2025-11-26T14:59:15.263482+00:00 siem-backend kernel: eth1: renamed from clab-924f9b9b
+2025-11-26T14:59:15.263484+00:00 siem-backend kernel: eth2: renamed from clab-ba36523e
+2025-11-26T14:59:15.263485+00:00 siem-backend kernel: eth0: renamed from veth247cd1e
+2025-11-26T14:59:15.263486+00:00 siem-backend kernel: eth2: renamed from clab-d2972c9d
+2025-11-26T14:59:15.263488+00:00 siem-backend kernel: eth2: renamed from clab-c8334cf6
+2025-11-26T14:59:15.263493+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered blocking state
+2025-11-26T14:59:15.263495+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered forwarding state
+2025-11-26T14:59:15.263496+00:00 siem-backend kernel: eth0: renamed from vetha758ca3
+2025-11-26T14:59:15.263497+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered blocking state
+2025-11-26T14:59:15.263499+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered disabled state
+2025-11-26T14:59:15.263500+00:00 siem-backend kernel: veth45eded5: entered allmulticast mode
+2025-11-26T14:59:15.263506+00:00 siem-backend kernel: veth45eded5: entered promiscuous mode
+2025-11-26T14:59:15.263508+00:00 siem-backend kernel: eth3: renamed from clab-6ab9fda6
+2025-11-26T14:59:15.263509+00:00 siem-backend kernel: eth3: renamed from clab-d9fbda7e
+2025-11-26T14:59:15.263510+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered blocking state
+2025-11-26T14:59:15.263512+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered forwarding state
+2025-11-26T14:59:15.263513+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered blocking state
+2025-11-26T14:59:15.263518+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered forwarding state
+2025-11-26T14:59:15.263520+00:00 siem-backend kernel: eth1: renamed from clab-004e682d
+2025-11-26T14:59:15.263522+00:00 siem-backend kernel: eth3: renamed from clab-ec3ea2fe
+2025-11-26T14:59:15.263523+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered blocking state
+2025-11-26T14:59:15.263525+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered disabled state
+2025-11-26T14:59:15.263526+00:00 siem-backend kernel: veth6a8f50e: entered allmulticast mode
+2025-11-26T14:59:15.263528+00:00 siem-backend kernel: veth6a8f50e: entered promiscuous mode
+2025-11-26T14:59:15.263533+00:00 siem-backend kernel: eth1: renamed from clab-4890a94b
+2025-11-26T14:59:15.263535+00:00 siem-backend kernel: eth1: renamed from clab-3fa4e618
+2025-11-26T14:59:15.263536+00:00 siem-backend kernel: eth1: renamed from clab-a1df1032
+2025-11-26T14:59:15.263538+00:00 siem-backend kernel: eth0: renamed from veth005db4f
+2025-11-26T14:59:15.263539+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered blocking state
+2025-11-26T14:59:15.263541+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered forwarding state
+2025-11-26T14:59:15.263546+00:00 siem-backend kernel: eth2: renamed from clab-6ecf5b07
+2025-11-26T14:59:15.263548+00:00 siem-backend kernel: eth3: renamed from clab-4d2d2b95
+2025-11-26T14:59:15.263549+00:00 siem-backend kernel: eth0: renamed from veth235fe84
+2025-11-26T14:59:15.263551+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered blocking state
+2025-11-26T14:59:15.263552+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered forwarding state
+2025-11-26T14:59:15.263554+00:00 siem-backend kernel: eth1: renamed from clab-0a8300dd
+2025-11-26T14:59:15.263555+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered blocking state
+2025-11-26T14:59:15.263561+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered disabled state
+2025-11-26T14:59:15.263562+00:00 siem-backend kernel: veth1afa454: entered allmulticast mode
+2025-11-26T14:59:15.263564+00:00 siem-backend kernel: veth1afa454: entered promiscuous mode
+2025-11-26T14:59:15.263565+00:00 siem-backend kernel: eth1: renamed from clab-1a7bc2ab
+2025-11-26T14:59:15.263567+00:00 siem-backend kernel: eth2: renamed from clab-d2a82cbb
+2025-11-26T14:59:15.263568+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered blocking state
+2025-11-26T14:59:15.263574+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered disabled state
+2025-11-26T14:59:15.263576+00:00 siem-backend kernel: vethe2a6712: entered allmulticast mode
+2025-11-26T14:59:15.263578+00:00 siem-backend kernel: vethe2a6712: entered promiscuous mode
+2025-11-26T14:59:15.263579+00:00 siem-backend kernel: eth0: renamed from vethe2df006
+2025-11-26T14:59:15.263581+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered blocking state
+2025-11-26T14:59:15.263582+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered forwarding state
+2025-11-26T14:59:15.263588+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered blocking state
+2025-11-26T14:59:15.263589+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered disabled state
+2025-11-26T14:59:15.263591+00:00 siem-backend kernel: vetha778419: entered allmulticast mode
+2025-11-26T14:59:15.263592+00:00 siem-backend kernel: vetha778419: entered promiscuous mode
+2025-11-26T14:59:15.263594+00:00 siem-backend kernel: eth0: renamed from vethab1dd93
+2025-11-26T14:59:15.263596+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered blocking state
+2025-11-26T14:59:15.263597+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered forwarding state
+2025-11-26T14:59:15.263603+00:00 siem-backend kernel: eth1: renamed from clab-c8775127
+2025-11-26T14:59:15.279427+00:00 siem-backend kernel: eth0: renamed from vethfb486a5
+2025-11-26T14:59:15.283468+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered blocking state
+2025-11-26T14:59:15.283490+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered forwarding state
+2025-11-26T14:59:15.312055+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered blocking state
+2025-11-26T14:59:15.312083+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered disabled state
+2025-11-26T14:59:15.312085+00:00 siem-backend kernel: vethb980277: entered allmulticast mode
+2025-11-26T14:59:15.312086+00:00 siem-backend kernel: vethb980277: entered promiscuous mode
+2025-11-26T14:59:15.383427+00:00 siem-backend kernel: eth0: renamed from veth6a95824
+2025-11-26T14:59:15.383444+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered blocking state
+2025-11-26T14:59:15.383446+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered forwarding state
+2025-11-26T14:59:15.419557+00:00 siem-backend kernel: eth1: renamed from clab-356521c8
+2025-11-26T14:59:15.479044+00:00 siem-backend kernel: eth1: renamed from clab-5d043d3e
+2025-11-26T14:59:16.268461+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T14:59:16.271427+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered disabled state
+2025-11-26T14:59:16.271444+00:00 siem-backend kernel: vethe2a6712 (unregistering): left allmulticast mode
+2025-11-26T14:59:16.271446+00:00 siem-backend kernel: vethe2a6712 (unregistering): left promiscuous mode
+2025-11-26T14:59:16.271448+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethe2a6712) entered disabled state
+2025-11-26T15:02:20.166211+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered disabled state
+2025-11-26T15:02:20.166279+00:00 siem-backend kernel: veth005db4f: renamed from eth0
+2025-11-26T15:02:20.166281+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered disabled state
+2025-11-26T15:02:20.166282+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered disabled state
+2025-11-26T15:02:20.166282+00:00 siem-backend kernel: veth11e2978: renamed from eth0
+2025-11-26T15:02:20.166283+00:00 siem-backend kernel: veth30c5a67: renamed from eth0
+2025-11-26T15:02:20.166283+00:00 siem-backend kernel: veth6a95824: renamed from eth0
+2025-11-26T15:02:20.166286+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered disabled state
+2025-11-26T15:02:20.166287+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered disabled state
+2025-11-26T15:02:20.166287+00:00 siem-backend kernel: vethc2d85ae: renamed from eth0
+2025-11-26T15:02:20.166288+00:00 siem-backend kernel: vethfb486a5: renamed from eth0
+2025-11-26T15:02:20.166289+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered disabled state
+2025-11-26T15:02:20.166289+00:00 siem-backend kernel: veth45eded5 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166290+00:00 siem-backend kernel: veth45eded5 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166293+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth45eded5) entered disabled state
+2025-11-26T15:02:20.166294+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered disabled state
+2025-11-26T15:02:20.166294+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered disabled state
+2025-11-26T15:02:20.166295+00:00 siem-backend kernel: vethe2df006: renamed from eth0
+2025-11-26T15:02:20.166296+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered disabled state
+2025-11-26T15:02:20.166296+00:00 siem-backend kernel: vethcafea28 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166299+00:00 siem-backend kernel: vethcafea28 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166321+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethcafea28) entered disabled state
+2025-11-26T15:02:20.166322+00:00 siem-backend kernel: veth235fe84: renamed from eth0
+2025-11-26T15:02:20.166323+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered disabled state
+2025-11-26T15:02:20.166323+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered disabled state
+2025-11-26T15:02:20.166324+00:00 siem-backend kernel: vetha758ca3: renamed from eth0
+2025-11-26T15:02:20.166327+00:00 siem-backend kernel: vethdab45c1: renamed from eth0
+2025-11-26T15:02:20.166327+00:00 siem-backend kernel: veth247cd1e: renamed from eth0
+2025-11-26T15:02:20.166328+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered disabled state
+2025-11-26T15:02:20.166329+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered disabled state
+2025-11-26T15:02:20.166329+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered disabled state
+2025-11-26T15:02:20.166330+00:00 siem-backend kernel: vethd780134 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166330+00:00 siem-backend kernel: vethd780134 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166333+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethd780134) entered disabled state
+2025-11-26T15:02:20.166333+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered disabled state
+2025-11-26T15:02:20.166334+00:00 siem-backend kernel: vethb980277 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166334+00:00 siem-backend kernel: vethb980277 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166335+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb980277) entered disabled state
+2025-11-26T15:02:20.166336+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered disabled state
+2025-11-26T15:02:20.166338+00:00 siem-backend kernel: veth768d32c (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166339+00:00 siem-backend kernel: veth768d32c (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166341+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth768d32c) entered disabled state
+2025-11-26T15:02:20.166341+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered disabled state
+2025-11-26T15:02:20.166342+00:00 siem-backend kernel: vetha778419 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166343+00:00 siem-backend kernel: vetha778419 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166343+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha778419) entered disabled state
+2025-11-26T15:02:20.166346+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered disabled state
+2025-11-26T15:02:20.166347+00:00 siem-backend kernel: veth1afa454 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166347+00:00 siem-backend kernel: veth1afa454 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166348+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth1afa454) entered disabled state
+2025-11-26T15:02:20.166348+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered disabled state
+2025-11-26T15:02:20.166349+00:00 siem-backend kernel: veth82aa5ef (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166351+00:00 siem-backend kernel: veth82aa5ef (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166352+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth82aa5ef) entered disabled state
+2025-11-26T15:02:20.166353+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered disabled state
+2025-11-26T15:02:20.166353+00:00 siem-backend kernel: veth6a8f50e (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166354+00:00 siem-backend kernel: veth6a8f50e (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166355+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth6a8f50e) entered disabled state
+2025-11-26T15:02:20.166357+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered disabled state
+2025-11-26T15:02:20.166358+00:00 siem-backend kernel: vethd844ce3 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166358+00:00 siem-backend kernel: vethd844ce3 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166359+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethd844ce3) entered disabled state
+2025-11-26T15:02:20.166360+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered disabled state
+2025-11-26T15:02:20.166360+00:00 siem-backend kernel: veth326ed82 (unregistering): left allmulticast mode
+2025-11-26T15:02:20.166361+00:00 siem-backend kernel: veth326ed82 (unregistering): left promiscuous mode
+2025-11-26T15:02:20.166363+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth326ed82) entered disabled state
+2025-11-26T15:02:20.166364+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered blocking state
+2025-11-26T15:02:20.166365+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered disabled state
+2025-11-26T15:02:20.166365+00:00 siem-backend kernel: veth70917b1: entered allmulticast mode
+2025-11-26T15:02:20.166366+00:00 siem-backend kernel: veth70917b1: entered promiscuous mode
+2025-11-26T15:02:20.166366+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered blocking state
+2025-11-26T15:02:20.166370+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered disabled state
+2025-11-26T15:02:20.166370+00:00 siem-backend kernel: veth62179e6: entered allmulticast mode
+2025-11-26T15:02:20.166371+00:00 siem-backend kernel: veth62179e6: entered promiscuous mode
+2025-11-26T15:02:20.166372+00:00 siem-backend kernel: eth0: renamed from vethb1c9f3c
+2025-11-26T15:02:20.166372+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered blocking state
+2025-11-26T15:02:20.166373+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered forwarding state
+2025-11-26T15:02:20.166373+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered blocking state
+2025-11-26T15:02:20.166376+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered disabled state
+2025-11-26T15:02:20.166376+00:00 siem-backend kernel: vethb882a58: entered allmulticast mode
+2025-11-26T15:02:20.166377+00:00 siem-backend kernel: vethb882a58: entered promiscuous mode
+2025-11-26T15:02:20.166377+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered blocking state
+2025-11-26T15:02:20.166378+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered disabled state
+2025-11-26T15:02:20.166378+00:00 siem-backend kernel: vetha84898e: entered allmulticast mode
+2025-11-26T15:02:20.166381+00:00 siem-backend kernel: vetha84898e: entered promiscuous mode
+2025-11-26T15:02:20.166381+00:00 siem-backend kernel: eth0: renamed from veth0e43f23
+2025-11-26T15:02:20.166382+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered blocking state
+2025-11-26T15:02:20.166382+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered forwarding state
+2025-11-26T15:02:20.171412+00:00 siem-backend kernel: eth0: renamed from veth68f78d1
+2025-11-26T15:02:20.171423+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered blocking state
+2025-11-26T15:02:20.171430+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered forwarding state
+2025-11-26T15:02:20.223434+00:00 siem-backend kernel: eth1: renamed from clab-96b59622
+2025-11-26T15:02:20.235942+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered blocking state
+2025-11-26T15:02:20.235957+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered disabled state
+2025-11-26T15:02:20.235958+00:00 siem-backend kernel: vethc08f39f: entered allmulticast mode
+2025-11-26T15:02:20.247550+00:00 siem-backend kernel: vethc08f39f: entered promiscuous mode
+2025-11-26T15:02:20.363412+00:00 siem-backend kernel: eth1: renamed from clab-369153ac
+2025-11-26T15:02:20.363426+00:00 siem-backend kernel: eth0: renamed from vethc62e16c
+2025-11-26T15:02:20.363427+00:00 siem-backend kernel: eth1: renamed from clab-73b84f63
+2025-11-26T15:02:20.368132+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered blocking state
+2025-11-26T15:02:20.368151+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered forwarding state
+2025-11-26T15:02:20.373275+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered blocking state
+2025-11-26T15:02:20.373294+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered disabled state
+2025-11-26T15:02:20.373295+00:00 siem-backend kernel: vethe5b9628: entered allmulticast mode
+2025-11-26T15:02:20.373296+00:00 siem-backend kernel: vethe5b9628: entered promiscuous mode
+2025-11-26T15:02:20.443438+00:00 siem-backend kernel: eth4: renamed from clab-2c69cefb
+2025-11-26T15:02:20.452068+00:00 siem-backend kernel: eth0: renamed from vethbaedca3
+2025-11-26T15:02:20.455745+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered blocking state
+2025-11-26T15:02:20.455767+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered forwarding state
+2025-11-26T15:02:20.539596+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered blocking state
+2025-11-26T15:02:20.539613+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered disabled state
+2025-11-26T15:02:20.539615+00:00 siem-backend kernel: veth8e7b1ef: entered allmulticast mode
+2025-11-26T15:02:20.539615+00:00 siem-backend kernel: veth8e7b1ef: entered promiscuous mode
+2025-11-26T15:02:20.547420+00:00 siem-backend kernel: eth0: renamed from vethe50ec1e
+2025-11-26T15:02:20.551521+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered blocking state
+2025-11-26T15:02:20.551536+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered forwarding state
+2025-11-26T15:02:20.639982+00:00 siem-backend kernel: eth2: renamed from clab-112242f1
+2025-11-26T15:02:20.679426+00:00 siem-backend kernel: eth1: renamed from clab-4c887194
+2025-11-26T15:02:20.715665+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered blocking state
+2025-11-26T15:02:20.715679+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered disabled state
+2025-11-26T15:02:20.715680+00:00 siem-backend kernel: veth343650e: entered allmulticast mode
+2025-11-26T15:02:20.719546+00:00 siem-backend kernel: veth343650e: entered promiscuous mode
+2025-11-26T15:02:20.723426+00:00 siem-backend kernel: eth0: renamed from veth8d033b6
+2025-11-26T15:02:20.723443+00:00 siem-backend kernel: eth1: renamed from clab-b9ec95e7
+2025-11-26T15:02:20.723444+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered blocking state
+2025-11-26T15:02:20.723445+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered forwarding state
+2025-11-26T15:02:20.812296+00:00 siem-backend kernel: eth3: renamed from clab-0ea30a32
+2025-11-26T15:02:20.812311+00:00 siem-backend kernel: eth1: renamed from clab-859fe737
+2025-11-26T15:02:20.841995+00:00 siem-backend kernel: eth2: renamed from clab-403ad7f8
+2025-11-26T15:02:20.903412+00:00 siem-backend kernel: eth3: renamed from clab-7340ce3f
+2025-11-26T15:02:20.907411+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered blocking state
+2025-11-26T15:02:20.907425+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered disabled state
+2025-11-26T15:02:20.907426+00:00 siem-backend kernel: vethe907aa9: entered allmulticast mode
+2025-11-26T15:02:20.907426+00:00 siem-backend kernel: vethe907aa9: entered promiscuous mode
+2025-11-26T15:02:20.925990+00:00 siem-backend kernel: eth0: renamed from vethe366fec
+2025-11-26T15:02:20.931858+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered blocking state
+2025-11-26T15:02:20.931873+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered forwarding state
+2025-11-26T15:02:20.988962+00:00 siem-backend kernel: eth1: renamed from clab-763f2a98
+2025-11-26T15:02:21.015509+00:00 siem-backend kernel: eth5: renamed from clab-b5f5100a
+2025-11-26T15:02:21.067616+00:00 siem-backend kernel: eth0: renamed from vethfa8d7f4
+2025-11-26T15:02:21.067641+00:00 siem-backend kernel: eth1: renamed from clab-4d768c6e
+2025-11-26T15:02:21.071442+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered blocking state
+2025-11-26T15:02:21.071471+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered disabled state
+2025-11-26T15:02:21.071473+00:00 siem-backend kernel: veth80a7e9d: entered allmulticast mode
+2025-11-26T15:02:21.071474+00:00 siem-backend kernel: veth80a7e9d: entered promiscuous mode
+2025-11-26T15:02:21.155432+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered blocking state
+2025-11-26T15:02:21.155454+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered forwarding state
+2025-11-26T15:02:21.155456+00:00 siem-backend kernel: eth6: renamed from clab-d1c947fc
+2025-11-26T15:02:21.159435+00:00 siem-backend kernel: eth2: renamed from clab-5beed4e9
+2025-11-26T15:02:21.174287+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:02:21.203540+00:00 siem-backend kernel: eth3: renamed from clab-e09ea2cb
+2025-11-26T15:02:21.215467+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered blocking state
+2025-11-26T15:02:21.215495+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered disabled state
+2025-11-26T15:02:21.219739+00:00 siem-backend kernel: veth4150aa9: entered allmulticast mode
+2025-11-26T15:02:21.219772+00:00 siem-backend kernel: veth4150aa9: entered promiscuous mode
+2025-11-26T15:02:21.250534+00:00 siem-backend kernel: eth0: renamed from veth4a6f772
+2025-11-26T15:02:21.250557+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered blocking state
+2025-11-26T15:02:21.250559+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered forwarding state
+2025-11-26T15:02:21.343436+00:00 siem-backend kernel: eth1: renamed from clab-84dbca2a
+2025-11-26T15:02:21.347421+00:00 siem-backend kernel: eth0: renamed from veth9a51afe
+2025-11-26T15:02:21.347437+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered blocking state
+2025-11-26T15:02:21.347439+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered forwarding state
+2025-11-26T15:02:21.387441+00:00 siem-backend kernel: eth1: renamed from clab-40629c7f
+2025-11-26T15:02:21.399564+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered blocking state
+2025-11-26T15:02:21.399579+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered disabled state
+2025-11-26T15:02:21.399580+00:00 siem-backend kernel: vethb123214: entered allmulticast mode
+2025-11-26T15:02:21.399581+00:00 siem-backend kernel: vethb123214: entered promiscuous mode
+2025-11-26T15:02:21.483447+00:00 siem-backend kernel: eth0: renamed from veth84cffd6
+2025-11-26T15:02:21.483460+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered blocking state
+2025-11-26T15:02:21.483461+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered forwarding state
+2025-11-26T15:02:21.575466+00:00 siem-backend kernel: eth1: renamed from clab-d4d4e471
+2025-11-26T15:02:22.408711+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered disabled state
+2025-11-26T15:02:22.408745+00:00 siem-backend kernel: veth4150aa9 (unregistering): left allmulticast mode
+2025-11-26T15:02:22.408747+00:00 siem-backend kernel: veth4150aa9 (unregistering): left promiscuous mode
+2025-11-26T15:02:22.408749+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth4150aa9) entered disabled state
+2025-11-26T15:10:29.196114+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered disabled state
+2025-11-26T15:10:29.196674+00:00 siem-backend kernel: veth4a6f772: renamed from eth0
+2025-11-26T15:10:29.196681+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered disabled state
+2025-11-26T15:10:29.196683+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered disabled state
+2025-11-26T15:10:29.196684+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered disabled state
+2025-11-26T15:10:29.196685+00:00 siem-backend kernel: vethb1c9f3c: renamed from eth0
+2025-11-26T15:10:29.196687+00:00 siem-backend kernel: vethfa8d7f4: renamed from eth0
+2025-11-26T15:10:29.196689+00:00 siem-backend kernel: veth68f78d1: renamed from eth0
+2025-11-26T15:10:29.196690+00:00 siem-backend kernel: vethbaedca3: renamed from eth0
+2025-11-26T15:10:29.196692+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered disabled state
+2025-11-26T15:10:29.196693+00:00 siem-backend kernel: veth80a7e9d (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196696+00:00 siem-backend kernel: veth80a7e9d (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196766+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth80a7e9d) entered disabled state
+2025-11-26T15:10:29.196769+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered disabled state
+2025-11-26T15:10:29.196771+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered disabled state
+2025-11-26T15:10:29.196772+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered disabled state
+2025-11-26T15:10:29.196774+00:00 siem-backend kernel: vethc62e16c: renamed from eth0
+2025-11-26T15:10:29.196776+00:00 siem-backend kernel: vethe366fec: renamed from eth0
+2025-11-26T15:10:29.196781+00:00 siem-backend kernel: veth8d033b6: renamed from eth0
+2025-11-26T15:10:29.196783+00:00 siem-backend kernel: veth0e43f23: renamed from eth0
+2025-11-26T15:10:29.196785+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered disabled state
+2025-11-26T15:10:29.196787+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered disabled state
+2025-11-26T15:10:29.196788+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered disabled state
+2025-11-26T15:10:29.196790+00:00 siem-backend kernel: veth84cffd6: renamed from eth0
+2025-11-26T15:10:29.196792+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered disabled state
+2025-11-26T15:10:29.196798+00:00 siem-backend kernel: vethe50ec1e: renamed from eth0
+2025-11-26T15:10:29.196800+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered disabled state
+2025-11-26T15:10:29.196801+00:00 siem-backend kernel: vethb882a58 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196802+00:00 siem-backend kernel: vethb882a58 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196803+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethb882a58) entered disabled state
+2025-11-26T15:10:29.196805+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered disabled state
+2025-11-26T15:10:29.196812+00:00 siem-backend kernel: veth70917b1 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196813+00:00 siem-backend kernel: veth70917b1 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196815+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth70917b1) entered disabled state
+2025-11-26T15:10:29.196816+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered disabled state
+2025-11-26T15:10:29.196817+00:00 siem-backend kernel: vethe907aa9 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196819+00:00 siem-backend kernel: vethe907aa9 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196824+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethe907aa9) entered disabled state
+2025-11-26T15:10:29.196825+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered disabled state
+2025-11-26T15:10:29.196827+00:00 siem-backend kernel: vethc08f39f (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196828+00:00 siem-backend kernel: vethc08f39f (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196829+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc08f39f) entered disabled state
+2025-11-26T15:10:29.196830+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered disabled state
+2025-11-26T15:10:29.196831+00:00 siem-backend kernel: vetha84898e (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196836+00:00 siem-backend kernel: vetha84898e (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196838+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vetha84898e) entered disabled state
+2025-11-26T15:10:29.196839+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered disabled state
+2025-11-26T15:10:29.196841+00:00 siem-backend kernel: veth343650e (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196842+00:00 siem-backend kernel: veth343650e (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196843+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth343650e) entered disabled state
+2025-11-26T15:10:29.196848+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered disabled state
+2025-11-26T15:10:29.196850+00:00 siem-backend kernel: veth62179e6 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196851+00:00 siem-backend kernel: veth62179e6 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196853+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth62179e6) entered disabled state
+2025-11-26T15:10:29.196854+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered disabled state
+2025-11-26T15:10:29.196856+00:00 siem-backend kernel: veth8e7b1ef (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196857+00:00 siem-backend kernel: veth8e7b1ef (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196863+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth8e7b1ef) entered disabled state
+2025-11-26T15:10:29.196864+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered disabled state
+2025-11-26T15:10:29.196865+00:00 siem-backend kernel: vethb123214 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196867+00:00 siem-backend kernel: vethb123214 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196868+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(vethb123214) entered disabled state
+2025-11-26T15:10:29.196870+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered disabled state
+2025-11-26T15:10:29.196876+00:00 siem-backend kernel: vethe5b9628 (unregistering): left allmulticast mode
+2025-11-26T15:10:29.196878+00:00 siem-backend kernel: vethe5b9628 (unregistering): left promiscuous mode
+2025-11-26T15:10:29.196879+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethe5b9628) entered disabled state
+2025-11-26T15:10:29.196881+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered blocking state
+2025-11-26T15:10:29.196882+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered disabled state
+2025-11-26T15:10:29.196884+00:00 siem-backend kernel: veth7a1930b: entered allmulticast mode
+2025-11-26T15:10:29.196890+00:00 siem-backend kernel: veth7a1930b: entered promiscuous mode
+2025-11-26T15:10:29.196891+00:00 siem-backend kernel: eth0: renamed from veth48310f0
+2025-11-26T15:10:29.196893+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered blocking state
+2025-11-26T15:10:29.196894+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered forwarding state
+2025-11-26T15:10:29.196896+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered blocking state
+2025-11-26T15:10:29.196898+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered disabled state
+2025-11-26T15:10:29.196899+00:00 siem-backend kernel: veth3d13160: entered allmulticast mode
+2025-11-26T15:10:29.196905+00:00 siem-backend kernel: veth3d13160: entered promiscuous mode
+2025-11-26T15:10:29.196907+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered blocking state
+2025-11-26T15:10:29.196908+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered disabled state
+2025-11-26T15:10:29.196910+00:00 siem-backend kernel: veth934aab7: entered allmulticast mode
+2025-11-26T15:10:29.196911+00:00 siem-backend kernel: veth934aab7: entered promiscuous mode
+2025-11-26T15:10:29.196913+00:00 siem-backend kernel: eth0: renamed from veth08a46ab
+2025-11-26T15:10:29.196918+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered blocking state
+2025-11-26T15:10:29.196919+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered disabled state
+2025-11-26T15:10:29.196920+00:00 siem-backend kernel: veth8479162: entered allmulticast mode
+2025-11-26T15:10:29.196921+00:00 siem-backend kernel: veth8479162: entered promiscuous mode
+2025-11-26T15:10:29.196923+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered blocking state
+2025-11-26T15:10:29.196924+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered forwarding state
+2025-11-26T15:10:29.196926+00:00 siem-backend kernel: eth0: renamed from veth2753a5a
+2025-11-26T15:10:29.196931+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered blocking state
+2025-11-26T15:10:29.196932+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered disabled state
+2025-11-26T15:10:29.196934+00:00 siem-backend kernel: veth0cf035c: entered allmulticast mode
+2025-11-26T15:10:29.196935+00:00 siem-backend kernel: veth0cf035c: entered promiscuous mode
+2025-11-26T15:10:29.196937+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered blocking state
+2025-11-26T15:10:29.196938+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered forwarding state
+2025-11-26T15:10:29.196943+00:00 siem-backend kernel: eth0: renamed from veth5c3599b
+2025-11-26T15:10:29.196944+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered blocking state
+2025-11-26T15:10:29.196946+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered forwarding state
+2025-11-26T15:10:29.196948+00:00 siem-backend kernel: ICMPv6: NA: 3a:2a:f1:90:ba:0d advertised our address 3fff:172:20:20::2 on eth0!
+2025-11-26T15:10:29.196949+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered blocking state
+2025-11-26T15:10:29.196951+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered disabled state
+2025-11-26T15:10:29.196956+00:00 siem-backend kernel: vethd81aeb9: entered allmulticast mode
+2025-11-26T15:10:29.196957+00:00 siem-backend kernel: vethd81aeb9: entered promiscuous mode
+2025-11-26T15:10:29.196959+00:00 siem-backend kernel: eth1: renamed from clab-00b006d5
+2025-11-26T15:10:29.196960+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered blocking state
+2025-11-26T15:10:29.196962+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered disabled state
+2025-11-26T15:10:29.196963+00:00 siem-backend kernel: veth617968f: entered allmulticast mode
+2025-11-26T15:10:29.196964+00:00 siem-backend kernel: veth617968f: entered promiscuous mode
+2025-11-26T15:10:29.196980+00:00 siem-backend kernel: eth0: renamed from veth58b13ab
+2025-11-26T15:10:29.196982+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered blocking state
+2025-11-26T15:10:29.196983+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered forwarding state
+2025-11-26T15:10:29.196985+00:00 siem-backend kernel: eth0: renamed from veth5410c66
+2025-11-26T15:10:29.196986+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered blocking state
+2025-11-26T15:10:29.196988+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered forwarding state
+2025-11-26T15:10:29.196993+00:00 siem-backend kernel: eth1: renamed from clab-a4a17576
+2025-11-26T15:10:29.197074+00:00 siem-backend kernel: eth2: renamed from clab-50fcfb21
+2025-11-26T15:10:29.197076+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered blocking state
+2025-11-26T15:10:29.197077+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered disabled state
+2025-11-26T15:10:29.197079+00:00 siem-backend kernel: veth2d75b81: entered allmulticast mode
+2025-11-26T15:10:29.197080+00:00 siem-backend kernel: veth2d75b81: entered promiscuous mode
+2025-11-26T15:10:29.197081+00:00 siem-backend kernel: eth1: renamed from clab-36f66ff3
+2025-11-26T15:10:29.197088+00:00 siem-backend kernel: eth0: renamed from vethf36f7f9
+2025-11-26T15:10:29.197090+00:00 siem-backend kernel: eth1: renamed from clab-2a081082
+2025-11-26T15:10:29.197091+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered blocking state
+2025-11-26T15:10:29.197093+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered forwarding state
+2025-11-26T15:10:29.197095+00:00 siem-backend kernel: eth2: renamed from clab-230e1311
+2025-11-26T15:10:29.197096+00:00 siem-backend kernel: eth2: renamed from clab-2e922854
+2025-11-26T15:10:29.197102+00:00 siem-backend kernel: eth3: renamed from clab-7c47cf1f
+2025-11-26T15:10:29.197103+00:00 siem-backend kernel: eth1: renamed from clab-fa40581f
+2025-11-26T15:10:29.197104+00:00 siem-backend kernel: eth0: renamed from veth2e3e94f
+2025-11-26T15:10:29.197106+00:00 siem-backend kernel: eth4: renamed from clab-1edd01e8
+2025-11-26T15:10:29.197108+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered blocking state
+2025-11-26T15:10:29.197109+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered forwarding state
+2025-11-26T15:10:29.197114+00:00 siem-backend kernel: eth2: renamed from clab-af411ef3
+2025-11-26T15:10:29.197116+00:00 siem-backend kernel: eth5: renamed from clab-c3bef3aa
+2025-11-26T15:10:29.197117+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered blocking state
+2025-11-26T15:10:29.197118+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered disabled state
+2025-11-26T15:10:29.197120+00:00 siem-backend kernel: vethcc75f61: entered allmulticast mode
+2025-11-26T15:10:29.197121+00:00 siem-backend kernel: vethcc75f61: entered promiscuous mode
+2025-11-26T15:10:29.197122+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered blocking state
+2025-11-26T15:10:29.197127+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered disabled state
+2025-11-26T15:10:29.197129+00:00 siem-backend kernel: vethdd7b37b: entered allmulticast mode
+2025-11-26T15:10:29.197130+00:00 siem-backend kernel: vethdd7b37b: entered promiscuous mode
+2025-11-26T15:10:29.197132+00:00 siem-backend kernel: eth1: renamed from clab-13d0313a
+2025-11-26T15:10:29.197133+00:00 siem-backend kernel: eth0: renamed from veth117b1c6
+2025-11-26T15:10:29.197134+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered blocking state
+2025-11-26T15:10:29.197140+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered forwarding state
+2025-11-26T15:10:29.197141+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered blocking state
+2025-11-26T15:10:29.197143+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered disabled state
+2025-11-26T15:10:29.197144+00:00 siem-backend kernel: veth9001006: entered allmulticast mode
+2025-11-26T15:10:29.197145+00:00 siem-backend kernel: veth9001006: entered promiscuous mode
+2025-11-26T15:10:29.197147+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered blocking state
+2025-11-26T15:10:29.197148+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered disabled state
+2025-11-26T15:10:29.197154+00:00 siem-backend kernel: veth1301576: entered allmulticast mode
+2025-11-26T15:10:29.197155+00:00 siem-backend kernel: veth1301576: entered promiscuous mode
+2025-11-26T15:10:29.197157+00:00 siem-backend kernel: eth0: renamed from veth05f953e
+2025-11-26T15:10:29.197158+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered blocking state
+2025-11-26T15:10:29.197160+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered forwarding state
+2025-11-26T15:10:29.197161+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered disabled state
+2025-11-26T15:10:29.197167+00:00 siem-backend kernel: veth7a1930b (unregistering): left allmulticast mode
+2025-11-26T15:10:29.197168+00:00 siem-backend kernel: veth7a1930b (unregistering): left promiscuous mode
+2025-11-26T15:10:29.197170+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth7a1930b) entered disabled state
+2025-11-26T15:10:29.197171+00:00 siem-backend kernel: eth1: renamed from clab-349951b7
+2025-11-26T15:10:29.197172+00:00 siem-backend kernel: eth2: renamed from clab-26e5cb6b
+2025-11-26T15:10:29.197174+00:00 siem-backend kernel: eth0: renamed from veth073dce5
+2025-11-26T15:10:29.197180+00:00 siem-backend kernel: eth1: renamed from clab-7818ed8f
+2025-11-26T15:10:29.197181+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered blocking state
+2025-11-26T15:10:29.197183+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered forwarding state
+2025-11-26T15:10:29.197184+00:00 siem-backend kernel: eth0: renamed from veth1095e44
+2025-11-26T15:10:29.197185+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered blocking state
+2025-11-26T15:10:29.197186+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered forwarding state
+2025-11-26T15:10:29.239836+00:00 siem-backend kernel: eth1: renamed from clab-3ee8772a
+2025-11-26T15:10:29.279752+00:00 siem-backend kernel: eth1: renamed from clab-3dc5dacb
+2025-11-26T15:10:30.202153+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:13:44.983487+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered disabled state
+2025-11-26T15:13:44.983505+00:00 siem-backend kernel: veth2753a5a: renamed from eth0
+2025-11-26T15:13:45.027458+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered disabled state
+2025-11-26T15:13:45.027483+00:00 siem-backend kernel: veth2e3e94f: renamed from eth0
+2025-11-26T15:13:47.366179+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered disabled state
+2025-11-26T15:13:47.366371+00:00 siem-backend kernel: veth934aab7 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366376+00:00 siem-backend kernel: veth934aab7 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366376+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(veth934aab7) entered disabled state
+2025-11-26T15:13:47.366377+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered disabled state
+2025-11-26T15:13:47.366378+00:00 siem-backend kernel: veth2d75b81 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366378+00:00 siem-backend kernel: veth2d75b81 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366381+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth2d75b81) entered disabled state
+2025-11-26T15:13:47.366381+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered disabled state
+2025-11-26T15:13:47.366382+00:00 siem-backend kernel: veth5410c66: renamed from eth0
+2025-11-26T15:13:47.366383+00:00 siem-backend kernel: veth08a46ab: renamed from eth0
+2025-11-26T15:13:47.366383+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered disabled state
+2025-11-26T15:13:47.366384+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered disabled state
+2025-11-26T15:13:47.366385+00:00 siem-backend kernel: veth05f953e: renamed from eth0
+2025-11-26T15:13:47.366387+00:00 siem-backend kernel: veth5c3599b: renamed from eth0
+2025-11-26T15:13:47.366388+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered disabled state
+2025-11-26T15:13:47.366388+00:00 siem-backend kernel: vethd81aeb9 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366389+00:00 siem-backend kernel: vethd81aeb9 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366390+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethd81aeb9) entered disabled state
+2025-11-26T15:13:47.366390+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered disabled state
+2025-11-26T15:13:47.366393+00:00 siem-backend kernel: veth1095e44: renamed from eth0
+2025-11-26T15:13:47.366420+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered disabled state
+2025-11-26T15:13:47.366422+00:00 siem-backend kernel: veth3d13160 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366451+00:00 siem-backend kernel: veth3d13160 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366451+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth3d13160) entered disabled state
+2025-11-26T15:13:47.366452+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered disabled state
+2025-11-26T15:13:47.366455+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered disabled state
+2025-11-26T15:13:47.366456+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered disabled state
+2025-11-26T15:13:47.366456+00:00 siem-backend kernel: veth117b1c6: renamed from eth0
+2025-11-26T15:13:47.366457+00:00 siem-backend kernel: vethf36f7f9: renamed from eth0
+2025-11-26T15:13:47.366457+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered disabled state
+2025-11-26T15:13:47.366458+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered disabled state
+2025-11-26T15:13:47.366459+00:00 siem-backend kernel: veth073dce5: renamed from eth0
+2025-11-26T15:13:47.366461+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered disabled state
+2025-11-26T15:13:47.366462+00:00 siem-backend kernel: vethdd7b37b (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366463+00:00 siem-backend kernel: vethdd7b37b (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366463+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethdd7b37b) entered disabled state
+2025-11-26T15:13:47.366464+00:00 siem-backend kernel: veth58b13ab: renamed from eth0
+2025-11-26T15:13:47.366465+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered disabled state
+2025-11-26T15:13:47.366467+00:00 siem-backend kernel: veth8479162 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366468+00:00 siem-backend kernel: veth8479162 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366468+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth8479162) entered disabled state
+2025-11-26T15:13:47.366469+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered disabled state
+2025-11-26T15:13:47.366470+00:00 siem-backend kernel: vethcc75f61 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366470+00:00 siem-backend kernel: vethcc75f61 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366471+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethcc75f61) entered disabled state
+2025-11-26T15:13:47.366474+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered disabled state
+2025-11-26T15:13:47.366479+00:00 siem-backend kernel: veth1301576 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366479+00:00 siem-backend kernel: veth1301576 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366480+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth1301576) entered disabled state
+2025-11-26T15:13:47.366480+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered disabled state
+2025-11-26T15:13:47.366481+00:00 siem-backend kernel: veth9001006 (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366483+00:00 siem-backend kernel: veth9001006 (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366484+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth9001006) entered disabled state
+2025-11-26T15:13:47.366485+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered disabled state
+2025-11-26T15:13:47.366485+00:00 siem-backend kernel: veth617968f (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366486+00:00 siem-backend kernel: veth617968f (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366486+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth617968f) entered disabled state
+2025-11-26T15:13:47.366489+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered disabled state
+2025-11-26T15:13:47.366490+00:00 siem-backend kernel: veth0cf035c (unregistering): left allmulticast mode
+2025-11-26T15:13:47.366490+00:00 siem-backend kernel: veth0cf035c (unregistering): left promiscuous mode
+2025-11-26T15:13:47.366491+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth0cf035c) entered disabled state
+2025-11-26T15:13:47.366492+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered blocking state
+2025-11-26T15:13:47.366492+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered disabled state
+2025-11-26T15:13:47.366493+00:00 siem-backend kernel: veth6730947: entered allmulticast mode
+2025-11-26T15:13:47.366495+00:00 siem-backend kernel: veth6730947: entered promiscuous mode
+2025-11-26T15:13:47.366496+00:00 siem-backend kernel: eth0: renamed from veth9136d95
+2025-11-26T15:13:47.366497+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered blocking state
+2025-11-26T15:13:47.366497+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered forwarding state
+2025-11-26T15:13:47.366498+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered blocking state
+2025-11-26T15:13:47.366499+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered disabled state
+2025-11-26T15:13:47.366501+00:00 siem-backend kernel: veth741e552: entered allmulticast mode
+2025-11-26T15:13:47.366502+00:00 siem-backend kernel: veth741e552: entered promiscuous mode
+2025-11-26T15:13:47.366503+00:00 siem-backend kernel: eth1: renamed from clab-cc8b583c
+2025-11-26T15:13:47.366503+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered blocking state
+2025-11-26T15:13:47.366504+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered disabled state
+2025-11-26T15:13:47.366504+00:00 siem-backend kernel: vethef30a7c: entered allmulticast mode
+2025-11-26T15:13:47.366505+00:00 siem-backend kernel: vethef30a7c: entered promiscuous mode
+2025-11-26T15:13:47.366507+00:00 siem-backend kernel: eth0: renamed from veth75e2023
+2025-11-26T15:13:47.366508+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered blocking state
+2025-11-26T15:13:47.366509+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered forwarding state
+2025-11-26T15:13:47.366509+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered blocking state
+2025-11-26T15:13:47.366510+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered disabled state
+2025-11-26T15:13:47.366510+00:00 siem-backend kernel: vethe63ab19: entered allmulticast mode
+2025-11-26T15:13:47.366512+00:00 siem-backend kernel: vethe63ab19: entered promiscuous mode
+2025-11-26T15:13:47.366513+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered blocking state
+2025-11-26T15:13:47.366514+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered disabled state
+2025-11-26T15:13:47.366514+00:00 siem-backend kernel: vethc37b6d9: entered allmulticast mode
+2025-11-26T15:13:47.366515+00:00 siem-backend kernel: vethc37b6d9: entered promiscuous mode
+2025-11-26T15:13:47.366515+00:00 siem-backend kernel: eth0: renamed from vethd799aa7
+2025-11-26T15:13:47.366524+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered blocking state
+2025-11-26T15:13:47.366525+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered forwarding state
+2025-11-26T15:13:47.366526+00:00 siem-backend kernel: eth1: renamed from clab-6ee4c375
+2025-11-26T15:13:47.366526+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered blocking state
+2025-11-26T15:13:47.366527+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered disabled state
+2025-11-26T15:13:47.366528+00:00 siem-backend kernel: vethde411a6: entered allmulticast mode
+2025-11-26T15:13:47.366528+00:00 siem-backend kernel: vethde411a6: entered promiscuous mode
+2025-11-26T15:13:47.366531+00:00 siem-backend kernel: eth2: renamed from clab-33007fb6
+2025-11-26T15:13:47.366532+00:00 siem-backend kernel: eth0: renamed from vethff10a5a
+2025-11-26T15:13:47.366532+00:00 siem-backend kernel: eth1: renamed from clab-62066387
+2025-11-26T15:13:47.367441+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered blocking state
+2025-11-26T15:13:47.367452+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered forwarding state
+2025-11-26T15:13:47.375720+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered blocking state
+2025-11-26T15:13:47.375736+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered disabled state
+2025-11-26T15:13:47.375737+00:00 siem-backend kernel: veth4584d8d: entered allmulticast mode
+2025-11-26T15:13:47.375738+00:00 siem-backend kernel: veth4584d8d: entered promiscuous mode
+2025-11-26T15:13:47.379860+00:00 siem-backend kernel: eth0: renamed from vethd3cb3dc
+2025-11-26T15:13:47.379870+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered blocking state
+2025-11-26T15:13:47.379871+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered forwarding state
+2025-11-26T15:13:47.399402+00:00 siem-backend kernel: eth0: renamed from vethc9e4108
+2025-11-26T15:13:47.399440+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered blocking state
+2025-11-26T15:13:47.399441+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered forwarding state
+2025-11-26T15:13:47.483455+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered blocking state
+2025-11-26T15:13:47.483482+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered disabled state
+2025-11-26T15:13:47.483484+00:00 siem-backend kernel: veth8b435ca: entered allmulticast mode
+2025-11-26T15:13:47.483485+00:00 siem-backend kernel: veth8b435ca: entered promiscuous mode
+2025-11-26T15:13:47.535423+00:00 siem-backend kernel: eth0: renamed from veth2d10752
+2025-11-26T15:13:47.539837+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered blocking state
+2025-11-26T15:13:47.539851+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered forwarding state
+2025-11-26T15:13:47.579464+00:00 siem-backend kernel: eth1: renamed from clab-0a061885
+2025-11-26T15:13:47.611415+00:00 siem-backend kernel: eth1: renamed from clab-dd461d85
+2025-11-26T15:13:47.615436+00:00 siem-backend kernel: eth0: renamed from vethf39ab03
+2025-11-26T15:13:47.619435+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered blocking state
+2025-11-26T15:13:47.619451+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered forwarding state
+2025-11-26T15:13:47.655408+00:00 siem-backend kernel: eth2: renamed from clab-593fd5ff
+2025-11-26T15:13:47.655424+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered blocking state
+2025-11-26T15:13:47.655425+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered disabled state
+2025-11-26T15:13:47.655426+00:00 siem-backend kernel: veth7256578: entered allmulticast mode
+2025-11-26T15:13:47.655426+00:00 siem-backend kernel: veth7256578: entered promiscuous mode
+2025-11-26T15:13:47.703523+00:00 siem-backend kernel: eth1: renamed from clab-8c211143
+2025-11-26T15:13:47.743535+00:00 siem-backend kernel: eth2: renamed from clab-b3e4e6be
+2025-11-26T15:13:47.835418+00:00 siem-backend kernel: eth1: renamed from clab-3774e817
+2025-11-26T15:13:47.855449+00:00 siem-backend kernel: eth0: renamed from veth94c12a4
+2025-11-26T15:13:47.863432+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered blocking state
+2025-11-26T15:13:47.863448+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered forwarding state
+2025-11-26T15:13:47.875880+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered blocking state
+2025-11-26T15:13:47.875895+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered disabled state
+2025-11-26T15:13:47.875896+00:00 siem-backend kernel: veth26abe5a: entered allmulticast mode
+2025-11-26T15:13:47.880035+00:00 siem-backend kernel: veth26abe5a: entered promiscuous mode
+2025-11-26T15:13:47.931432+00:00 siem-backend kernel: eth0: renamed from vethe4ce519
+2025-11-26T15:13:47.931444+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered blocking state
+2025-11-26T15:13:47.931445+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered forwarding state
+2025-11-26T15:13:48.024016+00:00 siem-backend kernel: eth1: renamed from clab-28d1b400
+2025-11-26T15:13:48.067437+00:00 siem-backend kernel: eth2: renamed from clab-537c605d
+2025-11-26T15:13:48.071456+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered blocking state
+2025-11-26T15:13:48.071479+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered disabled state
+2025-11-26T15:13:48.071481+00:00 siem-backend kernel: vetha182f2e: entered allmulticast mode
+2025-11-26T15:13:48.071483+00:00 siem-backend kernel: vetha182f2e: entered promiscuous mode
+2025-11-26T15:13:48.118448+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered blocking state
+2025-11-26T15:13:48.118464+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered disabled state
+2025-11-26T15:13:48.118465+00:00 siem-backend kernel: veth917063a: entered allmulticast mode
+2025-11-26T15:13:48.118466+00:00 siem-backend kernel: veth917063a: entered promiscuous mode
+2025-11-26T15:13:48.151409+00:00 siem-backend kernel: eth0: renamed from veth7bf08a7
+2025-11-26T15:13:48.151424+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered blocking state
+2025-11-26T15:13:48.151425+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered forwarding state
+2025-11-26T15:13:48.151425+00:00 siem-backend kernel: ICMPv6: NA: 52:39:7b:2a:a8:cf advertised our address 3fff:172:20:20::a on eth0!
+2025-11-26T15:13:48.159569+00:00 siem-backend kernel: eth0: renamed from veth873dfe3
+2025-11-26T15:13:48.163467+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered blocking state
+2025-11-26T15:13:48.163491+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered forwarding state
+2025-11-26T15:13:48.255445+00:00 siem-backend kernel: eth1: renamed from clab-c2955554
+2025-11-26T15:13:48.295456+00:00 siem-backend kernel: eth1: renamed from clab-2d12b0f0
+2025-11-26T15:13:48.332765+00:00 siem-backend kernel: eth2: renamed from clab-43378e2a
+2025-11-26T15:13:48.363451+00:00 siem-backend kernel: eth3: renamed from clab-f13382f4
+2025-11-26T15:13:48.375188+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:13:48.403421+00:00 siem-backend kernel: eth4: renamed from clab-7c0a432a
+2025-11-26T15:13:48.435438+00:00 siem-backend kernel: eth5: renamed from clab-55b313bc
+2025-11-26T15:13:48.947483+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered disabled state
+2025-11-26T15:13:48.947508+00:00 siem-backend kernel: veth7256578 (unregistering): left allmulticast mode
+2025-11-26T15:13:48.947510+00:00 siem-backend kernel: veth7256578 (unregistering): left promiscuous mode
+2025-11-26T15:13:48.947511+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(veth7256578) entered disabled state
+2025-11-26T15:14:14.959440+00:00 siem-backend kernel: eth1: entered promiscuous mode
+2025-11-26T15:14:21+00:00 firewall-in : [origin software="rsyslogd" swVersion="8.2410.0" x-pid="148" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:17:44.691470+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered disabled state
+2025-11-26T15:17:44.691500+00:00 siem-backend kernel: vethd3cb3dc: renamed from eth0
+2025-11-26T15:17:48.165962+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered disabled state
+2025-11-26T15:17:48.166171+00:00 siem-backend kernel: vethc37b6d9 (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166178+00:00 siem-backend kernel: vethc37b6d9 (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166180+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(vethc37b6d9) entered disabled state
+2025-11-26T15:17:48.166181+00:00 siem-backend kernel: vethe4ce519: renamed from eth0
+2025-11-26T15:17:48.166183+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered disabled state
+2025-11-26T15:17:48.166184+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered disabled state
+2025-11-26T15:17:48.166191+00:00 siem-backend kernel: vethf39ab03: renamed from eth0
+2025-11-26T15:17:48.166192+00:00 siem-backend kernel: vethff10a5a: renamed from eth0
+2025-11-26T15:17:48.166194+00:00 siem-backend kernel: veth2d10752: renamed from eth0
+2025-11-26T15:17:48.166195+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered disabled state
+2025-11-26T15:17:48.166196+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered disabled state
+2025-11-26T15:17:48.166198+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered disabled state
+2025-11-26T15:17:48.166199+00:00 siem-backend kernel: veth873dfe3: renamed from eth0
+2025-11-26T15:17:48.166205+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered disabled state
+2025-11-26T15:17:48.166207+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered disabled state
+2025-11-26T15:17:48.166208+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered disabled state
+2025-11-26T15:17:48.166210+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered disabled state
+2025-11-26T15:17:48.166211+00:00 siem-backend kernel: vethd799aa7: renamed from eth0
+2025-11-26T15:17:48.166213+00:00 siem-backend kernel: vethc9e4108: renamed from eth0
+2025-11-26T15:17:48.166218+00:00 siem-backend kernel: veth75e2023: renamed from eth0
+2025-11-26T15:17:48.166220+00:00 siem-backend kernel: veth7bf08a7: renamed from eth0
+2025-11-26T15:17:48.166221+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered disabled state
+2025-11-26T15:17:48.166223+00:00 siem-backend kernel: veth26abe5a (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166224+00:00 siem-backend kernel: veth26abe5a (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166225+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(veth26abe5a) entered disabled state
+2025-11-26T15:17:48.166231+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered disabled state
+2025-11-26T15:17:48.166233+00:00 siem-backend kernel: veth9136d95: renamed from eth0
+2025-11-26T15:17:48.166234+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered disabled state
+2025-11-26T15:17:48.166235+00:00 siem-backend kernel: veth8b435ca (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166237+00:00 siem-backend kernel: veth8b435ca (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166238+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth8b435ca) entered disabled state
+2025-11-26T15:17:48.166239+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered disabled state
+2025-11-26T15:17:48.166245+00:00 siem-backend kernel: vethef30a7c (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166247+00:00 siem-backend kernel: vethef30a7c (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166248+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethef30a7c) entered disabled state
+2025-11-26T15:17:48.166250+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered disabled state
+2025-11-26T15:17:48.166251+00:00 siem-backend kernel: vethe63ab19 (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166253+00:00 siem-backend kernel: vethe63ab19 (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166260+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(vethe63ab19) entered disabled state
+2025-11-26T15:17:48.166261+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered disabled state
+2025-11-26T15:17:48.166263+00:00 siem-backend kernel: veth4584d8d (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166264+00:00 siem-backend kernel: veth4584d8d (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166265+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth4584d8d) entered disabled state
+2025-11-26T15:17:48.166267+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered disabled state
+2025-11-26T15:17:48.166268+00:00 siem-backend kernel: veth741e552 (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166274+00:00 siem-backend kernel: veth741e552 (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166276+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(veth741e552) entered disabled state
+2025-11-26T15:17:48.166278+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered disabled state
+2025-11-26T15:17:48.166279+00:00 siem-backend kernel: veth917063a (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166281+00:00 siem-backend kernel: veth917063a (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166282+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth917063a) entered disabled state
+2025-11-26T15:17:48.166288+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered disabled state
+2025-11-26T15:17:48.166290+00:00 siem-backend kernel: vethde411a6 (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166292+00:00 siem-backend kernel: vethde411a6 (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166293+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(vethde411a6) entered disabled state
+2025-11-26T15:17:48.166295+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered disabled state
+2025-11-26T15:17:48.166296+00:00 siem-backend kernel: veth6730947 (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166305+00:00 siem-backend kernel: veth6730947 (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166307+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth6730947) entered disabled state
+2025-11-26T15:17:48.166308+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered disabled state
+2025-11-26T15:17:48.166310+00:00 siem-backend kernel: vetha182f2e (unregistering): left allmulticast mode
+2025-11-26T15:17:48.166311+00:00 siem-backend kernel: vetha182f2e (unregistering): left promiscuous mode
+2025-11-26T15:17:48.166313+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(vetha182f2e) entered disabled state
+2025-11-26T15:17:48.166315+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered blocking state
+2025-11-26T15:17:48.166321+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered disabled state
+2025-11-26T15:17:48.166323+00:00 siem-backend kernel: veth4ee2f3b: entered allmulticast mode
+2025-11-26T15:17:48.166324+00:00 siem-backend kernel: veth4ee2f3b: entered promiscuous mode
+2025-11-26T15:17:48.166326+00:00 siem-backend kernel: eth0: renamed from veth921d471
+2025-11-26T15:17:48.166327+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered blocking state
+2025-11-26T15:17:48.166329+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered forwarding state
+2025-11-26T15:17:48.166335+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered blocking state
+2025-11-26T15:17:48.166337+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered disabled state
+2025-11-26T15:17:48.166338+00:00 siem-backend kernel: vethb04ec73: entered allmulticast mode
+2025-11-26T15:17:48.166340+00:00 siem-backend kernel: vethb04ec73: entered promiscuous mode
+2025-11-26T15:17:48.166341+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered blocking state
+2025-11-26T15:17:48.166343+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered disabled state
+2025-11-26T15:17:48.166345+00:00 siem-backend kernel: vethc69386a: entered allmulticast mode
+2025-11-26T15:17:48.166351+00:00 siem-backend kernel: vethc69386a: entered promiscuous mode
+2025-11-26T15:17:48.166352+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered blocking state
+2025-11-26T15:17:48.166354+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered disabled state
+2025-11-26T15:17:48.166355+00:00 siem-backend kernel: veth240008f: entered allmulticast mode
+2025-11-26T15:17:48.166357+00:00 siem-backend kernel: veth240008f: entered promiscuous mode
+2025-11-26T15:17:48.166359+00:00 siem-backend kernel: eth0: renamed from veth161cc17
+2025-11-26T15:17:48.166365+00:00 siem-backend kernel: eth1: renamed from clab-50b881c4
+2025-11-26T15:17:48.166367+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered blocking state
+2025-11-26T15:17:48.166369+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered forwarding state
+2025-11-26T15:17:48.166370+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered blocking state
+2025-11-26T15:17:48.166371+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered disabled state
+2025-11-26T15:17:48.166373+00:00 siem-backend kernel: veth6926af9: entered allmulticast mode
+2025-11-26T15:17:48.166379+00:00 siem-backend kernel: veth6926af9: entered promiscuous mode
+2025-11-26T15:17:48.166381+00:00 siem-backend kernel: eth2: renamed from clab-200ebb8b
+2025-11-26T15:17:48.166383+00:00 siem-backend kernel: eth0: renamed from veth787239e
+2025-11-26T15:17:48.166385+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered blocking state
+2025-11-26T15:17:48.166386+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered forwarding state
+2025-11-26T15:17:48.166388+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered blocking state
+2025-11-26T15:17:48.166390+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered disabled state
+2025-11-26T15:17:48.166396+00:00 siem-backend kernel: veth004bdea: entered allmulticast mode
+2025-11-26T15:17:48.166398+00:00 siem-backend kernel: veth004bdea: entered promiscuous mode
+2025-11-26T15:17:48.166399+00:00 siem-backend kernel: eth0: renamed from vethc0354e6
+2025-11-26T15:17:48.166401+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered blocking state
+2025-11-26T15:17:48.166402+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered forwarding state
+2025-11-26T15:17:48.166404+00:00 siem-backend kernel: eth0: renamed from veth04a25ed
+2025-11-26T15:17:48.166410+00:00 siem-backend kernel: eth1: renamed from clab-c8f31f40
+2025-11-26T15:17:48.166412+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered blocking state
+2025-11-26T15:17:48.166413+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered forwarding state
+2025-11-26T15:17:48.166415+00:00 siem-backend kernel: eth1: renamed from clab-5e82c6d3
+2025-11-26T15:17:48.166416+00:00 siem-backend kernel: eth1: renamed from clab-9c7c6ade
+2025-11-26T15:17:48.166418+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered blocking state
+2025-11-26T15:17:48.166420+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered disabled state
+2025-11-26T15:17:48.166436+00:00 siem-backend kernel: veth805e64e: entered allmulticast mode
+2025-11-26T15:17:48.166438+00:00 siem-backend kernel: veth805e64e: entered promiscuous mode
+2025-11-26T15:17:48.166440+00:00 siem-backend kernel: eth0: renamed from vethb0cb570
+2025-11-26T15:17:48.166442+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered blocking state
+2025-11-26T15:17:48.166443+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered forwarding state
+2025-11-26T15:17:48.166445+00:00 siem-backend kernel: eth2: renamed from clab-d03f071a
+2025-11-26T15:17:48.166538+00:00 siem-backend kernel: eth1: renamed from clab-f8ae1c9a
+2025-11-26T15:17:48.166541+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered blocking state
+2025-11-26T15:17:48.166542+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered disabled state
+2025-11-26T15:17:48.166543+00:00 siem-backend kernel: veth9d569e4: entered allmulticast mode
+2025-11-26T15:17:48.166545+00:00 siem-backend kernel: veth9d569e4: entered promiscuous mode
+2025-11-26T15:17:48.166546+00:00 siem-backend kernel: eth3: renamed from clab-7080f73c
+2025-11-26T15:17:48.166552+00:00 siem-backend kernel: eth4: renamed from clab-ee28de73
+2025-11-26T15:17:48.166553+00:00 siem-backend kernel: eth5: renamed from clab-edf4fd0f
+2025-11-26T15:17:48.166555+00:00 siem-backend kernel: eth0: renamed from vethe41d227
+2025-11-26T15:17:48.166556+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered blocking state
+2025-11-26T15:17:48.166558+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered disabled state
+2025-11-26T15:17:48.166559+00:00 siem-backend kernel: vethccfe224: entered allmulticast mode
+2025-11-26T15:17:48.166560+00:00 siem-backend kernel: vethccfe224: entered promiscuous mode
+2025-11-26T15:17:48.166566+00:00 siem-backend kernel: eth0: renamed from veth7b751fe
+2025-11-26T15:17:48.166567+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered blocking state
+2025-11-26T15:17:48.166569+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered forwarding state
+2025-11-26T15:17:48.166570+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered blocking state
+2025-11-26T15:17:48.166572+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered forwarding state
+2025-11-26T15:17:48.166573+00:00 siem-backend kernel: eth0: renamed from veth7820d47
+2025-11-26T15:17:48.166579+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered blocking state
+2025-11-26T15:17:48.166580+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered forwarding state
+2025-11-26T15:17:48.166582+00:00 siem-backend kernel: eth1: renamed from clab-dc1a104f
+2025-11-26T15:17:48.166584+00:00 siem-backend kernel: eth1: renamed from clab-0f4f7d82
+2025-11-26T15:17:48.166585+00:00 siem-backend kernel: eth2: renamed from clab-44adcadd
+2025-11-26T15:17:48.166586+00:00 siem-backend kernel: eth1: renamed from clab-72f918ec
+2025-11-26T15:17:48.166588+00:00 siem-backend kernel: eth2: renamed from clab-ce7c2140
+2025-11-26T15:17:48.166594+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered blocking state
+2025-11-26T15:17:48.166596+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered disabled state
+2025-11-26T15:17:48.166597+00:00 siem-backend kernel: vethc837907: entered allmulticast mode
+2025-11-26T15:17:48.166599+00:00 siem-backend kernel: vethc837907: entered promiscuous mode
+2025-11-26T15:17:48.166600+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered blocking state
+2025-11-26T15:17:48.166602+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered disabled state
+2025-11-26T15:17:48.166609+00:00 siem-backend kernel: veth02a86ee: entered allmulticast mode
+2025-11-26T15:17:48.166611+00:00 siem-backend kernel: veth02a86ee: entered promiscuous mode
+2025-11-26T15:17:48.166613+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered blocking state
+2025-11-26T15:17:48.166614+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered disabled state
+2025-11-26T15:17:48.166615+00:00 siem-backend kernel: veth659c94e: entered allmulticast mode
+2025-11-26T15:17:48.166617+00:00 siem-backend kernel: veth659c94e: entered promiscuous mode
+2025-11-26T15:17:48.166623+00:00 siem-backend kernel: eth0: renamed from veth9f16fb8
+2025-11-26T15:17:48.166625+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered blocking state
+2025-11-26T15:17:48.166626+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered forwarding state
+2025-11-26T15:17:48.166628+00:00 siem-backend kernel: eth0: renamed from vethee6dbb8
+2025-11-26T15:17:48.166629+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered blocking state
+2025-11-26T15:17:48.166631+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered forwarding state
+2025-11-26T15:17:48.166632+00:00 siem-backend kernel: eth0: renamed from veth55584f2
+2025-11-26T15:17:48.166638+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered blocking state
+2025-11-26T15:17:48.166640+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered forwarding state
+2025-11-26T15:17:48.166642+00:00 siem-backend kernel: eth1: renamed from clab-f1fc5208
+2025-11-26T15:17:48.166643+00:00 siem-backend kernel: eth2: renamed from clab-a2e946a5
+2025-11-26T15:17:48.166645+00:00 siem-backend kernel: eth1: renamed from clab-7d921d88
+2025-11-26T15:17:49.173040+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:18:14.695407+00:00 siem-backend kernel: eth1: entered promiscuous mode
+2025-11-26T15:18:21+00:00 firewall-in : [origin software="rsyslogd" swVersion="8.2410.0" x-pid="148" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:26:11.479418+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered disabled state
+2025-11-26T15:26:11.479438+00:00 siem-backend kernel: vethb0cb570: renamed from eth0
+2025-11-26T15:26:40.686733+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered disabled state
+2025-11-26T15:26:40.686930+00:00 siem-backend kernel: veth004bdea (unregistering): left allmulticast mode
+2025-11-26T15:26:40.686937+00:00 siem-backend kernel: veth004bdea (unregistering): left promiscuous mode
+2025-11-26T15:26:40.686938+00:00 siem-backend kernel: br-dc0bf7aab699: port 6(veth004bdea) entered disabled state
+2025-11-26T15:26:40.686940+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered disabled state
+2025-11-26T15:26:40.686942+00:00 siem-backend kernel: vethee6dbb8: renamed from eth0
+2025-11-26T15:26:40.686943+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered disabled state
+2025-11-26T15:26:40.686949+00:00 siem-backend kernel: veth7820d47: renamed from eth0
+2025-11-26T15:26:40.686950+00:00 siem-backend kernel: vethc0354e6: renamed from eth0
+2025-11-26T15:26:40.686952+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered disabled state
+2025-11-26T15:26:40.686953+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered disabled state
+2025-11-26T15:26:40.686964+00:00 siem-backend kernel: veth02a86ee (unregistering): left allmulticast mode
+2025-11-26T15:26:40.686965+00:00 siem-backend kernel: veth02a86ee (unregistering): left promiscuous mode
+2025-11-26T15:26:40.686967+00:00 siem-backend kernel: br-dc0bf7aab699: port 11(veth02a86ee) entered disabled state
+2025-11-26T15:26:40.686973+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered disabled state
+2025-11-26T15:26:40.686974+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered disabled state
+2025-11-26T15:26:40.686976+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered disabled state
+2025-11-26T15:26:40.686977+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered disabled state
+2025-11-26T15:26:40.687517+00:00 siem-backend kernel: veth55584f2: renamed from eth0
+2025-11-26T15:26:40.687525+00:00 siem-backend kernel: veth9f16fb8: renamed from eth0
+2025-11-26T15:26:40.687558+00:00 siem-backend kernel: veth161cc17: renamed from eth0
+2025-11-26T15:26:40.687560+00:00 siem-backend kernel: veth04a25ed: renamed from eth0
+2025-11-26T15:26:40.687561+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered disabled state
+2025-11-26T15:26:40.687563+00:00 siem-backend kernel: veth240008f (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687565+00:00 siem-backend kernel: veth240008f (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687567+00:00 siem-backend kernel: br-dc0bf7aab699: port 4(veth240008f) entered disabled state
+2025-11-26T15:26:40.687573+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered disabled state
+2025-11-26T15:26:40.687574+00:00 siem-backend kernel: vethccfe224 (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687576+00:00 siem-backend kernel: vethccfe224 (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687578+00:00 siem-backend kernel: br-dc0bf7aab699: port 9(vethccfe224) entered disabled state
+2025-11-26T15:26:40.687579+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered disabled state
+2025-11-26T15:26:40.687581+00:00 siem-backend kernel: veth659c94e (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687582+00:00 siem-backend kernel: veth659c94e (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687588+00:00 siem-backend kernel: br-dc0bf7aab699: port 12(veth659c94e) entered disabled state
+2025-11-26T15:26:40.687589+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered disabled state
+2025-11-26T15:26:40.687591+00:00 siem-backend kernel: vethc837907 (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687592+00:00 siem-backend kernel: vethc837907 (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687593+00:00 siem-backend kernel: br-dc0bf7aab699: port 10(vethc837907) entered disabled state
+2025-11-26T15:26:40.687594+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered disabled state
+2025-11-26T15:26:40.687600+00:00 siem-backend kernel: veth6926af9 (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687601+00:00 siem-backend kernel: veth6926af9 (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687603+00:00 siem-backend kernel: br-dc0bf7aab699: port 5(veth6926af9) entered disabled state
+2025-11-26T15:26:40.687604+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered disabled state
+2025-11-26T15:26:40.687606+00:00 siem-backend kernel: vethb04ec73 (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687608+00:00 siem-backend kernel: vethb04ec73 (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687609+00:00 siem-backend kernel: br-dc0bf7aab699: port 2(vethb04ec73) entered disabled state
+2025-11-26T15:26:40.687615+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered disabled state
+2025-11-26T15:26:40.687617+00:00 siem-backend kernel: veth787239e: renamed from eth0
+2025-11-26T15:26:40.687618+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered disabled state
+2025-11-26T15:26:40.687620+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered disabled state
+2025-11-26T15:26:40.687621+00:00 siem-backend kernel: veth7b751fe: renamed from eth0
+2025-11-26T15:26:40.687623+00:00 siem-backend kernel: veth921d471: renamed from eth0
+2025-11-26T15:26:40.687628+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered disabled state
+2025-11-26T15:26:40.687630+00:00 siem-backend kernel: vethe41d227: renamed from eth0
+2025-11-26T15:26:40.687631+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered disabled state
+2025-11-26T15:26:40.687633+00:00 siem-backend kernel: vethc69386a (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687635+00:00 siem-backend kernel: vethc69386a (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687636+00:00 siem-backend kernel: br-dc0bf7aab699: port 3(vethc69386a) entered disabled state
+2025-11-26T15:26:40.687641+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered disabled state
+2025-11-26T15:26:40.687643+00:00 siem-backend kernel: veth9d569e4 (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687644+00:00 siem-backend kernel: veth9d569e4 (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687646+00:00 siem-backend kernel: br-dc0bf7aab699: port 8(veth9d569e4) entered disabled state
+2025-11-26T15:26:40.687647+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered disabled state
+2025-11-26T15:26:40.687648+00:00 siem-backend kernel: veth4ee2f3b (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687649+00:00 siem-backend kernel: veth4ee2f3b (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687655+00:00 siem-backend kernel: br-dc0bf7aab699: port 1(veth4ee2f3b) entered disabled state
+2025-11-26T15:26:40.687656+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered disabled state
+2025-11-26T15:26:40.687658+00:00 siem-backend kernel: veth805e64e (unregistering): left allmulticast mode
+2025-11-26T15:26:40.687659+00:00 siem-backend kernel: veth805e64e (unregistering): left promiscuous mode
+2025-11-26T15:26:40.687661+00:00 siem-backend kernel: br-dc0bf7aab699: port 7(veth805e64e) entered disabled state
+2025-11-26T15:26:40.687662+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered blocking state
+2025-11-26T15:26:40.687668+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered disabled state
+2025-11-26T15:26:40.687669+00:00 siem-backend kernel: veth93d92ae: entered allmulticast mode
+2025-11-26T15:26:40.687670+00:00 siem-backend kernel: veth93d92ae: entered promiscuous mode
+2025-11-26T15:26:40.687672+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered blocking state
+2025-11-26T15:26:40.687673+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered disabled state
+2025-11-26T15:26:40.687674+00:00 siem-backend kernel: veth52da84a: entered allmulticast mode
+2025-11-26T15:26:40.687675+00:00 siem-backend kernel: veth52da84a: entered promiscuous mode
+2025-11-26T15:26:40.687681+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered blocking state
+2025-11-26T15:26:40.687682+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered disabled state
+2025-11-26T15:26:40.687684+00:00 siem-backend kernel: vethc9d0929: entered allmulticast mode
+2025-11-26T15:26:40.687685+00:00 siem-backend kernel: vethc9d0929: entered promiscuous mode
+2025-11-26T15:26:40.687686+00:00 siem-backend kernel: eth0: renamed from veth842b1a3
+2025-11-26T15:26:40.687688+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered blocking state
+2025-11-26T15:26:40.687693+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered forwarding state
+2025-11-26T15:26:40.687695+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered blocking state
+2025-11-26T15:26:40.687696+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered disabled state
+2025-11-26T15:26:40.687697+00:00 siem-backend kernel: vethdac2d53: entered allmulticast mode
+2025-11-26T15:26:40.687698+00:00 siem-backend kernel: vethdac2d53: entered promiscuous mode
+2025-11-26T15:26:40.687700+00:00 siem-backend kernel: eth0: renamed from vethadabfd9
+2025-11-26T15:26:40.687705+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered blocking state
+2025-11-26T15:26:40.687706+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered forwarding state
+2025-11-26T15:26:40.687708+00:00 siem-backend kernel: eth0: renamed from veth6ba7304
+2025-11-26T15:26:40.687709+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered blocking state
+2025-11-26T15:26:40.687710+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered forwarding state
+2025-11-26T15:26:40.687712+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered blocking state
+2025-11-26T15:26:40.687713+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered disabled state
+2025-11-26T15:26:40.687719+00:00 siem-backend kernel: veth39f3296: entered allmulticast mode
+2025-11-26T15:26:40.687721+00:00 siem-backend kernel: veth39f3296: entered promiscuous mode
+2025-11-26T15:26:40.687723+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered blocking state
+2025-11-26T15:26:40.687724+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered disabled state
+2025-11-26T15:26:40.687725+00:00 siem-backend kernel: veth0648c96: entered allmulticast mode
+2025-11-26T15:26:40.687726+00:00 siem-backend kernel: veth0648c96: entered promiscuous mode
+2025-11-26T15:26:40.687732+00:00 siem-backend kernel: eth0: renamed from vetha7f22d1
+2025-11-26T15:26:40.687734+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered blocking state
+2025-11-26T15:26:40.687735+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered forwarding state
+2025-11-26T15:26:40.687736+00:00 siem-backend kernel: eth0: renamed from vethbeb148a
+2025-11-26T15:26:40.687738+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered blocking state
+2025-11-26T15:26:40.687739+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered forwarding state
+2025-11-26T15:26:40.687740+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered blocking state
+2025-11-26T15:26:40.687748+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered disabled state
+2025-11-26T15:26:40.687749+00:00 siem-backend kernel: vethb7aa8d2: entered allmulticast mode
+2025-11-26T15:26:40.687750+00:00 siem-backend kernel: vethb7aa8d2: entered promiscuous mode
+2025-11-26T15:26:40.687752+00:00 siem-backend kernel: eth1: renamed from clab-c1ad8356
+2025-11-26T15:26:40.687753+00:00 siem-backend kernel: eth1: renamed from clab-66d4383e
+2025-11-26T15:26:40.687774+00:00 siem-backend kernel: eth1: renamed from clab-e2f4c581
+2025-11-26T15:26:40.687780+00:00 siem-backend kernel: eth1: renamed from clab-a328f1a1
+2025-11-26T15:26:40.687782+00:00 siem-backend kernel: eth0: renamed from veth735a221
+2025-11-26T15:26:40.687784+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered blocking state
+2025-11-26T15:26:40.687785+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered forwarding state
+2025-11-26T15:26:40.727535+00:00 siem-backend kernel: eth2: renamed from clab-56e243b8
+2025-11-26T15:26:40.727563+00:00 siem-backend kernel: eth1: renamed from clab-a9a9b5fe
+2025-11-26T15:26:40.747460+00:00 siem-backend kernel: eth0: renamed from veth4b87c7f
+2025-11-26T15:26:40.813611+00:00 siem-backend kernel: eth3: renamed from clab-f1bc29fc
+2025-11-26T15:26:40.813638+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered blocking state
+2025-11-26T15:26:40.813665+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered forwarding state
+2025-11-26T15:26:40.823868+00:00 siem-backend kernel: eth2: renamed from clab-29260ceb
+2025-11-26T15:26:40.831424+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered blocking state
+2025-11-26T15:26:40.831453+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered disabled state
+2025-11-26T15:26:40.831455+00:00 siem-backend kernel: veth09d9f7e: entered allmulticast mode
+2025-11-26T15:26:40.831456+00:00 siem-backend kernel: veth09d9f7e: entered promiscuous mode
+2025-11-26T15:26:40.987422+00:00 siem-backend kernel: eth1: renamed from clab-26b791dc
+2025-11-26T15:26:40.987438+00:00 siem-backend kernel: eth0: renamed from vetha94aee2
+2025-11-26T15:26:40.995461+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered blocking state
+2025-11-26T15:26:40.995479+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered forwarding state
+2025-11-26T15:26:41.128003+00:00 siem-backend kernel: eth1: renamed from clab-0700acf8
+2025-11-26T15:26:41.171438+00:00 siem-backend kernel: eth2: renamed from clab-0c2bbe4a
+2025-11-26T15:26:41.219445+00:00 siem-backend kernel: eth3: renamed from clab-f62d133b
+2025-11-26T15:26:41.266506+00:00 siem-backend kernel: eth4: renamed from clab-ab69d1a3
+2025-11-26T15:26:41.266525+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered blocking state
+2025-11-26T15:26:41.266526+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered disabled state
+2025-11-26T15:26:41.267425+00:00 siem-backend kernel: vethbf7752a: entered allmulticast mode
+2025-11-26T15:26:41.267446+00:00 siem-backend kernel: vethbf7752a: entered promiscuous mode
+2025-11-26T15:26:41.291436+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered blocking state
+2025-11-26T15:26:41.291458+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered disabled state
+2025-11-26T15:26:41.291772+00:00 siem-backend kernel: veth1e9d206: entered allmulticast mode
+2025-11-26T15:26:41.291777+00:00 siem-backend kernel: veth1e9d206: entered promiscuous mode
+2025-11-26T15:26:41.327420+00:00 siem-backend kernel: eth0: renamed from veth96f4a98
+2025-11-26T15:26:41.327436+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered blocking state
+2025-11-26T15:26:41.327437+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered forwarding state
+2025-11-26T15:26:41.359460+00:00 siem-backend kernel: eth0: renamed from vethf3cabaf
+2025-11-26T15:26:41.359492+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered blocking state
+2025-11-26T15:26:41.359495+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered forwarding state
+2025-11-26T15:26:41.451448+00:00 siem-backend kernel: eth1: renamed from clab-10594d80
+2025-11-26T15:26:41.692929+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="10" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:27:02.983402+00:00 siem-backend kernel: eth1: entered promiscuous mode
+2025-11-26T15:27:09+00:00 edge-firewall : [origin software="rsyslogd" swVersion="8.2410.0" x-pid="86" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:30:29.780898+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered disabled state
+2025-11-26T15:30:29.781439+00:00 siem-backend kernel: veth4b87c7f: renamed from eth0
+2025-11-26T15:30:29.781445+00:00 siem-backend kernel: vethbeb148a: renamed from eth0
+2025-11-26T15:30:29.781446+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered disabled state
+2025-11-26T15:30:29.781447+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered disabled state
+2025-11-26T15:30:29.781448+00:00 siem-backend kernel: veth6ba7304: renamed from eth0
+2025-11-26T15:30:29.781449+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered disabled state
+2025-11-26T15:30:29.782177+00:00 siem-backend kernel: veth96f4a98: renamed from eth0
+2025-11-26T15:30:29.782353+00:00 siem-backend kernel: vethf3cabaf: renamed from eth0
+2025-11-26T15:30:29.782355+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered disabled state
+2025-11-26T15:30:29.782356+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered disabled state
+2025-11-26T15:30:29.782357+00:00 siem-backend kernel: veth842b1a3: renamed from eth0
+2025-11-26T15:30:29.782358+00:00 siem-backend kernel: vetha94aee2: renamed from eth0
+2025-11-26T15:30:29.782359+00:00 siem-backend kernel: vethadabfd9: renamed from eth0
+2025-11-26T15:30:29.782365+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered disabled state
+2025-11-26T15:30:29.782366+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered disabled state
+2025-11-26T15:30:29.782367+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered disabled state
+2025-11-26T15:30:29.782368+00:00 siem-backend kernel: veth735a221: renamed from eth0
+2025-11-26T15:30:29.782369+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered disabled state
+2025-11-26T15:30:29.782370+00:00 siem-backend kernel: vethb7aa8d2 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782373+00:00 siem-backend kernel: vethb7aa8d2 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782374+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethb7aa8d2) entered disabled state
+2025-11-26T15:30:29.782375+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered disabled state
+2025-11-26T15:30:29.782376+00:00 siem-backend kernel: vetha7f22d1: renamed from eth0
+2025-11-26T15:30:29.782377+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered disabled state
+2025-11-26T15:30:29.782378+00:00 siem-backend kernel: veth39f3296 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782381+00:00 siem-backend kernel: veth39f3296 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782382+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth39f3296) entered disabled state
+2025-11-26T15:30:29.782383+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered disabled state
+2025-11-26T15:30:29.782384+00:00 siem-backend kernel: veth93d92ae (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782384+00:00 siem-backend kernel: veth93d92ae (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782385+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth93d92ae) entered disabled state
+2025-11-26T15:30:29.782386+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered disabled state
+2025-11-26T15:30:29.782389+00:00 siem-backend kernel: vethbf7752a (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782390+00:00 siem-backend kernel: vethbf7752a (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782391+00:00 siem-backend kernel: br-2583762bbb0f: port 9(vethbf7752a) entered disabled state
+2025-11-26T15:30:29.782392+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered disabled state
+2025-11-26T15:30:29.782393+00:00 siem-backend kernel: vethc9d0929 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782393+00:00 siem-backend kernel: vethc9d0929 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782396+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethc9d0929) entered disabled state
+2025-11-26T15:30:29.782397+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered disabled state
+2025-11-26T15:30:29.782398+00:00 siem-backend kernel: veth1e9d206 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782399+00:00 siem-backend kernel: veth1e9d206 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782400+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth1e9d206) entered disabled state
+2025-11-26T15:30:29.782401+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered disabled state
+2025-11-26T15:30:29.782401+00:00 siem-backend kernel: veth09d9f7e (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782404+00:00 siem-backend kernel: veth09d9f7e (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782405+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth09d9f7e) entered disabled state
+2025-11-26T15:30:29.782406+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered disabled state
+2025-11-26T15:30:29.782407+00:00 siem-backend kernel: veth52da84a (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782408+00:00 siem-backend kernel: veth52da84a (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782409+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth52da84a) entered disabled state
+2025-11-26T15:30:29.782412+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered disabled state
+2025-11-26T15:30:29.782413+00:00 siem-backend kernel: vethdac2d53 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782414+00:00 siem-backend kernel: vethdac2d53 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782414+00:00 siem-backend kernel: br-2583762bbb0f: port 4(vethdac2d53) entered disabled state
+2025-11-26T15:30:29.782415+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered disabled state
+2025-11-26T15:30:29.782416+00:00 siem-backend kernel: veth0648c96 (unregistering): left allmulticast mode
+2025-11-26T15:30:29.782419+00:00 siem-backend kernel: veth0648c96 (unregistering): left promiscuous mode
+2025-11-26T15:30:29.782420+00:00 siem-backend kernel: br-2583762bbb0f: port 6(veth0648c96) entered disabled state
+2025-11-26T15:30:29.782421+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth52e964d) entered blocking state
+2025-11-26T15:30:29.782422+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth52e964d) entered disabled state
+2025-11-26T15:30:29.782423+00:00 siem-backend kernel: veth52e964d: entered allmulticast mode
+2025-11-26T15:30:29.782423+00:00 siem-backend kernel: veth52e964d: entered promiscuous mode
+2025-11-26T15:30:29.782424+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth44c72b6) entered blocking state
+2025-11-26T15:30:29.782427+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth44c72b6) entered disabled state
+2025-11-26T15:30:29.782428+00:00 siem-backend kernel: veth44c72b6: entered allmulticast mode
+2025-11-26T15:30:29.782429+00:00 siem-backend kernel: veth44c72b6: entered promiscuous mode
+2025-11-26T15:30:29.782430+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethda5d043) entered blocking state
+2025-11-26T15:30:29.782430+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethda5d043) entered disabled state
+2025-11-26T15:30:29.782431+00:00 siem-backend kernel: vethda5d043: entered allmulticast mode
+2025-11-26T15:30:29.782434+00:00 siem-backend kernel: vethda5d043: entered promiscuous mode
+2025-11-26T15:30:29.782435+00:00 siem-backend kernel: eth0: renamed from veth185187e
+2025-11-26T15:30:29.782436+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth52e964d) entered blocking state
+2025-11-26T15:30:29.782436+00:00 siem-backend kernel: br-2583762bbb0f: port 1(veth52e964d) entered forwarding state
+2025-11-26T15:30:29.782437+00:00 siem-backend kernel: eth0: renamed from veth4a25566
+2025-11-26T15:30:29.782438+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth44c72b6) entered blocking state
+2025-11-26T15:30:29.782439+00:00 siem-backend kernel: br-2583762bbb0f: port 2(veth44c72b6) entered forwarding state
+2025-11-26T15:30:29.782442+00:00 siem-backend kernel: br-2583762bbb0f: port 4(veth18cf5d5) entered blocking state
+2025-11-26T15:30:29.782443+00:00 siem-backend kernel: br-2583762bbb0f: port 4(veth18cf5d5) entered disabled state
+2025-11-26T15:30:29.782444+00:00 siem-backend kernel: veth18cf5d5: entered allmulticast mode
+2025-11-26T15:30:29.782445+00:00 siem-backend kernel: veth18cf5d5: entered promiscuous mode
+2025-11-26T15:30:29.782446+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth071199f) entered blocking state
+2025-11-26T15:30:29.782447+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth071199f) entered disabled state
+2025-11-26T15:30:29.782451+00:00 siem-backend kernel: veth071199f: entered allmulticast mode
+2025-11-26T15:30:29.782452+00:00 siem-backend kernel: veth071199f: entered promiscuous mode
+2025-11-26T15:30:29.782453+00:00 siem-backend kernel: eth0: renamed from veth57ba218
+2025-11-26T15:30:29.782454+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethda5d043) entered blocking state
+2025-11-26T15:30:29.782454+00:00 siem-backend kernel: br-2583762bbb0f: port 3(vethda5d043) entered forwarding state
+2025-11-26T15:30:29.782455+00:00 siem-backend kernel: eth0: renamed from vethe65446c
+2025-11-26T15:30:29.782458+00:00 siem-backend kernel: br-2583762bbb0f: port 6(vethb36b291) entered blocking state
+2025-11-26T15:30:29.782459+00:00 siem-backend kernel: br-2583762bbb0f: port 6(vethb36b291) entered disabled state
+2025-11-26T15:30:29.782460+00:00 siem-backend kernel: vethb36b291: entered allmulticast mode
+2025-11-26T15:30:29.782461+00:00 siem-backend kernel: vethb36b291: entered promiscuous mode
+2025-11-26T15:30:29.782462+00:00 siem-backend kernel: br-2583762bbb0f: port 4(veth18cf5d5) entered blocking state
+2025-11-26T15:30:29.782462+00:00 siem-backend kernel: br-2583762bbb0f: port 4(veth18cf5d5) entered forwarding state
+2025-11-26T15:30:29.782463+00:00 siem-backend kernel: eth1: renamed from clab-c15e2b28
+2025-11-26T15:30:29.831455+00:00 siem-backend kernel: eth1: renamed from clab-1496b014
+2025-11-26T15:30:29.839451+00:00 siem-backend kernel: eth0: renamed from vethbbd0c23
+2025-11-26T15:30:29.839468+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethcf3da46) entered blocking state
+2025-11-26T15:30:29.839470+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethcf3da46) entered disabled state
+2025-11-26T15:30:29.839471+00:00 siem-backend kernel: vethcf3da46: entered allmulticast mode
+2025-11-26T15:30:29.844941+00:00 siem-backend kernel: vethcf3da46: entered promiscuous mode
+2025-11-26T15:30:29.845013+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth071199f) entered blocking state
+2025-11-26T15:30:29.845015+00:00 siem-backend kernel: br-2583762bbb0f: port 5(veth071199f) entered forwarding state
+2025-11-26T15:30:29.855427+00:00 siem-backend kernel: eth0: renamed from veth4775932
+2025-11-26T15:30:29.855444+00:00 siem-backend kernel: br-2583762bbb0f: port 6(vethb36b291) entered blocking state
+2025-11-26T15:30:29.855446+00:00 siem-backend kernel: br-2583762bbb0f: port 6(vethb36b291) entered forwarding state
+2025-11-26T15:30:29.908482+00:00 siem-backend kernel: overlayfs: lowerdir is in-use as upperdir/workdir of another mount, accessing files from both mounts will result in undefined behavior.
+2025-11-26T15:30:29.927486+00:00 siem-backend kernel: eth1: renamed from clab-78332472
+2025-11-26T15:30:29.975421+00:00 siem-backend kernel: eth2: renamed from clab-95a69f82
+2025-11-26T15:30:29.979705+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth97bb48f) entered blocking state
+2025-11-26T15:30:29.979727+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth97bb48f) entered disabled state
+2025-11-26T15:30:29.979729+00:00 siem-backend kernel: veth97bb48f: entered allmulticast mode
+2025-11-26T15:30:29.979730+00:00 siem-backend kernel: veth97bb48f: entered promiscuous mode
+2025-11-26T15:30:30.015524+00:00 siem-backend kernel: eth0: renamed from vethd0d36aa
+2025-11-26T15:30:30.015545+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethcf3da46) entered blocking state
+2025-11-26T15:30:30.015547+00:00 siem-backend kernel: br-2583762bbb0f: port 7(vethcf3da46) entered forwarding state
+2025-11-26T15:30:30.068642+00:00 siem-backend kernel: eth1: renamed from clab-48b1ad17
+2025-11-26T15:30:30.107416+00:00 siem-backend kernel: eth2: renamed from clab-431daacf
+2025-11-26T15:30:30.107435+00:00 siem-backend kernel: eth0: renamed from veth76c4b89
+2025-11-26T15:30:30.147426+00:00 siem-backend kernel: eth3: renamed from clab-8228093a
+2025-11-26T15:30:30.147442+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth97bb48f) entered blocking state
+2025-11-26T15:30:30.147443+00:00 siem-backend kernel: br-2583762bbb0f: port 8(veth97bb48f) entered forwarding state
+2025-11-26T15:30:30.175405+00:00 siem-backend kernel: eth1: renamed from clab-453368e3
+2025-11-26T15:30:30.223491+00:00 siem-backend kernel: eth2: renamed from clab-d0e0d479
+2025-11-26T15:30:30.307449+00:00 siem-backend kernel: eth1: renamed from clab-8a6c5cfc
+2025-11-26T15:30:30.325619+00:00 siem-backend kernel: br-2583762bbb0f: port 9(veth882af3c) entered blocking state
+2025-11-26T15:30:30.325639+00:00 siem-backend kernel: br-2583762bbb0f: port 9(veth882af3c) entered disabled state
+2025-11-26T15:30:30.325640+00:00 siem-backend kernel: veth882af3c: entered allmulticast mode
+2025-11-26T15:30:30.325641+00:00 siem-backend kernel: veth882af3c: entered promiscuous mode
+2025-11-26T15:30:30.367424+00:00 siem-backend kernel: eth0: renamed from vethe3c98cd
+2025-11-26T15:30:30.367440+00:00 siem-backend kernel: br-2583762bbb0f: port 9(veth882af3c) entered blocking state
+2025-11-26T15:30:30.367441+00:00 siem-backend kernel: br-2583762bbb0f: port 9(veth882af3c) entered forwarding state
+2025-11-26T15:30:30.371423+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth3218129) entered blocking state
+2025-11-26T15:30:30.371437+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth3218129) entered disabled state
+2025-11-26T15:30:30.371438+00:00 siem-backend kernel: veth3218129: entered allmulticast mode
+2025-11-26T15:30:30.371439+00:00 siem-backend kernel: veth3218129: entered promiscuous mode
+2025-11-26T15:30:30.411409+00:00 siem-backend kernel: eth0: renamed from veth0c0baf0
+2025-11-26T15:30:30.415409+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth3218129) entered blocking state
+2025-11-26T15:30:30.415430+00:00 siem-backend kernel: br-2583762bbb0f: port 10(veth3218129) entered forwarding state
+2025-11-26T15:30:30.475446+00:00 siem-backend kernel: eth1: renamed from clab-d875cc2f
+2025-11-26T15:30:30.515434+00:00 siem-backend kernel: eth1: renamed from clab-61ccd965
+2025-11-26T15:30:30.555470+00:00 siem-backend kernel: eth2: renamed from clab-70cb7acc
+2025-11-26T15:30:30.608559+00:00 siem-backend kernel: eth3: renamed from clab-ad5f587f
+2025-11-26T15:30:30.650123+00:00 siem-backend kernel: eth4: renamed from clab-e443c29b
+2025-11-26T15:30:30.700052+00:00 siem-backend kernel: eth5: renamed from clab-3276d09b
+2025-11-26T15:30:30.792934+00:00 siem-backend rsyslogd: [origin software="rsyslogd" swVersion="8.2504.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+2025-11-26T15:30:52.083438+00:00 siem-backend kernel: eth1: entered promiscuous mode
+2025-11-26T15:30:52.651429+00:00 siem-backend kernel: eth2: entered promiscuous mode
+2025-11-26T15:30:59+00:00 edge-firewall : [origin software="rsyslogd" swVersion="8.2410.0" x-pid="85" x-info="https://www.rsyslog.com"] start
