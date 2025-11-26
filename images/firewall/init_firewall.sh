@@ -3,9 +3,28 @@
 echo "--- 🔥 FIREWALL INITIALIZATION ---"
 
 # 1. LOGGING KONFIGURATION (Bleibt gleich)
-echo "Configuring Rsyslog..."
-echo 'module(load="imuxsock")' > /etc/rsyslog.conf
-echo '*.* @192.168.35.10:514' >> /etc/rsyslog.conf
+echo "Configuring Rsyslog TLS..."
+cat > /etc/rsyslog.conf <<EOF
+module(load="imuxsock")
+module(load="lmnsd_ossl")
+
+global(
+    DefaultNetstreamDriver="ossl"
+    DefaultNetstreamDriverCAFile="/etc/ssl/certs/ca.pem"
+    DefaultNetstreamDriverCertFile="/etc/ssl/certs/client.pem"
+    DefaultNetstreamDriverKeyFile="/etc/ssl/private/client.key"
+)
+
+*.* action(
+    type="omfwd"
+    target="192.168.35.10"
+    port="6514"
+    protocol="tcp"
+    StreamDriver="ossl"
+    StreamDriverMode="1"
+    StreamDriverAuthMode="anon"
+)
+EOF
 pkill rsyslogd || true
 rsyslogd
 

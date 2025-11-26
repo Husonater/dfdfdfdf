@@ -21,12 +21,32 @@ iptables -t raw -I PREROUTING -i eth1 -j DROP
 echo 'alert http any any -> any any (msg:"ET WEB_SERVER CMD.EXE Access"; content:"cmd.exe"; http_uri; sid:1000001; rev:1;)' >> /var/lib/suricata/rules/suricata.rules
 
 # 1.7 Configure and Start Rsyslog (Forward to SIEM)
-echo "Configuring Rsyslog..."
+echo "Configuring Rsyslog TLS..."
 mkdir -p /var/lib/rsyslog
-echo 'global(workDirectory="/var/lib/rsyslog")' > /etc/rsyslog.conf
-echo 'module(load="imfile")' >> /etc/rsyslog.conf
-echo 'input(type="imfile" File="/var/log/suricata/fast.log" Tag="suricata")' >> /etc/rsyslog.conf
-echo '*.* @192.168.35.10:514' >> /etc/rsyslog.conf
+cat > /etc/rsyslog.conf <<EOF
+global(workDirectory="/var/lib/rsyslog")
+module(load="imfile")
+module(load="lmnsd_ossl")
+
+global(
+    DefaultNetstreamDriver="ossl"
+    DefaultNetstreamDriverCAFile="/etc/ssl/certs/ca.pem"
+    DefaultNetstreamDriverCertFile="/etc/ssl/certs/client.pem"
+    DefaultNetstreamDriverKeyFile="/etc/ssl/private/client.key"
+)
+
+input(type="imfile" File="/var/log/suricata/fast.log" Tag="suricata")
+
+*.* action(
+    type="omfwd"
+    target="192.168.35.10"
+    port="6514"
+    protocol="tcp"
+    StreamDriver="ossl"
+    StreamDriverMode="1"
+    StreamDriverAuthMode="anon"
+)
+EOF
 rsyslogd
 
 # 2. Suricata starten

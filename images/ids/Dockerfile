@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     tcpdump \
     python3 \
     iptables \
+    rsyslog-openssl \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Regeln AUTOMATISCH beim Bauen herunterladen
@@ -20,8 +21,13 @@ RUN suricata-update update-sources && \
     suricata-update enable-source et/open && \
     suricata-update
 
+# Certs
+COPY config/certs/ca.pem /etc/ssl/certs/ca.pem
+COPY config/certs/client.pem /etc/ssl/certs/client.pem
+COPY config/certs/client.key /etc/ssl/private/client.key
+
 # 3. Skripte kopieren
-COPY startup_ids.sh /usr/local/bin/
+COPY images/ids/startup_ids.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup_ids.sh
 
 # 4. Dummy-Prozess (Hält den Container am Leben)
