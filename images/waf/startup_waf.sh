@@ -18,15 +18,12 @@ global(
     DefaultNetstreamDriverKeyFile="/etc/ssl/private/client.key"
 )
 
-# Forward everything to SIEM via TLS
+# Forward everything to SIEM via UDP
 *.* action(
     type="omfwd"
     target="192.168.35.10"
-    port="6514"
-    protocol="tcp"
-    StreamDriver="ossl"
-    StreamDriverMode="1"
-    StreamDriverAuthMode="anon"
+    port="514"
+    protocol="udp"
 )
 EOF
 

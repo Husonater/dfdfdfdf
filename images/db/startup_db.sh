@@ -18,11 +18,8 @@ global(
 *.* action(
     type="omfwd"
     target="192.168.35.10"
-    port="6514"
-    protocol="tcp"
-    StreamDriver="ossl"
-    StreamDriverMode="1"
-    StreamDriverAuthMode="anon"
+    port="514"
+    protocol="udp"
 )
 EOF
 
@@ -31,4 +28,4 @@ rsyslogd
 
 # 3. Start MariaDB
 echo "Starting MariaDB..."
-exec mariadbd
+exec /usr/local/bin/docker-entrypoint.sh mariadbd

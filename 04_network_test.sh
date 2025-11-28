@@ -90,12 +90,14 @@ echo -e "${YELLOW}======================================================${NC}"
 # ---------------------------------------------------------
 print_header "1. INFRASTRUKTUR & IP ADRESSEN"
 check_ip "attacker-internet" "eth1" "172.16.1.10"
-check_ip "edge-router" "eth1" "192.168.10.1"
-check_ip "firewall-in" "eth2" "192.168.20.1"
+check_ip "edge-firewall" "eth1" "172.16.1.1" # Corrected IP and Name
+check_ip "internal-firewall" "eth2" "192.168.35.1" # Corrected IP and Name
 check_ip "reverse-proxy-waf" "eth1" "192.168.20.10"
 check_ip "webserver" "eth1" "192.168.60.20"  # NEU
 check_ip "ids-dmz" "eth1" "192.168.61.30"    # NEU
 check_ip "db-backend" "eth1" "192.168.70.10" # NEU
+check_ip "wazuh-indexer" "eth1" "192.168.35.11" # NEU
+check_ip "wazuh-dashboard" "eth1" "192.168.35.12" # NEU
 check_ip "client-internal" "eth1" "192.168.40.10"
 
 # ---------------------------------------------------------
@@ -112,7 +114,8 @@ expect_block "attacker-internet" "curl -m 2 192.168.60.20" "Internet -> Webserve
 expect_block "attacker-internet" "nc -z -v -w 2 192.168.70.10 3306" "Internet -> Database (Direct Access Blocked)" # NEU
 
 # B. Von Innen (Internal Client)
-expect_success "client-internal" "ping -c 1 192.168.35.10" "Client -> SIEM (Management Access)"
+expect_success "client-internal" "ping -c 1 192.168.35.10" "Client -> SIEM Manager (Management Access)"
+expect_success "client-internal" "ping -c 1 192.168.35.12" "Client -> SIEM Dashboard (Access)"
 expect_block "client-internal" "ping -c 1 172.16.1.10" "Client -> Internet (Egress Filter)"
 expect_block "client-internal" "curl -m 2 192.168.60.20" "Client -> DMZ Webserver (Segregation)" # Updated IP
 
@@ -158,9 +161,23 @@ sudo docker exec ${CLAB_PREFIX}-reverse-proxy-waf curl -s "http://192.168.60.20/
 # Warte kurz, bis der Alarm verarbeitet wurde
 sleep 30
 
-# 2. Prüfen am SIEM (Check for the Suricata alert signature)
-# WICHTIG: Prüft auf die am häufigsten ausgelöste Signatur
-SIEM_LOGS=$(sudo docker exec ${CLAB_PREFIX}-siem-backend grep "ET WEB_SERVER" /var/log/siem_logs/suricata_alerts.log | tail -n 1)
+# 2. Prüfen am SIEM (Check for the Suricata alert signature in Wazuh)
+# 2. Prüfen am SIEM (Check for the Suricata alert signature in Wazuh)
+# Find the latest archive log file (handling date-based rotation)
+ARCHIVES_FILE=$(sudo docker exec ${CLAB_PREFIX}-wazuh-manager find /var/ossec/logs/archives -name "ossec-archive-*.log" | sort | tail -n 1)
+
+if [[ -z "$ARCHIVES_FILE" ]]; then
+    echo "WARNING: No archive log found. Checking for archives.log..."
+    ARCHIVES_FILE="/var/ossec/logs/archives/archives.log"
+fi
+
+echo "Checking logs in: $ARCHIVES_FILE"
+SIEM_LOGS=$(sudo docker exec ${CLAB_PREFIX}-wazuh-manager grep "ET WEB_SERVER" "$ARCHIVES_FILE" 2>/dev/null | tail -n 1)
+
+if [[ -z "$SIEM_LOGS" ]]; then
+    echo "DEBUG: Last 10 lines of $ARCHIVES_FILE:"
+    sudo docker exec ${CLAB_PREFIX}-wazuh-manager tail -n 10 "$ARCHIVES_FILE" || true
+fi
 
 if [[ "$SIEM_LOGS" == *"ET WEB_SERVER"* ]]; then
     echo -e "[${GREEN}PASS${NC}] IDS Alert received for attack (Detection Chain OK)"
@@ -175,9 +192,8 @@ fi
 # ---------------------------------------------------------
 print_header "5. SIEM LOGGING COMPLETENESS"
 
-# A. Firewall Logs (Check for dropped packets)
-# Wir suchen nach "firewall", da tcpdump -q den Prefix nicht ausgibt.
-FW_LOGS=$(sudo docker exec ${CLAB_PREFIX}-siem-backend grep "firewall" /var/log/siem_logs/suricata_alerts.log | tail -n 1)
+# A. Firewall Logs (Check for dropped packets in Wazuh)
+FW_LOGS=$(sudo docker exec ${CLAB_PREFIX}-wazuh-manager grep "FW-DROP" "$ARCHIVES_FILE" 2>/dev/null | tail -n 1)
 if [[ -n "$FW_LOGS" ]]; then
     echo -e "[${GREEN}PASS${NC}] Firewall Logs received (FW-DROP detected)"
     ((PASS_COUNT++))
@@ -186,9 +202,8 @@ else
     ((FAIL_COUNT++))
 fi
 
-# B. WAF Logs (Check for Nginx/ModSecurity logs)
-# Wir suchen nach "nginx_waf" oder "nginx_error", das wir in nginx.conf definiert haben.
-WAF_LOGS=$(sudo docker exec ${CLAB_PREFIX}-siem-backend grep "nginx_" /var/log/siem_logs/suricata_alerts.log | tail -n 1)
+# B. WAF Logs (Check for Nginx/ModSecurity logs in Wazuh)
+WAF_LOGS=$(sudo docker exec ${CLAB_PREFIX}-wazuh-manager grep "nginx" "$ARCHIVES_FILE" 2>/dev/null | tail -n 1)
 if [[ -n "$WAF_LOGS" ]]; then
     echo -e "[${GREEN}PASS${NC}] WAF Logs received (Nginx Access/Error detected)"
     ((PASS_COUNT++))

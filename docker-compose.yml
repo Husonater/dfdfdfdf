@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   # 1. Web Application Firewall (WAF) / Reverse Proxy
@@ -65,3 +65,27 @@ services:
       dockerfile: Dockerfile
     image: siem-overlay:latest
     container_name: build_siem_overlay
+
+  # 9. Wazuh Manager
+  wazuh-manager:
+    build:
+      context: ./images/wazuh_manager
+      dockerfile: Dockerfile
+    image: wazuh-manager:latest
+    container_name: build_wazuh_manager
+
+  # 10. Wazuh Indexer
+  wazuh-indexer:
+    build:
+      context: ./images/wazuh_indexer
+      dockerfile: Dockerfile
+    image: wazuh-indexer:latest
+    container_name: build_wazuh_indexer
+
+  # 11. Wazuh Dashboard
+  wazuh-dashboard:
+    build:
+      context: ./images/wazuh_dashboard
+      dockerfile: Dockerfile
+    image: wazuh-dashboard:latest
+    container_name: build_wazuh_dashboard
