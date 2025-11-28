@@ -189,6 +189,7 @@ EOF
 
     # Cleanup
     rm *.csr *.cnf *.srl
+    fi
 
     echo "Distributing certificates..."
     
@@ -205,13 +206,21 @@ EOF
     docker cp root-ca.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/config/certs/root-ca.pem
 
     # Manager
+    docker exec clab-dmz-project-sun-wazuh-manager mkdir -p /etc/filebeat/certs
     docker cp wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager.pem
     docker cp wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager-key.pem
     docker cp root-ca.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/root-ca.pem
+
+    # Manager API Certs
+    docker exec clab-dmz-project-sun-wazuh-manager mkdir -p /var/ossec/api/configuration/ssl
+    docker cp wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.crt
+    docker cp wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.key
+    docker exec clab-dmz-project-sun-wazuh-manager chown -R wazuh:wazuh /var/ossec/api/configuration/ssl
+    docker exec clab-dmz-project-sun-wazuh-manager chmod 600 /var/ossec/api/configuration/ssl/server.key
+    docker exec clab-dmz-project-sun-wazuh-manager chmod 644 /var/ossec/api/configuration/ssl/server.crt
     
     # Update opensearch.yml with correct admin_dn
     docker exec clab-dmz-project-sun-wazuh-indexer sed -i 's|CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US|CN=admin,OU=Wazuh,O=Wazuh,L=San Jose,ST=California,C=US|g' /usr/share/wazuh-indexer/opensearch.yml
-    fi
 
     # Distribute certs (This block is now redundant due to the manual generation and distribution above, but keeping for context if needed)
     # echo "Distributing certificates..."
@@ -229,8 +238,11 @@ EOF
     # Fix dashboard config
     docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/wazuh.indexer/wazuh-indexer/g' /usr/share/wazuh-dashboard/config/opensearch_dashboards.yml
     
+    # Fix Dashboard API Credentials
+    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/username: wazuh-wui/username: admin/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/password: wazuh-wui/password: SecretPassword123!/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    
     # Manager
-    docker exec clab-dmz-project-sun-wazuh-manager mkdir -p /etc/filebeat/certs
     # docker cp certs/wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager.pem
     # docker cp certs/wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager-key.pem
     # docker cp certs/root-ca.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/root-ca.pem
@@ -267,6 +279,7 @@ seccomp:
     names:
     - rseq
 EOF
+    docker cp wazuh-template.json clab-dmz-project-sun-wazuh-manager:/etc/filebeat/wazuh-template.json
     docker cp filebeat.yml clab-dmz-project-sun-wazuh-manager:/etc/filebeat/filebeat.yml
 
     # Initialize Security
@@ -423,5 +436,9 @@ docker exec -d clab-dmz-project-sun-reverse-proxy-waf /usr/local/bin/startup_waf
 echo "Initializing Firewalls..."
 clab_exec edge-firewall "/usr/local/bin/init_firewall.sh"
 clab_exec internal-firewall "/usr/local/bin/init_firewall.sh"
+
+# Fix Wazuh Cluster Configuration
+echo "Applying Wazuh Cluster Fixes..."
+bash fix_wazuh_cluster.sh
 
 echo "--- READY ---"

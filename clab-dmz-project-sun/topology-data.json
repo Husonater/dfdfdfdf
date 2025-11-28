@@ -28,9 +28,9 @@
       "image": "attacker:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -58,9 +58,9 @@
       "image": "attacker:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -124,9 +124,9 @@
       "image": "firewall:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -154,9 +154,9 @@
       "image": "ids:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-address": "172.20.20.10",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -184,9 +184,9 @@
       "image": "firewall:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -214,9 +214,9 @@
       "image": "waf:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::d",
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -244,9 +244,9 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.13",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-address": "3fff:172:20:20::d",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -276,7 +276,7 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.12",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -318,7 +318,7 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.11",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -376,12 +376,6 @@
       },
       "port-bindings": [
         {
-          "host-ip": "",
-          "host-port": 0,
-          "port": 1516,
-          "protocol": "tcp"
-        },
-        {
           "host-ip": "0.0.0.0",
           "host-port": 514,
           "port": 514,
@@ -422,6 +416,12 @@
           "host-port": 0,
           "port": 1515,
           "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1516,
+          "protocol": "tcp"
         }
       ]
     },
@@ -436,9 +436,9 @@
       "image": "webserver:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.9",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -467,13 +467,13 @@
       "a": {
         "node": "attacker-internet",
         "interface": "eth1",
-        "mac": "aa:c1:ab:90:29:f9",
+        "mac": "aa:c1:ab:96:91:94",
         "peer": "z"
       },
       "z": {
         "node": "edge-firewall",
         "interface": "eth1",
-        "mac": "aa:c1:ab:f4:b3:a7",
+        "mac": "aa:c1:ab:1c:c9:b5",
         "peer": "a"
       }
     },
@@ -481,13 +481,13 @@
       "a": {
         "node": "edge-firewall",
         "interface": "eth2",
-        "mac": "aa:c1:ab:67:b8:7c",
+        "mac": "aa:c1:ab:a8:97:3d",
         "peer": "z"
       },
       "z": {
         "node": "internal-firewall",
         "interface": "eth1",
-        "mac": "aa:c1:ab:e0:d7:63",
+        "mac": "aa:c1:ab:ca:d2:7c",
         "peer": "a"
       }
     },
@@ -495,13 +495,13 @@
       "a": {
         "node": "edge-firewall",
         "interface": "eth3",
-        "mac": "aa:c1:ab:63:e0:a1",
+        "mac": "aa:c1:ab:53:06:5f",
         "peer": "z"
       },
       "z": {
         "node": "ids-dmz",
         "interface": "eth1",
-        "mac": "aa:c1:ab:8d:b3:fa",
+        "mac": "aa:c1:ab:ad:8e:67",
         "peer": "a"
       }
     },
@@ -509,13 +509,13 @@
       "a": {
         "node": "internal-firewall",
         "interface": "eth2",
-        "mac": "aa:c1:ab:68:7d:43",
+        "mac": "aa:c1:ab:30:2e:fb",
         "peer": "z"
       },
       "z": {
         "node": "siem-switch",
         "interface": "eth1",
-        "mac": "aa:c1:ab:0a:00:99",
+        "mac": "aa:c1:ab:bf:e8:4f",
         "peer": "a"
       }
     },
@@ -523,13 +523,13 @@
       "a": {
         "node": "siem-switch",
         "interface": "eth2",
-        "mac": "aa:c1:ab:4d:29:3e",
+        "mac": "aa:c1:ab:1a:ec:83",
         "peer": "z"
       },
       "z": {
         "node": "wazuh-manager",
         "interface": "eth1",
-        "mac": "aa:c1:ab:9a:2e:06",
+        "mac": "aa:c1:ab:99:ca:6b",
         "peer": "a"
       }
     },
@@ -537,13 +537,13 @@
       "a": {
         "node": "internal-firewall",
         "interface": "eth3",
-        "mac": "aa:c1:ab:c9:1e:27",
+        "mac": "aa:c1:ab:71:24:82",
         "peer": "z"
       },
       "z": {
         "node": "client-internal",
         "interface": "eth1",
-        "mac": "aa:c1:ab:49:af:16",
+        "mac": "aa:c1:ab:38:43:96",
         "peer": "a"
       }
     },
@@ -551,13 +551,13 @@
       "a": {
         "node": "internal-firewall",
         "interface": "eth4",
-        "mac": "aa:c1:ab:60:8e:74",
+        "mac": "aa:c1:ab:b5:d7:fc",
         "peer": "z"
       },
       "z": {
         "node": "reverse-proxy-waf",
         "interface": "eth1",
-        "mac": "aa:c1:ab:13:ea:4f",
+        "mac": "aa:c1:ab:88:47:c3",
         "peer": "a"
       }
     },
@@ -565,13 +565,13 @@
       "a": {
         "node": "reverse-proxy-waf",
         "interface": "eth2",
-        "mac": "aa:c1:ab:e5:df:fc",
+        "mac": "aa:c1:ab:62:d6:4c",
         "peer": "z"
       },
       "z": {
         "node": "webserver",
         "interface": "eth1",
-        "mac": "aa:c1:ab:5c:0f:ab",
+        "mac": "aa:c1:ab:96:d6:c0",
         "peer": "a"
       }
     },
@@ -579,13 +579,13 @@
       "a": {
         "node": "internal-firewall",
         "interface": "eth5",
-        "mac": "aa:c1:ab:df:df:11",
+        "mac": "aa:c1:ab:02:ce:10",
         "peer": "z"
       },
       "z": {
         "node": "ids-dmz",
         "interface": "eth2",
-        "mac": "aa:c1:ab:1d:55:ee",
+        "mac": "aa:c1:ab:46:aa:3b",
         "peer": "a"
       }
     },
@@ -593,13 +593,13 @@
       "a": {
         "node": "siem-switch",
         "interface": "eth3",
-        "mac": "aa:c1:ab:97:13:a2",
+        "mac": "aa:c1:ab:40:41:f0",
         "peer": "z"
       },
       "z": {
         "node": "wazuh-indexer",
         "interface": "eth1",
-        "mac": "aa:c1:ab:8e:bc:91",
+        "mac": "aa:c1:ab:78:a1:73",
         "peer": "a"
       }
     },
@@ -607,13 +607,13 @@
       "a": {
         "node": "siem-switch",
         "interface": "eth4",
-        "mac": "aa:c1:ab:61:c8:6f",
+        "mac": "aa:c1:ab:26:ed:fb",
         "peer": "z"
       },
       "z": {
         "node": "wazuh-dashboard",
         "interface": "eth1",
-        "mac": "aa:c1:ab:12:b2:b4",
+        "mac": "aa:c1:ab:fd:61:d8",
         "peer": "a"
       }
     },
@@ -621,13 +621,13 @@
       "a": {
         "node": "internal-firewall",
         "interface": "eth6",
-        "mac": "aa:c1:ab:82:cc:59",
+        "mac": "aa:c1:ab:8a:2b:d1",
         "peer": "z"
       },
       "z": {
         "node": "db-backend",
         "interface": "eth1",
-        "mac": "aa:c1:ab:31:16:2e",
+        "mac": "aa:c1:ab:26:99:55",
         "peer": "a"
       }
     }
