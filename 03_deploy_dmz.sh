@@ -239,8 +239,13 @@ EOF
     docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/wazuh.indexer/wazuh-indexer/g' /usr/share/wazuh-dashboard/config/opensearch_dashboards.yml
     
     # Fix Dashboard API Credentials
-    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/username: wazuh-wui/username: admin/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
-    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/password: wazuh-wui/password: SecretPassword123!/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/username: admin/username: wazuh-wui/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/password: SecretPassword123!/password: wazuh-wui/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    docker exec clab-dmz-project-sun-wazuh-dashboard sed -i 's/run_as: false/run_as: false\n      validate_ssl: false/g' /usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml
+    
+    # Trust Root CA in Dashboard OS
+    docker exec -u 0 clab-dmz-project-sun-wazuh-dashboard cp /usr/share/wazuh-dashboard/config/certs/root-ca.pem /usr/local/share/ca-certificates/wazuh-root-ca.crt
+    docker exec -u 0 clab-dmz-project-sun-wazuh-dashboard update-ca-certificates
     
     # Manager
     # docker cp certs/wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager.pem
