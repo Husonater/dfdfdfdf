@@ -30,7 +30,7 @@ topology:
     wazuh-indexer:
       kind: linux
       image: wazuh-indexer:latest
-      mgmt_ipv4: 172.20.20.11
+      mgmt-ipv4: 172.20.20.11
       ports:
         - "9200:9200"
       env:
@@ -39,7 +39,7 @@ topology:
     wazuh-manager:
       kind: linux
       image: wazuh-manager:latest
-      mgmt_ipv4: 172.20.20.8
+      mgmt-ipv4: 172.20.20.8
       ports:
         - "1514:1514"
         - "514:514/udp"
@@ -52,9 +52,9 @@ topology:
     wazuh-dashboard:
       kind: linux
       image: wazuh-dashboard:latest
-      mgmt_ipv4: 172.20.20.12
+      mgmt-ipv4: 172.20.20.12
       ports:
-        - "0.0.0.0:443:5601"
+        - "0.0.0.0:8443:5601"
       env:
         INDEXER_URL: https://wazuh-indexer:9200
         OPENSEARCH_HOSTS: https://wazuh-indexer:9200
