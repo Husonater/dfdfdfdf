@@ -44,6 +44,7 @@ clab_exec() {
 # Attacker
 clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1 || true"
 clab_exec attacker-internet "ip route replace default via 172.16.1.1"
+clab_exec attacker-internet "apt-get update && apt-get install -y sshpass || true"
 add_mgmt_route attacker-internet
 
 # Edge Firewall
@@ -75,6 +76,7 @@ add_mgmt_route reverse-proxy-waf
 clab_exec webserver "ip addr add 192.168.60.20/24 dev eth1 || true"
 clab_exec webserver "ip route del default || true"
 clab_exec webserver "ip route add default via 192.168.60.1"
+clab_exec webserver "apt-get update && apt-get install -y openssh-server && service ssh start || true"
 add_mgmt_route webserver
 
 # Wazuh Manager
