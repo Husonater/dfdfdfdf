@@ -1,0 +1,102 @@
+name: dmz-project-sun
+topology:
+  nodes:
+    attacker-internet:
+      kind: linux
+      image: attacker:latest
+    edge-firewall:
+      kind: linux
+      image: firewall:latest
+    reverse-proxy-waf:
+      kind: linux
+      image: waf:latest
+      memory: 512Mb
+    internal-firewall:
+      kind: linux
+      image: firewall:latest
+    webserver:
+      kind: linux
+      image: webserver:latest
+    ids-dmz:
+      kind: linux
+      image: ids:latest
+    db-backend:
+      kind: linux
+      image: db:latest
+    client-internal:
+      kind: linux
+      image: attacker:latest
+
+    wazuh-indexer:
+      kind: linux
+      image: wazuh-indexer:latest
+      mgmt-ipv4: 172.20.20.11
+      ports:
+        - "127.0.0.1:9200:9200"
+      env:
+        OPENSEARCH_INITIAL_ADMIN_PASSWORD: SecretPassword123!
+
+    wazuh-manager:
+      kind: linux
+      image: wazuh-manager:latest
+      mgmt-ipv4: 172.20.20.8
+      ports:
+        - "1514:1514"
+        - "514:514/udp"
+        - "127.0.0.1:55000:55000"
+      env:
+        INDEXER_URL: https://wazuh-indexer:9200
+        INDEXER_USERNAME: admin
+        INDEXER_PASSWORD: SecretPassword123!
+
+    wazuh-dashboard:
+      kind: linux
+      image: wazuh-dashboard:latest
+      mgmt-ipv4: 172.20.20.12
+      ports:
+        - "127.0.0.1:8443:5601"
+      env:
+        INDEXER_URL: https://wazuh-indexer:9200
+        OPENSEARCH_HOSTS: https://wazuh-indexer:9200
+        INDEXER_USERNAME: admin
+        INDEXER_PASSWORD: SecretPassword123!
+        WAZUH_API_URL: https://wazuh-manager:55000
+
+    siem-switch:
+      kind: linux
+      image: alpine:latest
+
+  links:
+    # Internet -> Edge Firewall
+    - endpoints: ["attacker-internet:eth1", "edge-firewall:eth1"]
+
+    # Edge Firewall -> Internal Firewall
+    - endpoints: ["edge-firewall:eth2", "internal-firewall:eth1"]
+
+    # Edge Firewall -> IDS (Mirror Port)
+    - endpoints: ["edge-firewall:eth3", "ids-dmz:eth1"]
+
+    # Internal Firewall -> SIEM Switch
+    - endpoints: ["internal-firewall:eth2", "siem-switch:eth1"]
+
+    # SIEM Switch -> Wazuh Manager
+    - endpoints: ["siem-switch:eth2", "wazuh-manager:eth1"]
+
+    # Internal Firewall -> Client
+    - endpoints: ["internal-firewall:eth3", "client-internal:eth1"]
+
+    # Internal Firewall -> WAF -> Webserver
+    - endpoints: ["internal-firewall:eth4", "reverse-proxy-waf:eth1"]
+    - endpoints: ["reverse-proxy-waf:eth2", "webserver:eth1"]
+
+    # Internal Firewall -> IDS (Mirror Port)
+    - endpoints: ["internal-firewall:eth5", "ids-dmz:eth2"]
+
+    # SIEM Switch -> Wazuh Indexer
+    - endpoints: ["siem-switch:eth3", "wazuh-indexer:eth1"]
+
+    # SIEM Switch -> Wazuh Dashboard
+    - endpoints: ["siem-switch:eth4", "wazuh-dashboard:eth1"]
+
+    # Internal Firewall -> Database
+    - endpoints: ["internal-firewall:eth6", "db-backend:eth1"]

@@ -1,0 +1,32 @@
+version: '3.8'
+
+volumes:
+  wazuh-manager-data:
+    driver: local
+  wazuh-manager-logs:
+    driver: local
+  wazuh-indexer-data:
+    driver: local
+  wazuh-dashboard-config:
+    driver: local
+
+services:
+  # Diese Volumes können in die Containerlab-Config integriert werden
+  # Für jetzt: Manuelle Backup-Strategie
+  
+  backup:
+    image: alpine:latest
+    volumes:
+      - wazuh-manager-data:/backup/manager-data:ro
+      - wazuh-manager-logs:/backup/manager-logs:ro
+      - wazuh-indexer-data:/backup/indexer-data:ro
+      - ./backups:/backups
+    command: |
+      sh -c "
+        echo 'Creating backup...'
+        tar czf /backups/wazuh-backup-$(date +%Y%m%d-%H%M%S).tar.gz \
+          /backup/manager-data \
+          /backup/manager-logs \
+          /backup/indexer-data
+        echo 'Backup complete!'
+      "

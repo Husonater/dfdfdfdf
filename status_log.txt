@@ -1,0 +1,135 @@
+╔════════════════════════════════════════════════════════════════╗
+║              Wazuh Security Events - Zusammenfassung           ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 AKTUELLE SITUATION:
+════════════════════════════════════════════════════════════════
+
+✓ Angriffsszenarien erstellt (7 Skripte)
+✓ Security Events in Logs geschrieben
+✓ Wazuh Manager läuft
+✓ Wazuh Dashboard erreichbar
+
+⚠️  PROBLEM: Keine Agents auf Ziel-Containern installiert
+
+════════════════════════════════════════════════════════════════
+💡 LÖSUNG: Nutze Wazuh Dashboard mit vorhandenen Events
+════════════════════════════════════════════════════════════════
+
+[1] Öffne Wazuh Dashboard:
+    URL: https://localhost:8443
+    Username: admin
+    Password: SecretPassword123!
+
+[2] Navigiere zu 'Security Events':
+    - Klicke auf das Menü-Icon (☰) oben links
+    - Wähle 'Security events'
+
+[3] Du siehst bereits Events vom Wazuh Manager selbst:
+    - SCA (Security Configuration Assessment) Scans
+    - File Integrity Monitoring
+    - System Events
+
+════════════════════════════════════════════════════════════════
+🎯 DEMO-EVENTS DIREKT IM DASHBOARD ERSTELLEN
+════════════════════════════════════════════════════════════════
+
+Ich generiere jetzt Test-Events die GARANTIERT sichtbar sind...
+
+[+] Generiere File Integrity Monitoring Events...
+Killing wazuh-clusterd...
+Killing wazuh-modulesd...
+Killing wazuh-monitord...
+Killing wazuh-logcollector...
+Killing wazuh-remoted...
+Killing wazuh-syscheckd...
+Killing wazuh-analysisd...
+wazuh-maild not running...
+Killing wazuh-execd...
+Killing wazuh-db...
+Killing wazuh-authd...
+wazuh-agentlessd not running...
+wazuh-integratord not running...
+wazuh-dbd not running...
+wazuh-csyslogd not running...
+Killing wazuh-apid...
+Wazuh v4.7.3 Stopped
+Starting Wazuh v4.7.3...
+Started wazuh-apid...
+Started wazuh-csyslogd...
+Started wazuh-dbd...
+2025/11/29 23:53:48 wazuh-integratord: INFO: Remote integrations not configured. Clean exit.
+Started wazuh-integratord...
+Started wazuh-agentlessd...
+Started wazuh-authd...
+Started wazuh-db...
+Started wazuh-execd...
+Started wazuh-analysisd...
+Started wazuh-syscheckd...
+Started wazuh-remoted...
+Started wazuh-logcollector...
+Started wazuh-monitord...
+Started wazuh-modulesd...
+Started wazuh-clusterd...
+Completed.
+[+] Generiere System Events...
+
+════════════════════════════════════════════════════════════════
+📈 AKTUELLE WAZUH STATISTIKEN
+════════════════════════════════════════════════════════════════
+
+[+] Anzahl der Alerts heute:
+    Total Alerts: 5694
+
+[+] Alert-Level Verteilung (letzte 100):
+    Level 3): 6 alerts
+    Level 9): 1 alerts
+    Level 7): 1 alerts
+
+[+] Top 5 Alert-Typen:
+     12 
+
+════════════════════════════════════════════════════════════════
+🔧 NÄCHSTE SCHRITTE FÜR ECHTE ANGRIFFSERKENNUNG
+════════════════════════════════════════════════════════════════
+
+Um echte Angriffe zu erkennen, benötigst du Wazuh Agents auf den
+Ziel-Containern. Hier sind 3 Optionen:
+
+OPTION 1: Agents manuell installieren (komplex)
+  - Wazuh Agent in jedem Container installieren
+  - Agents mit Manager verbinden
+  - Dauert ca. 30-60 Minuten
+
+OPTION 2: Filebeat/Syslog Forwarding (mittel)
+  - Logs von Containern an Wazuh weiterleiten
+  - Einfacher als Agents
+  - Dauert ca. 15-30 Minuten
+
+OPTION 3: Simulierte Events nutzen (einfach, EMPFOHLEN)
+  - Nutze das generate_wazuh_events.sh Skript
+  - Erzeugt realistische Security Events
+  - Sofort verfügbar!
+
+EMPFEHLUNG für Demo/Testing:
+  ./generate_wazuh_events.sh
+
+Für Produktion:
+  Installiere Wazuh Agents auf allen Hosts
+
+════════════════════════════════════════════════════════════════
+📚 VERFÜGBARE SKRIPTE
+════════════════════════════════════════════════════════════════
+
+  ./generate_wazuh_events.sh     - Generiere Test-Events
+  ./attack_scenarios/quick_start.sh - Interaktive Angriffe
+  ./attack_scenarios/README.md   - Vollständige Dokumentation
+
+════════════════════════════════════════════════════════════════
+✅ DASHBOARD JETZT ÖFFNEN!
+════════════════════════════════════════════════════════════════
+
+https://localhost:8443
+
+Du solltest jetzt Security Events sehen können! 🎉
+

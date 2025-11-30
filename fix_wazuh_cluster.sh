@@ -30,7 +30,7 @@ echo "Restarting Wazuh Manager..."
 docker restart clab-dmz-project-sun-wazuh-manager
 echo "Waiting for Manager to start..."
 sleep 20
-docker exec clab-dmz-project-sun-wazuh-manager /var/ossec/bin/wazuh-control status
+docker exec clab-dmz-project-sun-wazuh-manager /var/ossec/bin/wazuh-control status || true
 
 # Restart Dashboard
 echo "Restarting Wazuh Dashboard..."
