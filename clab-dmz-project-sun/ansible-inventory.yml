@@ -8,21 +8,21 @@ all:
     linux:
       hosts:
         clab-dmz-project-sun-attacker-internet:
-          ansible_host: 172.20.20.9
+          ansible_host: 172.20.20.5
         clab-dmz-project-sun-client-internal:
           ansible_host: 172.20.20.4
         clab-dmz-project-sun-db-backend:
-          ansible_host: 172.20.20.3
+          ansible_host: 172.20.20.9
         clab-dmz-project-sun-edge-firewall:
-          ansible_host: 172.20.20.7
-        clab-dmz-project-sun-ids-dmz:
           ansible_host: 172.20.20.13
-        clab-dmz-project-sun-internal-firewall:
-          ansible_host: 172.20.20.6
-        clab-dmz-project-sun-reverse-proxy-waf:
+        clab-dmz-project-sun-ids-dmz:
           ansible_host: 172.20.20.10
-        clab-dmz-project-sun-siem-switch:
+        clab-dmz-project-sun-internal-firewall:
           ansible_host: 172.20.20.2
+        clab-dmz-project-sun-reverse-proxy-waf:
+          ansible_host: 172.20.20.6
+        clab-dmz-project-sun-siem-switch:
+          ansible_host: 172.20.20.3
         clab-dmz-project-sun-wazuh-dashboard:
           ansible_host: 172.20.20.12
         clab-dmz-project-sun-wazuh-indexer:
@@ -30,4 +30,4 @@ all:
         clab-dmz-project-sun-wazuh-manager:
           ansible_host: 172.20.20.8
         clab-dmz-project-sun-webserver:
-          ansible_host: 172.20.20.5
+          ansible_host: 172.20.20.7

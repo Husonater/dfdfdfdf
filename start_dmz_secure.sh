@@ -44,7 +44,7 @@ clab_exec() {
 # Attacker
 clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1 || true"
 clab_exec attacker-internet "ip route replace default via 172.16.1.1"
-clab_exec attacker-internet "apt-get update && apt-get install -y sshpass || true"
+clab_exec attacker-internet "apt-get update && apt-get install -y sshpass nmap || true"
 add_mgmt_route attacker-internet
 
 # Edge Firewall
@@ -272,13 +272,37 @@ for host in "${HOSTS[@]}"; do
     if ! docker exec "$host" dpkg -l | grep -q "wazuh-agent"; then
         log "Installing Wazuh Agent on $host..."
         docker cp wazuh-agent_4.7.3-1_amd64.deb "$host":/tmp/wazuh-agent.deb
-        docker exec "$host" bash -c "apt-get update -qq && apt-get install -f -y && apt-get install -y lsb-release curl gnupg"
+        docker exec "$host" bash -c "apt-get update -qq && apt-get install -f -y && apt-get install -y lsb-release curl gnupg rsyslog"
         docker exec "$host" dpkg -i /tmp/wazuh-agent.deb || docker exec "$host" apt-get install -f -y
+        
+        # Configure rsyslog for local logging
+        docker exec "$host" bash -c 'cat <<EOF > /etc/rsyslog.conf
+module(load="imuxsock")
+module(load="imklog")
+auth,authpriv.*                 /var/log/auth.log
+*.*;auth,authpriv.none          -/var/log/syslog
+daemon.*                        -/var/log/daemon.log
+kern.*                          -/var/log/kern.log
+user.*                          -/var/log/user.log
+EOF'
+        docker exec "$host" bash -c "pkill rsyslogd; rm -f /run/rsyslogd.pid; rsyslogd"
+        docker exec "$host" service ssh restart || true
     fi
     
     log "Configuring Agent on $host..."
     docker exec "$host" sed -i "s/<address>MANAGER_IP<\/address>/<address>$WAZUH_MANAGER<\/address>/" /var/ossec/etc/ossec.conf
     
+    # Configure Log Monitoring (Syslog & Auth.log)
+    log "Enabling Log Monitoring on $host..."
+    docker exec "$host" bash -c '
+        if ! grep -q "/var/log/syslog" /var/ossec/etc/ossec.conf; then
+            sed -i "/<\/ossec_config>/i \  <localfile>\n    <log_format>syslog</log_format>\n    <location>/var/log/syslog</location>\n  </localfile>" /var/ossec/etc/ossec.conf
+        fi
+        if ! grep -q "/var/log/auth.log" /var/ossec/etc/ossec.conf; then
+            sed -i "/<\/ossec_config>/i \  <localfile>\n    <log_format>syslog</log_format>\n    <location>/var/log/auth.log</location>\n  </localfile>" /var/ossec/etc/ossec.conf
+        fi
+    '
+
     log "Registering Agent on $host..."
     docker exec "$host" /var/ossec/bin/agent-auth -m $WAZUH_MANAGER || true
     
@@ -334,6 +358,7 @@ iptables-save > /etc/iptables/rules.v4
 "
 
 log "Running final Wazuh Cluster fix..."
+chmod +x fix_wazuh_cluster.sh
 bash fix_wazuh_cluster.sh
 
 log "DMZ Secure Startup Complete!"
