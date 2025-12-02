@@ -413,6 +413,7 @@ Das Projekt demonstriert erfolgreich den Aufbau einer sicheren, überwachten IT-
 -   **Nginx + ModSecurity**: Webserver und WAF.
 -   **Suricata**: Intrusion Detection.
 -   **Google Gemini**: AI-Chatbot
+-   **VMWare Workstation**: Testing auf VMS
 
 ### 6.2 Literatur- und Quellenverzeichnis
 -   [Containerlab Dokumentation](https://containerlab.dev/)
