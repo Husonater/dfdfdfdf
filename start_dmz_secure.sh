@@ -23,38 +23,7 @@ error() {
 log "Deploying DMZ Topology..."
 sudo containerlab deploy -t dmz-project-sun.clab.yml --reconfigure
 
-# 1.1 Pre-install Packages (while we have clean internet access)
-log "Pre-installing packages..."
 
-# Attacker
-log "Installing tools on attacker-internet..."
-docker exec clab-dmz-project-sun-attacker-internet apt-get update -qq
-docker exec clab-dmz-project-sun-attacker-internet apt-get install -y sshpass nmap
-
-# Webserver
-log "Installing SSH on webserver..."
-docker exec clab-dmz-project-sun-webserver apt-get update -qq
-docker exec clab-dmz-project-sun-webserver apt-get install -y openssh-server lsb-release curl gnupg rsyslog
-
-# SIEM Switch
-log "Installing bridge-utils on siem-switch..."
-docker exec clab-dmz-project-sun-siem-switch apk add --no-cache bridge-utils
-
-# Other Agents (WAF, DB, Firewalls)
-AGENTS=(
-    "clab-dmz-project-sun-reverse-proxy-waf"
-    "clab-dmz-project-sun-db-backend"
-    "clab-dmz-project-sun-edge-firewall"
-    "clab-dmz-project-sun-internal-firewall"
-    "clab-dmz-project-sun-ids-dmz"
-    "clab-dmz-project-sun-client-internal"
-)
-
-for agent in "${AGENTS[@]}"; do
-    log "Installing dependencies on $agent..."
-    docker exec "$agent" apt-get update -qq
-    docker exec "$agent" apt-get install -y lsb-release curl gnupg rsyslog
-done
 
 
 # 2. Restore Routing
@@ -175,6 +144,45 @@ clab_exec db-backend "ip addr add 192.168.70.10/24 dev eth1 || true"
 clab_exec db-backend "ip route del default || true"
 clab_exec db-backend "ip route add default via 192.168.70.1"
 add_mgmt_route db-backend
+
+
+# 2.1 Install Packages (Now that routing is fixed)
+log "Installing packages..."
+
+# Fix DNS for Client Internal (Google DNS)
+docker exec clab-dmz-project-sun-client-internal bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
+
+# Attacker
+log "Installing tools on attacker-internet..."
+docker exec clab-dmz-project-sun-attacker-internet apt-get update -qq
+docker exec clab-dmz-project-sun-attacker-internet apt-get install -y sshpass nmap
+
+# Webserver
+log "Installing SSH on webserver..."
+docker exec clab-dmz-project-sun-webserver apt-get update -qq
+docker exec clab-dmz-project-sun-webserver apt-get install -y openssh-server lsb-release curl gnupg rsyslog
+
+# SIEM Switch
+log "Installing bridge-utils on siem-switch..."
+docker exec clab-dmz-project-sun-siem-switch apk add --no-cache bridge-utils
+
+# Other Agents (WAF, DB, Firewalls)
+AGENTS=(
+    "clab-dmz-project-sun-reverse-proxy-waf"
+    "clab-dmz-project-sun-db-backend"
+    "clab-dmz-project-sun-edge-firewall"
+    "clab-dmz-project-sun-internal-firewall"
+    "clab-dmz-project-sun-ids-dmz"
+    "clab-dmz-project-sun-client-internal"
+)
+
+for agent in "${AGENTS[@]}"; do
+    log "Installing dependencies on $agent..."
+    # Fix DNS for all agents just in case
+    docker exec "$agent" bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
+    docker exec "$agent" apt-get update -qq || true
+    docker exec "$agent" apt-get install -y lsb-release curl gnupg rsyslog || true
+done
 
 
 # 3. Fix Wazuh Indexer
