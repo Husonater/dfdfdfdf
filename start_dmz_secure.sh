@@ -56,6 +56,7 @@ clab_exec edge-firewall "ip addr add 192.168.10.1/24 dev eth2 || true"
 clab_exec edge-firewall "ip link set dev eth3 up || true"
 clab_exec edge-firewall "ip route add 192.168.0.0/16 via 192.168.10.2 || true"
 clab_exec edge-firewall "iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE || true"
+add_mgmt_route edge-firewall
 
 # Internal Firewall
 clab_exec internal-firewall "ip addr add 192.168.10.2/24 dev eth1 || true"
@@ -317,6 +318,16 @@ HOSTS=(
 )
 WAZUH_MANAGER="172.20.20.8"
 
+remove_agent_from_manager() {
+    AGENT_NAME=$1
+    # Get ID
+    AGENT_ID=$(docker exec clab-dmz-project-sun-wazuh-manager /var/ossec/bin/manage_agents -l | grep "Name: $AGENT_NAME," | cut -d: -f2 | cut -d, -f1 | tr -d ' ' || true)
+    if [ ! -z "$AGENT_ID" ]; then
+        log "Removing stale agent $AGENT_NAME (ID: $AGENT_ID) from Manager..."
+        docker exec -i clab-dmz-project-sun-wazuh-manager sh -c "echo y | /var/ossec/bin/manage_agents -r $AGENT_ID" || true
+    fi
+}
+
 for host in "${HOSTS[@]}"; do
     log "Processing $host..."
     
@@ -376,7 +387,16 @@ EOF'
     fi
 
     log "Registering Agent on $host..."
-    docker exec "$host" bash -c "if [ ! -s /var/ossec/etc/client.keys ]; then /var/ossec/bin/agent-auth -m $WAZUH_MANAGER; fi" || true
+    # Check if key exists (returns 0 if missing/empty, 1 if exists)
+    if docker exec "$host" bash -c "[ ! -s /var/ossec/etc/client.keys ]"; then
+        # Key missing, need to register.
+        # Get the node name from the container name
+        NODE_NAME=$(echo "$host" | sed 's/clab-dmz-project-sun-//')
+        
+        remove_agent_from_manager "$NODE_NAME"
+        
+        docker exec "$host" /var/ossec/bin/agent-auth -m $WAZUH_MANAGER || true
+    fi
     
     log "Starting Agent on $host..."
     docker exec "$host" pkill -f wazuh || true
