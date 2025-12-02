@@ -23,6 +23,40 @@ error() {
 log "Deploying DMZ Topology..."
 sudo containerlab deploy -t dmz-project-sun.clab.yml --reconfigure
 
+# 1.1 Pre-install Packages (while we have clean internet access)
+log "Pre-installing packages..."
+
+# Attacker
+log "Installing tools on attacker-internet..."
+docker exec clab-dmz-project-sun-attacker-internet apt-get update -qq
+docker exec clab-dmz-project-sun-attacker-internet apt-get install -y sshpass nmap
+
+# Webserver
+log "Installing SSH on webserver..."
+docker exec clab-dmz-project-sun-webserver apt-get update -qq
+docker exec clab-dmz-project-sun-webserver apt-get install -y openssh-server lsb-release curl gnupg rsyslog
+
+# SIEM Switch
+log "Installing bridge-utils on siem-switch..."
+docker exec clab-dmz-project-sun-siem-switch apk add --no-cache bridge-utils
+
+# Other Agents (WAF, DB, Firewalls)
+AGENTS=(
+    "clab-dmz-project-sun-reverse-proxy-waf"
+    "clab-dmz-project-sun-db-backend"
+    "clab-dmz-project-sun-edge-firewall"
+    "clab-dmz-project-sun-internal-firewall"
+    "clab-dmz-project-sun-ids-dmz"
+    "clab-dmz-project-sun-client-internal"
+)
+
+for agent in "${AGENTS[@]}"; do
+    log "Installing dependencies on $agent..."
+    docker exec "$agent" apt-get update -qq
+    docker exec "$agent" apt-get install -y lsb-release curl gnupg rsyslog
+done
+
+
 # 2. Restore Routing
 log "Restoring Network Routing..."
 # Helper to add mgmt route
@@ -44,7 +78,7 @@ clab_exec() {
 # Attacker
 clab_exec attacker-internet "ip addr add 172.16.1.10/24 dev eth1 || true"
 clab_exec attacker-internet "ip route replace default via 172.16.1.1"
-clab_exec attacker-internet "apt-get update && apt-get install -y sshpass nmap || true"
+# apt-get install moved to start
 add_mgmt_route attacker-internet
 
 # Edge Firewall
@@ -59,7 +93,7 @@ clab_exec internal-firewall "ip addr add 192.168.10.2/24 dev eth1 || true"
 clab_exec internal-firewall "ip addr add 192.168.35.1/24 dev eth2 || true"
 clab_exec internal-firewall "ip addr add 192.168.40.1/24 dev eth3 || true"
 clab_exec internal-firewall "ip addr add 192.168.20.1/24 dev eth4 || true"
-clab_exec internal-firewall "ip link set dev eth5 up || true"
+clab_exec internal-firewall "ip addr add 192.168.62.1/24 dev eth5 || true"
 clab_exec internal-firewall "ip route del default || true"
 clab_exec internal-firewall "ip route add default via 192.168.10.1"
 clab_exec internal-firewall "ip route add 192.168.60.0/24 via 192.168.20.10 || true"
@@ -70,13 +104,18 @@ clab_exec reverse-proxy-waf "ip addr add 192.168.20.10/24 dev eth1 || true"
 clab_exec reverse-proxy-waf "ip addr add 192.168.60.1/24 dev eth2 || true"
 clab_exec reverse-proxy-waf "ip route del default || true"
 clab_exec reverse-proxy-waf "ip route add default via 192.168.20.1"
+# Enable ModSecurity Audit Log
+clab_exec reverse-proxy-waf "sed -i 's/SecAuditEngine Off/SecAuditEngine RelevantOnly/' /etc/nginx/modsecurity.d/modsecurity.conf"
+clab_exec reverse-proxy-waf "sed -i '\$a SecAuditLog /var/log/modsec_audit.log' /etc/nginx/modsecurity.d/modsecurity.conf"
+clab_exec reverse-proxy-waf "touch /var/log/modsec_audit.log && chmod 644 /var/log/modsec_audit.log && chown www-data:www-data /var/log/modsec_audit.log"
+clab_exec reverse-proxy-waf "nginx -s reload || true"
 add_mgmt_route reverse-proxy-waf
 
 # Webserver
 clab_exec webserver "ip addr add 192.168.60.20/24 dev eth1 || true"
 clab_exec webserver "ip route del default || true"
 clab_exec webserver "ip route add default via 192.168.60.1"
-clab_exec webserver "apt-get update && apt-get install -y openssh-server && service ssh start || true"
+clab_exec webserver "service ssh start || true"
 add_mgmt_route webserver
 
 # Wazuh Manager
@@ -86,7 +125,7 @@ clab_exec wazuh-manager "ip route add default via 192.168.35.1"
 add_mgmt_route wazuh-manager
 
 # SIEM Switch
-clab_exec siem-switch "apk add --no-cache bridge-utils || true"
+# apk add moved to start
 clab_exec siem-switch "brctl addbr br0 || true"
 clab_exec siem-switch "brctl addif br0 eth1 || true"
 clab_exec siem-switch "brctl addif br0 eth2 || true"
@@ -123,8 +162,11 @@ clab_exec ids-dmz "ip link set dev eth2 promisc on || true"
 clab_exec ids-dmz "ip link set dev eth2 up || true"
 clab_exec edge-firewall "ip addr add 192.168.61.1/24 dev eth3 || true"
 clab_exec ids-dmz "ip addr add 192.168.61.30/24 dev eth1 || true"
+clab_exec ids-dmz "ip addr add 192.168.62.30/24 dev eth2 || true"
 clab_exec ids-dmz "ip route del default || true"
 clab_exec ids-dmz "ip route add default via 192.168.61.1"
+# Fix Suricata interfaces
+clab_exec ids-dmz "sed -i 's/suricata -i eth1/suricata -i eth1 -i eth2/' /usr/local/bin/startup_ids.sh"
 add_mgmt_route ids-dmz
 
 # Database
@@ -138,11 +180,11 @@ add_mgmt_route db-backend
 # 3. Fix Wazuh Indexer
 log "Configuring Wazuh Indexer..."
 # Copy all certificates
-docker cp root-ca.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/root-ca.pem
-docker cp indexer.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/indexer.pem
-docker cp indexer-key.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/indexer-key.pem
-docker cp admin.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/admin.pem
-docker cp admin-key.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/admin-key.pem
+docker cp certs/root-ca.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/root-ca.pem
+docker cp certs/indexer.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/indexer.pem
+docker cp certs/indexer-key.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/indexer-key.pem
+docker cp certs/admin.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/admin.pem
+docker cp certs/admin-key.pem clab-dmz-project-sun-wazuh-indexer:/usr/share/wazuh-indexer/certs/admin-key.pem
 
 # Fix permissions
 docker exec clab-dmz-project-sun-wazuh-indexer chmod 400 /usr/share/wazuh-indexer/certs/indexer-key.pem
@@ -171,12 +213,12 @@ docker exec -e JAVA_HOME=/usr/share/wazuh-indexer/jdk clab-dmz-project-sun-wazuh
 # 4. Fix Wazuh Manager
 log "Configuring Wazuh Manager..."
 docker exec clab-dmz-project-sun-wazuh-manager mkdir -p /etc/filebeat/certs
-docker cp wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager.pem
-docker cp wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager-key.pem
-docker cp root-ca.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/root-ca.pem
+docker cp certs/wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager.pem
+docker cp certs/wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/wazuh-manager-key.pem
+docker cp certs/root-ca.pem clab-dmz-project-sun-wazuh-manager:/etc/filebeat/certs/root-ca.pem
 docker exec clab-dmz-project-sun-wazuh-manager mkdir -p /var/ossec/api/configuration/ssl
-docker cp wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.crt
-docker cp wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.key
+docker cp certs/wazuh-manager.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.crt
+docker cp certs/wazuh-manager-key.pem clab-dmz-project-sun-wazuh-manager:/var/ossec/api/configuration/ssl/server.key
 docker exec clab-dmz-project-sun-wazuh-manager chown -R wazuh:wazuh /var/ossec/api/configuration/ssl
 docker exec clab-dmz-project-sun-wazuh-manager chmod 600 /var/ossec/api/configuration/ssl/server.key
 docker exec clab-dmz-project-sun-wazuh-manager chmod 644 /var/ossec/api/configuration/ssl/server.crt
@@ -229,9 +271,9 @@ sleep 15
 # 5. Fix Wazuh Dashboard
 log "Configuring Wazuh Dashboard..."
 docker exec clab-dmz-project-sun-wazuh-dashboard mkdir -p /usr/share/wazuh-dashboard/certs
-docker cp dashboard.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/dashboard.pem
-docker cp dashboard-key.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/dashboard-key.pem
-docker cp root-ca.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/root-ca.pem
+docker cp certs/dashboard.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/dashboard.pem
+docker cp certs/dashboard-key.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/dashboard-key.pem
+docker cp certs/root-ca.pem clab-dmz-project-sun-wazuh-dashboard:/usr/share/wazuh-dashboard/certs/root-ca.pem
 docker exec clab-dmz-project-sun-wazuh-dashboard chmod 600 /usr/share/wazuh-dashboard/certs/dashboard-key.pem
 docker exec clab-dmz-project-sun-wazuh-dashboard chmod 644 /usr/share/wazuh-dashboard/certs/dashboard.pem
 docker exec clab-dmz-project-sun-wazuh-dashboard chmod 644 /usr/share/wazuh-dashboard/certs/root-ca.pem
@@ -262,6 +304,8 @@ HOSTS=(
     "clab-dmz-project-sun-db-backend"
     "clab-dmz-project-sun-edge-firewall"
     "clab-dmz-project-sun-internal-firewall"
+    "clab-dmz-project-sun-ids-dmz"
+    "clab-dmz-project-sun-client-internal"
 )
 WAZUH_MANAGER="172.20.20.8"
 
@@ -271,8 +315,8 @@ for host in "${HOSTS[@]}"; do
     # Check if wazuh-agent is installed
     if ! docker exec "$host" dpkg -l | grep -q "wazuh-agent"; then
         log "Installing Wazuh Agent on $host..."
-        docker cp wazuh-agent_4.7.3-1_amd64.deb "$host":/tmp/wazuh-agent.deb
-        docker exec "$host" bash -c "apt-get update -qq && apt-get install -f -y && apt-get install -y lsb-release curl gnupg rsyslog"
+        docker cp installers/wazuh-agent_4.7.3-1_amd64.deb "$host":/tmp/wazuh-agent.deb
+        # apt-get install moved to start
         docker exec "$host" dpkg -i /tmp/wazuh-agent.deb || docker exec "$host" apt-get install -f -y
         
         # Configure rsyslog for local logging
@@ -303,8 +347,28 @@ EOF'
         fi
     '
 
+    # Specific Config for IDS (Suricata)
+    if [[ "$host" == *"ids-dmz"* ]]; then
+        log "Configuring Suricata Log Monitoring on $host..."
+        docker exec "$host" bash -c '
+            if ! grep -q "eve.json" /var/ossec/etc/ossec.conf; then
+                sed -i "/<\/ossec_config>/i \  <localfile>\n    <log_format>json</log_format>\n    <location>/var/log/suricata/eve.json</location>\n  </localfile>" /var/ossec/etc/ossec.conf
+            fi
+        '
+    fi
+
+    # Specific Config for WAF (ModSecurity)
+    if [[ "$host" == *"reverse-proxy-waf"* ]]; then
+        log "Configuring ModSecurity Log Monitoring on $host..."
+        docker exec "$host" bash -c '
+            if ! grep -q "modsec_audit.log" /var/ossec/etc/ossec.conf; then
+                sed -i "/<\/ossec_config>/i \  <localfile>\n    <log_format>apache</log_format>\n    <location>/var/log/modsec_audit.log</location>\n  </localfile>" /var/ossec/etc/ossec.conf
+            fi
+        '
+    fi
+
     log "Registering Agent on $host..."
-    docker exec "$host" /var/ossec/bin/agent-auth -m $WAZUH_MANAGER || true
+    docker exec "$host" bash -c "if [ ! -s /var/ossec/etc/client.keys ]; then /var/ossec/bin/agent-auth -m $WAZUH_MANAGER; fi" || true
     
     log "Starting Agent on $host..."
     docker exec "$host" pkill -f wazuh || true
@@ -324,6 +388,7 @@ iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i eth0 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -p tcp --dport 80 -j ACCEPT
@@ -331,6 +396,9 @@ iptables -A FORWARD -p tcp --dport 443 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -j LOG --log-prefix 'EDGE-FW-INPUT-DROP: '
 iptables -A FORWARD -j LOG --log-prefix 'EDGE-FW-FORWARD-DROP: '
+# Traffic Mirroring to IDS
+iptables -t mangle -A PREROUTING -j TEE --gateway 192.168.61.30
+iptables -t mangle -A POSTROUTING -j TEE --gateway 192.168.61.30
 mkdir -p /etc/iptables
 iptables-save > /etc/iptables/rules.v4
 "
@@ -343,6 +411,7 @@ iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i eth0 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -i eth4 -o eth4 -p tcp --dport 80 -j ACCEPT
@@ -353,13 +422,16 @@ iptables -A FORWARD -o eth2 -p tcp --dport 1514 -j ACCEPT
 iptables -A FORWARD -o eth2 -p udp --dport 514 -j ACCEPT
 iptables -A INPUT -j LOG --log-prefix 'INT-FW-INPUT-DROP: '
 iptables -A FORWARD -j LOG --log-prefix 'INT-FW-FORWARD-DROP: '
+# Traffic Mirroring to IDS
+iptables -t mangle -A PREROUTING -j TEE --gateway 192.168.62.30
+iptables -t mangle -A POSTROUTING -j TEE --gateway 192.168.62.30
 mkdir -p /etc/iptables
 iptables-save > /etc/iptables/rules.v4
 "
 
 log "Running final Wazuh Cluster fix..."
-chmod +x fix_wazuh_cluster.sh
-bash fix_wazuh_cluster.sh
+chmod +x scripts/fix_wazuh_cluster.sh
+bash scripts/fix_wazuh_cluster.sh
 
 log "DMZ Secure Startup Complete!"
 log "Dashboard: https://localhost:8443 (admin / SecretPassword123!)"
