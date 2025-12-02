@@ -41,72 +41,27 @@ run_scenario() {
     fi
 }
 
-# Menü
-echo "Wähle Ausführungsmodus:"
-echo "1) Alle Angriffe sequenziell ausführen"
-echo "2) Einzelnen Angriff auswählen"
-echo "3) Schnelldemo (verkürzte Versionen)"
-echo "4) Beenden"
-echo ""
-read -p "Auswahl [1-4]: " choice
+# Automatisierte Ausführung aller verifizierten Angriffe
+echo -e "${GREEN}[+] Führe alle verifizierten Angriffe aus...${NC}"
 
-case $choice in
-    1)
-        echo -e "${GREEN}[+] Führe alle Angriffe aus...${NC}"
-        run_scenario "$SCRIPT_DIR/01_brute_force_ssh.sh" "SSH Brute Force" 15
-        run_scenario "$SCRIPT_DIR/02_port_scan.sh" "Port Scanning" 15
-        run_scenario "$SCRIPT_DIR/03_web_attacks.sh" "Web Application Attacks" 15
-        run_scenario "$SCRIPT_DIR/04_dos_attack.sh" "DoS Attack" 20
-        run_scenario "$SCRIPT_DIR/05_malware_simulation.sh" "Malware Simulation" 15
-        run_scenario "$SCRIPT_DIR/06_privilege_escalation.sh" "Privilege Escalation" 15
-        run_scenario "$SCRIPT_DIR/07_lateral_movement.sh" "Lateral Movement" 15
-        ;;
-    2)
-        echo ""
-        echo "Verfügbare Angriffe:"
-        echo "1) SSH Brute Force"
-        echo "2) Port Scanning"
-        echo "3) Web Application Attacks"
-        echo "4) DoS Attack"
-        echo "5) Malware Simulation"
-        echo "6) Privilege Escalation"
-        echo "7) Lateral Movement"
-        echo ""
-        read -p "Wähle Angriff [1-7]: " attack
-        
-        case $attack in
-            1) run_scenario "$SCRIPT_DIR/01_brute_force_ssh.sh" "SSH Brute Force" 0 ;;
-            2) run_scenario "$SCRIPT_DIR/02_port_scan.sh" "Port Scanning" 0 ;;
-            3) run_scenario "$SCRIPT_DIR/03_web_attacks.sh" "Web Application Attacks" 0 ;;
-            4) run_scenario "$SCRIPT_DIR/04_dos_attack.sh" "DoS Attack" 0 ;;
-            5) run_scenario "$SCRIPT_DIR/05_malware_simulation.sh" "Malware Simulation" 0 ;;
-            6) run_scenario "$SCRIPT_DIR/06_privilege_escalation.sh" "Privilege Escalation" 0 ;;
-            7) run_scenario "$SCRIPT_DIR/07_lateral_movement.sh" "Lateral Movement" 0 ;;
-            *) echo -e "${RED}[ERROR]${NC} Ungültige Auswahl" ;;
-        esac
-        ;;
-    3)
-        echo -e "${GREEN}[+] Schnelldemo-Modus${NC}"
-        echo -e "${BLUE}[INFO]${NC} Führe verkürzte Versionen aus..."
-        
-        # Verkürzte Versionen
-        bash "$SCRIPT_DIR/01_brute_force_ssh.sh" webserver attacker-internet &
-        sleep 5
-        bash "$SCRIPT_DIR/02_port_scan.sh" webserver attacker-internet &
-        sleep 5
-        bash "$SCRIPT_DIR/03_web_attacks.sh" reverse-proxy-waf attacker-internet &
-        
-        wait
-        ;;
-    4)
-        echo -e "${BLUE}[INFO]${NC} Beende..."
-        exit 0
-        ;;
-    *)
-        echo -e "${RED}[ERROR]${NC} Ungültige Auswahl"
-        exit 1
-        ;;
-esac
+# 1. SSH Brute Force (Simple Version)
+run_scenario "$SCRIPT_DIR/01_brute_force_ssh_simple.sh" "SSH Brute Force (Simple)" 10
+
+# 2. Port Scan
+run_scenario "$SCRIPT_DIR/02_port_scan.sh" "Port Scanning" 10
+
+# 3. Web Attacks
+run_scenario "$SCRIPT_DIR/03_web_attacks.sh" "Web Application Attacks" 10
+
+# 4. DoS Attack (Optional - if script exists and works)
+if [ -f "$SCRIPT_DIR/04_dos_attack.sh" ]; then
+    run_scenario "$SCRIPT_DIR/04_dos_attack.sh" "DoS Attack" 10
+fi
+
+# 5. Malware Simulation (Optional)
+if [ -f "$SCRIPT_DIR/05_malware_simulation.sh" ]; then
+    run_scenario "$SCRIPT_DIR/05_malware_simulation.sh" "Malware Simulation" 10
+fi
 
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"

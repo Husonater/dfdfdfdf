@@ -1,4 +1,4 @@
-# Projektdokumentation: Sichere DMZ-Infrastruktur mit Wazuh SIEM
+# DMZ-Projekt: Multi-Layer Security Containerlab-basierte Netzwerksimulation
 
 Autor: Jonas Thiel, Nico Nasuti
 
@@ -327,35 +327,35 @@ Die Installation ist hochgradig automatisiert:
 
 ### 3.3 Schritt-für-Schritt Installationsanleitung
 
-1.  **Repository klonen**:
+1.  **Abhängigkeiten installieren**:
+    Installieren Sie notwendige Tools auf den Containern:
     ```bash
-    git clone https://github.com/Husonater/dfdfdfdf.git
-    cd dfdfdfdf
+    sudo bash install_dependencies.sh
     ```
 
-2.  **Images bauen**:
+2.  **Images bauen wenn noetig**:
     Bevor das Lab gestartet werden kann, müssen die Docker-Images erstellt werden:
     ```bash
     sudo bash build_images.sh
     ```
 
-3.  **Deployment starten**:
+2.  **Deployment starten**:
     Führen Sie das Deployment-Skript mit Root-Rechten aus, um die Umgebung zu starten und zu konfigurieren:
     ```bash
     sudo bash start_dmz_secure.sh
     ```
     *Das Skript startet die Containerlab-Topologie, richtet das Netzwerk ein und verbindet alle Agenten mit dem Wazuh Manager.*
 
-4.  **Abhängigkeiten installieren**:
-    Installieren Sie notwendige Tools auf den Containern:
-    ```bash
-    sudo bash install_dependencies.sh
-    ```
-
-5.  **Zugriff auf das Dashboard**:
+4.  **Zugriff auf das Dashboard**:
     Öffnen Sie im Browser `https://localhost:8443` (oder die IP der VM).
     -   **User**: admin
     -   **Password**: SecretPassword123!
+
+5.  **Angriffe starten**:
+    Führen Sie die Angriffe mit Root-Rechten aus:
+    ```bash
+    sudo bash attack_scenarios/run_all_attacks.sh
+    ```
 
 ---
 
@@ -412,6 +412,7 @@ Das Projekt demonstriert erfolgreich den Aufbau einer sicheren, überwachten IT-
 -   **Wazuh**: Open Source SIEM und XDR Plattform.
 -   **Nginx + ModSecurity**: Webserver und WAF.
 -   **Suricata**: Intrusion Detection.
+-   **Google Gemini**: AI-Chatbot
 
 ### 6.2 Literatur- und Quellenverzeichnis
 -   [Containerlab Dokumentation](https://containerlab.dev/)
