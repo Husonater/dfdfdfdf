@@ -1,0 +1,35 @@
+<group name="modsecurity,">
+  <rule id="100001" level="10">
+    <decoded_as>modsecurity</decoded_as>
+    <description>ModSecurity Event: $(msg)</description>
+    <group>web,appsec,attack</group>
+  </rule>
+
+  <rule id="100002" level="12">
+    <if_sid>100001</if_sid>
+    <field name="msg">XSS Blocked</field>
+    <description>ModSecurity: Cross-Site Scripting (XSS) Attempt Blocked</description>
+    <group>web,appsec,attack,xss</group>
+  </rule>
+
+  <rule id="100003" level="12">
+    <if_sid>100001</if_sid>
+    <field name="msg">SQL Injection Blocked</field>
+    <description>ModSecurity: SQL Injection Attempt Blocked</description>
+    <group>web,appsec,attack,sqli</group>
+  </rule>
+
+  <rule id="100004" level="12">
+    <if_sid>100001</if_sid>
+    <field name="msg">Path Traversal Blocked</field>
+    <description>ModSecurity: Path Traversal Attempt Blocked</description>
+    <group>web,appsec,attack,path-traversal</group>
+  </rule>
+
+  <rule id="100005" level="12">
+    <if_sid>100001</if_sid>
+    <field name="msg">Command Injection Blocked</field>
+    <description>ModSecurity: Command Injection Attempt Blocked</description>
+    <group>web,appsec,attack,command-injection</group>
+  </rule>
+</group>

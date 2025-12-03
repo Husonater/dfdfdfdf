@@ -1,0 +1,9 @@
+<decoder name="modsecurity">
+  <prematch>^ModSecurity: </prematch>
+</decoder>
+
+<decoder name="modsecurity-fields">
+  <parent>modsecurity</parent>
+  <regex offset="after_parent">^Access denied with code (\d+) \(phase (\d+)\). Matched "Operator `(\.+)' with parameter `(\.+)' against variable `(\.+)' \(Value: `(\.+)' \) [file "(\.+)"] [line "(\d+)"] [id "(\d+)"] [rev "(\.*)"] [msg "(\.+)"] [data "(\.*)"] [severity "(\d+)"] [ver "(\.*)"] [maturity "(\d+)"] [accuracy "(\d+)"] [hostname "(\.+)"] [uri "(\.+)"] [unique_id "(\.+)"]</regex>
+  <order>status, phase, operator, parameter, variable, value, file, line, id, rev, msg, data, severity, ver, maturity, accuracy, hostname, uri, unique_id</order>
+</decoder>

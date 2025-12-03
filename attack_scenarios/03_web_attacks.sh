@@ -25,7 +25,8 @@ SQL_PAYLOADS=(
 for payload in "${SQL_PAYLOADS[@]}"; do
     echo "  [>] Payload: $payload"
     sudo docker exec clab-dmz-project-sun-$ATTACKER \
-        curl -s -A "Mozilla/5.0" "http://$TARGET_HOST/login.php?user=$payload&pass=test" \
+        curl -s -G -A "Mozilla/5.0" "http://$TARGET_HOST/login.php" \
+        --data-urlencode "user=$payload" --data-urlencode "pass=test" \
         -o /dev/null 2>/dev/null || true
     sleep 0.5
 done
@@ -43,7 +44,8 @@ XSS_PAYLOADS=(
 for payload in "${XSS_PAYLOADS[@]}"; do
     echo "  [>] Payload: $payload"
     sudo docker exec clab-dmz-project-sun-$ATTACKER \
-        curl -s -A "Mozilla/5.0" "http://$TARGET_HOST/search.php?q=$payload" \
+        curl -s -G -A "Mozilla/5.0" "http://$TARGET_HOST/search.php" \
+        --data-urlencode "q=$payload" \
         -o /dev/null 2>/dev/null || true
     sleep 0.5
 done
@@ -60,7 +62,8 @@ PATH_PAYLOADS=(
 for payload in "${PATH_PAYLOADS[@]}"; do
     echo "  [>] Payload: $payload"
     sudo docker exec clab-dmz-project-sun-$ATTACKER \
-        curl -s -A "Mozilla/5.0" "http://$TARGET_HOST/download.php?file=$payload" \
+        curl -s -G -A "Mozilla/5.0" "http://$TARGET_HOST/download.php" \
+        --data-urlencode "file=$payload" \
         -o /dev/null 2>/dev/null || true
     sleep 0.5
 done
@@ -77,7 +80,8 @@ CMD_PAYLOADS=(
 for payload in "${CMD_PAYLOADS[@]}"; do
     echo "  [>] Payload: $payload"
     sudo docker exec clab-dmz-project-sun-$ATTACKER \
-        curl -s -A "Mozilla/5.0" "http://$TARGET_HOST/ping.php?host=localhost$payload" \
+        curl -s -G -A "Mozilla/5.0" "http://$TARGET_HOST/ping.php" \
+        --data-urlencode "host=localhost$payload" \
         -o /dev/null 2>/dev/null || true
     sleep 0.5
 done

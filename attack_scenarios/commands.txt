@@ -1,0 +1,1 @@
+sudo bash attack_scenarios/01_brute_force_ssh.sh 192.168.60.20 && sudo bash attack_scenarios/03_web_attacks.sh 192.168.20.10

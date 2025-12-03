@@ -155,16 +155,19 @@ docker exec clab-dmz-project-sun-client-internal bash -c "echo 'nameserver 8.8.8
 
 # Attacker
 log "Installing tools on attacker-internet..."
+docker exec clab-dmz-project-sun-attacker-internet bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
 docker exec clab-dmz-project-sun-attacker-internet apt-get update -qq
 docker exec clab-dmz-project-sun-attacker-internet apt-get install -y sshpass nmap
 
 # Webserver
 log "Installing SSH on webserver..."
+docker exec clab-dmz-project-sun-webserver bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
 docker exec clab-dmz-project-sun-webserver apt-get update -qq
 docker exec clab-dmz-project-sun-webserver apt-get install -y openssh-server lsb-release curl gnupg rsyslog
 
 # SIEM Switch
 log "Installing bridge-utils on siem-switch..."
+docker exec clab-dmz-project-sun-siem-switch sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
 docker exec clab-dmz-project-sun-siem-switch apk add --no-cache bridge-utils
 
 # Other Agents (WAF, DB, Firewalls)
@@ -420,7 +423,9 @@ iptables -A INPUT -i eth0 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 443 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -j LOG --log-prefix 'EDGE-FW-INPUT-DROP: '
 iptables -A FORWARD -j LOG --log-prefix 'EDGE-FW-FORWARD-DROP: '
@@ -442,8 +447,10 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -i eth0 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A FORWARD -i eth4 -o eth4 -p tcp --dport 80 -j ACCEPT
-iptables -A FORWARD -i eth4 -o eth4 -p tcp --dport 443 -j ACCEPT
+iptables -A FORWARD -o eth4 -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -o eth4 -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -o eth4 -p tcp --dport 443 -j ACCEPT
+iptables -A FORWARD -o eth4 -p tcp --dport 22 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 3306 -j ACCEPT
 iptables -A FORWARD -p tcp --dport 5432 -j ACCEPT
 iptables -A FORWARD -o eth2 -p tcp --dport 1514 -j ACCEPT
